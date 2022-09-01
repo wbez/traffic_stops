@@ -1,14 +1,14 @@
 from django.db import models
 
 # Create your models here.
-class Stop(models.model):
+class Stop(models.Model):
     AgencyCode = models.TextField()
     AgencyName = models.CharField(max_length=100,null=True)
-    DateOfStop = models.DateTimeField()
+    DateOfStop = models.DateField()
     TimeOfStop = models.TimeField()
-    DurationOfStop = models.IntegerField()
-    ZIP = models.IntegerField()
-    VehicleMake = models.CharField(max_length=100,null=True)
+    DurationOfStop = models.IntegerField() # minutes?
+    zipcode = models.IntegerField()
+    VehicleMake = models.TextField()
     VehicleYear = models.IntegerField()
     DriversYearofBirth = models.IntegerField()
     DriverSex = models.IntegerField()
@@ -16,7 +16,7 @@ class Stop(models.model):
     ReasonForStop = models.IntegerField()
     TypeOfMovingViolation = models.IntegerField()
     ResultOfStop = models.IntegerField()
-    BeatLocationOfStop = models.CharField(max_length=100,null=True)
+    BeatLocationOfStop = models.TextField()
     VehicleConsentSearchRequested  = models.IntegerField()
     VehicleConsentGiven  = models.IntegerField()
     VehicleSearchConducted  = models.IntegerField()
@@ -49,10 +49,10 @@ class Stop(models.model):
     PoliceDogAlertIfSniffed  = models.IntegerField()
     PoliceDogVehicleSearched  = models.IntegerField()
     PoliceDogContrabandFound  = models.IntegerField()
-    PoliceDogDrugsFound  = models.IntegerField()
+    PoliceDogDrugsFound  = models.BooleanField()
     PoliceDogDrugParaphernaliaFound  = models.IntegerField()
     PoliceDogAlcoholFound  = models.IntegerField()
     PoliceDogWeaponFound  = models.IntegerField()
     PoliceDogStolenPropertyFound  = models.IntegerField()
     PoliceDogOtherContrabandFound  = models.IntegerField()
-    PoliceDogDrugAmount  = models.IntegerField()
+    PoliceDogDrugAmount  = models.BooleanField()
