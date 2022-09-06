@@ -58,4 +58,51 @@ class Stop(models.Model):
     PoliceDogDrugAmount  = models.BooleanField()
 
 
+class OldStop(models.Model):
+    AgencyName = models.CharField(max_length=100,null=True))
+    DateOfStop = models.DateField()
+    TimeOfStop = models.TimeField()
+    Location = models.TextField()
+    BeatLocation = models.TextField()
+    Gender = models.IntegerField()
+    Race = models.IntegerField()
+    ReasonForSearchDrug = models.IntegerField()
+    ReasonForSearchFitsDescriptionRadio = models.IntegerField()
+    ReasonForSearchFitsDescriptionWitness = models.IntegerField()
+    ReasonForSearchCasing = models.IntegerField()
+    ReasonForSearchProximity = models.IntegerField()
+    ReasonForSearchGangEnforcement = models.IntegerField()
+    ReasonForSearchSuspiciousActivity = models.IntegerField()
+    ReasonForSearchOther = models.IntegerField()
+    ReasonForSearchSpecifyOther = models.TextField()
+    FriskWasConducted = models.IntegerField()
+    FriskConductedBy = models.IntegerField()
+    ReasonForFriskVerbalThreats = models.IntegerField()
+    ReasonForFriskPriorKnowlege = models.IntegerField()
+    ReasonForFriskViolentActions = models.IntegerField() #ReasonForFriskViolentAcitons
+    ReasonForFriskViolentCrime = models.IntegerField()
+    ReasonForFriskSuspisiousBulge = models.IntegerField()
+    ReasonForFriskEvasive = models.IntegerField()
+    ReasonForFriskOther = models.IntegerField()
+    ReasonForFriskSpecifyOther = models.CharField(max_length=100,null=True)
+    FriskLedToSearchBeyond = models.IntegerField()
+
+    ### Middle rows ###
+
+
+
+    SearchBeyondFoundAlcohol = models.IntegerField()
+    SearchBeyondFoundWeapon = models.IntegerField()
+    SearchBeyondFoundStolenProperty = models.IntegerField()
+    SearchBeyondFoundOther = models.IntegerField()
+    SearchBeyondAmountOfDrugsFound = models.IntegerField()
+    WarningCitationIssued = models.IntegerField()
+    Arrest = models.IntegerField()
+    ViolationsOrCharges = models.CharField(max_length=100,null=True)
+
+
+
+
+
+
 # TODO: model for agencies

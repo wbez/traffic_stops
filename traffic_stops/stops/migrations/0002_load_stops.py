@@ -3,6 +3,7 @@
 from django.db import migrations
 from stops.models import Stop
 import csv
+import ipdb
 from traffic_stops.settings import BASE_DIR
 
 ### START CONFIG ###
@@ -18,72 +19,74 @@ stops = []
 
 def load_data(apps,schema_editor,data_file):
     data_file = open(path_to_data_file)
-    data_csv = csv.DictReader(data_file)
+    data_csv = csv.DictReader(data_file,delimiter='~')
 
     for row in data_file:
-        stop_obj = Stop(
-                    AgencyCode = row[0],
-                    AgencyName = row[1],
-                    DateOfStop = row[2],
-                    TimeOfStop = row[3],
-                    DurationOfStop = row[4],
-                    zipcode = row[5],
-                    VehicleMake = row[6],
-                    VehicleYear = row[7],
-                    DriversYearofBirth = row[8],
-                    DriverSex = row[9],
-                    DriverRace = row[10],
-                    ReasonForStop = row[11],
-                    TypeOfMovingViolation = row[12],
-                    ResultOfStop = row[13],
-                    BeatLocationOfStop = row[14],
-                    VehicleConsentSearchRequested = row[15],
-                    VehicleConsentGiven = row[16],
-                    VehicleSearchConducted = row[17],
-                    VehicleSearchConductedBy = row[18],
-                    VehicleContrabandFound = row[19]
-                    VehicleDrugsFound = row[20],
-                    VehicleDrugParaphernaliaFound = row[21],
-                    VehicleAlcoholFound = row[22],
-                    VehicleWeaponFound = row[23],
-                    VehicleStolenPropertyFound = row[24],
-                    VehicleOtherContrabandFound = row[25],
-                    VehicleDrugAmount = row[26],
-                    DriverConsentSearchRequested = row[27],
-                    DriverConsentGiven = row[28],
-                    DriverSearchConducted = row[29],
-                    DriverSearchConductedBy = row[30],
-                    PassengerConsentSearchRequested = row[31],
-                    PassengerConsentGiven = row[32],
-                    PassengerSearchConducted = row[33],
-                    PassengerSearchConductedBy = row[34],
-                    DriverPassengerContrabandFound = row[35],
-                    DriverPassengerDrugsFound = row[36],
-                    DriverPassengerDrugParaphernaliaFound = row[37],
-                    DriverPassengerAlcoholFound = row[38],
-                    DriverPassengerWeaponFound = row[39],
-                    DriverPassengerStolenPropertyFound = row[40],
-                    DriverPassengerOtherContrabandFound = row[41],
-                    DriverPassengerDrugAmount = row[42],
-                    PoliceDogPerformSniffOfVehicle = row[43],
-                    PoliceDogAlertIfSniffed = row[44],
-                    PoliceDogVehicleSearched = row[45],
-                    PoliceDogContrabandFound = row[46],
-                    PoliceDogDrugsFound = row[47],
-                    PoliceDogDrugParaphernaliaFound = row[48]
-                    PoliceDogAlcoholFound = row[49],
-                    PoliceDogWeaponFound = row[50],
-                    PoliceDogStolenPropertyFound = row[51],
-                    PoliceDogOtherContrabandFound = row[52],
-                    PoliceDogDrugAmount = row[53]
-            )
-        stops.append(stop)
+        try:
+            stop_obj = Stop(
+                        AgencyCode = row['AgencyCode'],
+                        AgencyName = row['AgencyName'],
+                        DateOfStop = row['DateOfStop'],
+                        TimeOfStop = row['TimeOfStop'],
+                        DurationOfStop = row['DurationOfStop'],
+                        zipcode = row['ZIP'],
+                        VehicleMake = row['VehicleMake'],
+                        VehicleYear = row['VehicleYear'],
+                        DriversYearofBirth = row['DriversYearofBirth'],
+                        DriverSex = row['DriverSex'],
+                        DriverRace = row['DriverRace'],
+                        ReasonForStop = row['ReasonForStop'],
+                        TypeOfMovingViolation = row['TypeOfMovingViolation'],
+                        ResultOfStop = row['ResultOfStop'],
+                        BeatLocationOfStop = row['BeatLocationOfStop'],
+                        VehicleConsentSearchRequested = row['VehicleConsentSearchRequested'],
+                        VehicleConsentGiven = row['VehicleConsentGiven'],
+                        VehicleSearchConducted = row['VehicleSearchConducted'],
+                        VehicleSearchConductedBy = row['VehicleSearchConductedBy'],
+                        VehicleContrabandFound = row['VehicleContrabandFound']
+                        VehicleDrugsFound = row['VehicleDrugsFound'],
+                        VehicleDrugParaphernaliaFound = row['VehicleDrugParahernaliaFound'],
+                        VehicleAlcoholFound = row['VehicleAlcoholFound'],
+                        VehicleWeaponFound = row['VehicleWeaponFound'],
+                        VehicleStolenPropertyFound = row['VehicleStolenPropertyFound'],
+                        VehicleOtherContrabandFound = row['VehicleOtherContrabandFound'],
+                        VehicleDrugAmount = row['VehicleDrugAmount'],
+                        DriverConsentSearchRequested = row['DriverConsentSearchRequested'],
+                        DriverConsentGiven = row['DriverConsentGiven'],
+                        DriverSearchConducted = row['DriverSearchConducted'],
+                        DriverSearchConductedBy = row['DriverSearchConductedBy'],
+                        PassengerConsentSearchRequested = row['PassengerConsentSearchRequested'],
+                        PassengerConsentGiven = row['PassengerConsentGiven'],
+                        PassengerSearchConducted = row['PassengerSearchConducted'],
+                        PassengerSearchConductedBy = row['PassengerSearchConductedBy'],
+                        DriverPassengerContrabandFound = row['DriverPassengerContrabandFound'],
+                        DriverPassengerDrugsFound = row['DriverPassengerDrugsFound'],
+                        DriverPassengerDrugParaphernaliaFound = row['DriverPassengerDrugParaphernaliaFound'],
+                        DriverPassengerAlcoholFound = row['DriverPassengerAlcoholFound'],
+                        DriverPassengerWeaponFound = row['DriverPassengerWeaponFound'],
+                        DriverPassengerStolenPropertyFound = row['DriverPassengerStolenPropertyFound'],
+                        DriverPassengerOtherContrabandFound = row['DriverPassengerOtherContrabandFound'],
+                        DriverPassengerDrugAmount = row['DriverPassengerDrugAmount'],
+                        PoliceDogPerformSniffOfVehicle = row['PoliceDogPerformSniffOfVehicle'],
+                        PoliceDogAlertIfSniffed = row['PoliceDogAlertIfSniffed'],
+                        PoliceDogVehicleSearched = row['PoliceDogVehicleSearched'],
+                        PoliceDogContrabandFound = row['PoliceDogContrabandFound'],
+                        PoliceDogDrugsFound = row['PoliceDogDrugsFound'],
+                        PoliceDogDrugParaphernaliaFound = row['PoliceDogDrugParahernaliaFound']
+                        PoliceDogAlcoholFound = row['PoliceDogAlcoholFound'],
+                        PoliceDogWeaponFound = row['PoliceDogWeaponFound'],
+                        PoliceDogStolenPropertyFound = row['PoliceDogStolenPropertyFound'],
+                        PoliceDogOtherContrabandFound = row['PoliceDogOtherContrabandFound'],
+                        PoliceDogDrugAmount = row['PoliceDogDrugAmount']
+                )
+            stops.append(stop_obj)
+
+        except Exception as e:
+            print(e)
+            ipdb.set_trace()
+
     
     Stop.objects.bulk_create(stops)
-
-
-
-
     pass
 
 
