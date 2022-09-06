@@ -9,10 +9,69 @@ path_to_data_file = ''
 
 ### END CONFIG ###
 
-def load_data(apps,schema_editor):
+def load_data(apps,schema_editor,data_file):
     for row in data_file:
         Stop.objects.create(
-                AgencyCode = "")
+                AgencyCode = row[0],
+                AgencyName = row[1],
+                DateOfStop = row[2],
+                TimeOfStop = row[3],
+                DurationOfStop = row[4],
+                zipcode = row[5],
+                VehicleMake = row[6],
+                VehicleYear = row[7],
+                DriversYearofBirth = row[8],
+                DriverSex = row[9],
+                DriverRace = row[10],
+                ReasonForStop = row[11],
+                TypeOfMovingViolation = row[12],
+                ResultOfStop = row[13],
+                BeatLocationOfStop = row[14],
+                VehicleConsentSearchRequested = row[15],
+                VehicleConsentGiven = row[16],
+                VehicleSearchConducted = row[17],
+                VehicleSearchConductedBy = row[18],
+                VehicleContrabandFound = row[19]
+                VehicleDrugsFound = row[20],
+                VehicleDrugParaphernaliaFound = row[21],
+                VehicleAlcoholFound = row[22],
+                VehicleWeaponFound = row[23],
+                VehicleStolenPropertyFound = row[24],
+                VehicleOtherContrabandFound = row[25],
+                VehicleDrugAmount = row[26],
+                DriverConsentSearchRequested = row[27],
+                DriverConsentGiven = row[28],
+                DriverSearchConducted = row[29],
+                DriverSearchConductedBy = row[30],
+                PassengerConsentSearchRequested = row[31],
+                PassengerConsentGiven = row[32],
+                PassengerSearchConducted = row[33],
+                PassengerSearchConductedBy = row[34],
+                DriverPassengerContrabandFound = row[35],
+                DriverPassengerDrugsFound = row[36],
+                DriverPassengerDrugParaphernaliaFound = row[37],
+                DriverPassengerAlcoholFound = row[38],
+                DriverPassengerWeaponFound = row[39],
+                DriverPassengerStolenPropertyFound = row[40],
+                DriverPassengerOtherContrabandFound = row[41],
+                DriverPassengerDrugAmount = row[42],
+                PoliceDogPerformSniffOfVehicle = row[43],
+                PoliceDogAlertIfSniffed = row[44],
+                PoliceDogVehicleSearched = row[45],
+                PoliceDogContrabandFound = row[46],
+                PoliceDogDrugsFound = row[47],
+                PoliceDogDrugParaphernaliaFound = row[48]
+                PoliceDogAlcoholFound = row[49],
+                PoliceDogWeaponFound = row[50],
+                PoliceDogStolenPropertyFound = row[51],
+                PoliceDogOtherContrabandFound = row[52],
+                PoliceDogDrugAmount = row[53]
+        )
+
+
+
+
+
 
     pass
 
