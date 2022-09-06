@@ -6,18 +6,19 @@ import csv
 from traffic_stops.settings import BASE_DIR
 
 ### START CONFIG ###
-path_to_data_file = str(BASE_DIR) + ''
-
+data_dir = str(BASE_DIR) + '/data/'
+path_to_data_file = data_dir + '2019_ITSS_Statewide_Redacted.txt'
 ### END CONFIG ###
 
 stops = []
+# TODO: figure out encoding for text files, translate to something workable
+# e.g. fix line breaks, delimeters, encoding, etc.
+# TODO: replace row indices with field names
 # TODO: track agencies separately
 
 def load_data(apps,schema_editor,data_file):
     data_file = open(path_to_data_file)
     data_csv = csv.DictReader(data_file)
-
-
 
     for row in data_file:
         stop_obj = Stop(
