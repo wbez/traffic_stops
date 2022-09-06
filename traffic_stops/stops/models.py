@@ -56,3 +56,6 @@ class Stop(models.Model):
     PoliceDogStolenPropertyFound  = models.IntegerField()
     PoliceDogOtherContrabandFound  = models.IntegerField()
     PoliceDogDrugAmount  = models.BooleanField()
+
+
+# TODO: model for agencies
