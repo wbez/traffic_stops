@@ -27,7 +27,7 @@ def load_data(apps,schema_editor):
                         AgencyCode = row['AgencyCode'],
                         AgencyName = row['AgencyName'],
                         DateOfStop = row['DateOfStop'][0:10],
-                        TimeOfStop = row['TimeOfStop'],
+                        TimeOfStop = row['TimeOfStop'][0:4],
                         DurationOfStop = row['DurationOfStop'],
                         zipcode = row['ZIP'],
                         VehicleMake = row['VehicleMake'],
