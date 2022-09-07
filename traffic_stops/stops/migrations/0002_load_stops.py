@@ -17,11 +17,11 @@ stops = []
 # TODO: replace row indices with field names
 # TODO: track agencies separately
 
-def load_data(apps,schema_editor,data_file):
+def load_data(apps,schema_editor):
     data_file = open(path_to_data_file)
     data_csv = csv.DictReader(data_file,delimiter='~')
 
-    for row in data_file:
+    for row in data_csv:
         try:
             stop_obj = Stop(
                         AgencyCode = row['AgencyCode'],
@@ -43,7 +43,7 @@ def load_data(apps,schema_editor,data_file):
                         VehicleConsentGiven = row['VehicleConsentGiven'],
                         VehicleSearchConducted = row['VehicleSearchConducted'],
                         VehicleSearchConductedBy = row['VehicleSearchConductedBy'],
-                        VehicleContrabandFound = row['VehicleContrabandFound']
+                        VehicleContrabandFound = row['VehicleContrabandFound'],
                         VehicleDrugsFound = row['VehicleDrugsFound'],
                         VehicleDrugParaphernaliaFound = row['VehicleDrugParahernaliaFound'],
                         VehicleAlcoholFound = row['VehicleAlcoholFound'],
@@ -72,7 +72,7 @@ def load_data(apps,schema_editor,data_file):
                         PoliceDogVehicleSearched = row['PoliceDogVehicleSearched'],
                         PoliceDogContrabandFound = row['PoliceDogContrabandFound'],
                         PoliceDogDrugsFound = row['PoliceDogDrugsFound'],
-                        PoliceDogDrugParaphernaliaFound = row['PoliceDogDrugParahernaliaFound']
+                        PoliceDogDrugParaphernaliaFound = row['PoliceDogDrugParahernaliaFound'],
                         PoliceDogAlcoholFound = row['PoliceDogAlcoholFound'],
                         PoliceDogWeaponFound = row['PoliceDogWeaponFound'],
                         PoliceDogStolenPropertyFound = row['PoliceDogStolenPropertyFound'],
@@ -83,7 +83,7 @@ def load_data(apps,schema_editor,data_file):
 
         except Exception as e:
             print(e)
-            ipdb.set_trace()
+            #ipdb.set_trace()
 
     
     Stop.objects.bulk_create(stops)

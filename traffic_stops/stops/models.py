@@ -57,9 +57,9 @@ class Stop(models.Model):
     PoliceDogOtherContrabandFound  = models.IntegerField()
     PoliceDogDrugAmount  = models.BooleanField()
 
-
+'''
 class OldStop(models.Model):
-    AgencyName = models.CharField(max_length=100,null=True))
+    AgencyName = models.CharField(max_length=100,null=True)
     DateOfStop = models.DateField()
     TimeOfStop = models.TimeField()
     Location = models.TextField()
@@ -107,7 +107,7 @@ class OldStop(models.Model):
     ViolationsOrCharges = models.CharField(max_length=100,null=True)
 
 
-
+'''
 
 
 
