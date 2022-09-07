@@ -7,7 +7,7 @@ class Stop(models.Model):
     DateOfStop = models.DateField()
     TimeOfStop = models.TimeField()
     DurationOfStop = models.IntegerField() # minutes?
-    zipcode = models.IntegerField()
+    zipcode = models.CharField(max_length=100,null=True)
     VehicleMake = models.TextField()
     VehicleYear = models.IntegerField()
     DriversYearofBirth = models.IntegerField()
@@ -49,13 +49,13 @@ class Stop(models.Model):
     PoliceDogAlertIfSniffed  = models.IntegerField()
     PoliceDogVehicleSearched  = models.IntegerField()
     PoliceDogContrabandFound  = models.IntegerField()
-    PoliceDogDrugsFound  = models.BooleanField()
+    PoliceDogDrugsFound  = models.IntegerField()
     PoliceDogDrugParaphernaliaFound  = models.IntegerField()
     PoliceDogAlcoholFound  = models.IntegerField()
     PoliceDogWeaponFound  = models.IntegerField()
     PoliceDogStolenPropertyFound  = models.IntegerField()
     PoliceDogOtherContrabandFound  = models.IntegerField()
-    PoliceDogDrugAmount  = models.BooleanField()
+    PoliceDogDrugAmount  = models.IntegerField()
 
 '''
 class OldStop(models.Model):
