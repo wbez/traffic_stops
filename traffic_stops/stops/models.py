@@ -86,11 +86,17 @@ class OldStop(models.Model):
     ReasonForFriskOther = models.IntegerField()
     ReasonForFriskSpecifyOther = models.CharField(max_length=100,null=True)
     FriskLedToSearchBeyond = models.IntegerField()
-
-    ### Middle rows ###
-
-
-
+    SearchBeyondWasConducted = models.IntegerField()
+    SearchBeyondConductedBy = models.IntegerField()
+    ReasonForSearchBeyondDrugParaphernalia = models.IntegerField()
+    ReasonForSearchBeyondHardObject = models.IntegerField()
+    ReasonForSearchBeyondFirearm = models.IntegerField()
+    ReasonForSearchBeyondOtherWeapon = models.IntegerField()
+    ReasonForSearchBeyondOther = models.IntegerField()
+    ReasonForSearchBeyondSpecifyOther = models.CharField(max_length=100,null=True)
+    SearchBeyondFoundContraband = models.IntegerField()
+    SearchBeyondFoundDrugs = models.IntegerField()
+    SearchBeyondFoundDrugParaphernalia = models.IntegerField()
     SearchBeyondFoundAlcohol = models.IntegerField()
     SearchBeyondFoundWeapon = models.IntegerField()
     SearchBeyondFoundStolenProperty = models.IntegerField()
