@@ -26,7 +26,7 @@ def load_data(apps,schema_editor):
             stop_obj = Stop(
                         AgencyCode = row['AgencyCode'],
                         AgencyName = row['AgencyName'],
-                        DateOfStop = row['DateOfStop'],
+                        DateOfStop = row['DateOfStop'][0:10],
                         TimeOfStop = row['TimeOfStop'],
                         DurationOfStop = row['DurationOfStop'],
                         zipcode = row['ZIP'],
