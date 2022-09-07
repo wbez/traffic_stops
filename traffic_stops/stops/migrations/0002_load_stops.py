@@ -18,7 +18,7 @@ stops = []
 # TODO: track agencies separately
 
 def load_data(apps,schema_editor):
-    data_file = open(path_to_data_file)
+    data_file = open(path_to_data_file,encoding='latin-1') #TODO verify this encoding
     data_csv = csv.DictReader(data_file,delimiter='~')
 
     for row in data_csv:
@@ -45,7 +45,7 @@ def load_data(apps,schema_editor):
                         VehicleSearchConductedBy = row['VehicleSearchConductedBy'],
                         VehicleContrabandFound = row['VehicleContrabandFound'],
                         VehicleDrugsFound = row['VehicleDrugsFound'],
-                        VehicleDrugParaphernaliaFound = row['VehicleDrugParahernaliaFound'],
+                        VehicleDrugParaphernaliaFound = row['VehicleDrugParaphernaliaFound'],
                         VehicleAlcoholFound = row['VehicleAlcoholFound'],
                         VehicleWeaponFound = row['VehicleWeaponFound'],
                         VehicleStolenPropertyFound = row['VehicleStolenPropertyFound'],
@@ -72,7 +72,7 @@ def load_data(apps,schema_editor):
                         PoliceDogVehicleSearched = row['PoliceDogVehicleSearched'],
                         PoliceDogContrabandFound = row['PoliceDogContrabandFound'],
                         PoliceDogDrugsFound = row['PoliceDogDrugsFound'],
-                        PoliceDogDrugParaphernaliaFound = row['PoliceDogDrugParahernaliaFound'],
+                        PoliceDogDrugParaphernaliaFound = row['PoliceDogDrugParaphernaliaFound'],
                         PoliceDogAlcoholFound = row['PoliceDogAlcoholFound'],
                         PoliceDogWeaponFound = row['PoliceDogWeaponFound'],
                         PoliceDogStolenPropertyFound = row['PoliceDogStolenPropertyFound'],
