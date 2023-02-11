@@ -5,8 +5,9 @@ from traffic_stops.settings import BASE_DIR
 
 ### START CONFIG ###
 data_dir = str(BASE_DIR) + '/data/'
-data_filenames = [#'2020 Traffic Data Redacted.txt',
-                  #'2019_ITSS_Statewide_Redacted.txt',
+data_filenames = ['2021 Traffic Data Redacted.txt',
+                  '2020 Traffic Data Redacted.txt',
+                  '2019_ITSS_Statewide_Redacted.txt',
                   '2018 ITSS Data.txt',
                   '2017 ITSS Data.txt',
                   '2016 ITSS Data.txt',
@@ -48,12 +49,12 @@ def convert_date(date):
         import ipdb; ipdb.set_trace()
 
 
-def convert_time(time):
+def convert_time(time, row):
     try:
         return datetime.datetime.strptime(time,'%H:%M').time()
     except Exception as e:
         # seeing a lot of '12/30' which maybe we ought to str.replace('/',':')
-        print(time,e)
+        print(time,e,row)
 
 
 def convert_duration(duration):
@@ -65,13 +66,29 @@ def convert_duration(duration):
 
 def convert_int(value,counter):
     try:
-        return int(value)
+        return int(float(value))
     except Exception as e:
         print(counter,value,e)
 
+
+def get_header_assignments(data_csv,year):
+    """
+    inspect headers,
+    return dict
+    mapping row->db stop obj
+    """
+    pass
+
 def load_data(data_csv,year):
+    # keep track of each stop
     stop_objs = []
     counter = 1
+    
+    # handle inconsistent field names
+    agency_row_name = 'AgencyName' if 'AgencyName' in data_csv.fieldnames else 'Agency Name'
+    
+    header_assignments = header_assignments()
+
     for row in data_csv:
         row_date = row['DateOfStop'][0:10]
         row_date_formatted = convert_date(row_date)
@@ -79,7 +96,7 @@ def load_data(data_csv,year):
         # cleanup to handle imprecise slicing (hours can be single digits)
         if row_time[-1] == ':':
             row_time = row_time[:-1]
-        row_time_formatted = convert_time(row_time)
+        row_time_formatted = convert_time(row_time,row)
         row_duration = row['DurationOfStop']
         row_duration_formatted = convert_duration(row_duration)
         pk = int(year + str(counter))
@@ -92,11 +109,12 @@ def load_data(data_csv,year):
             if key in ['VehicleYear']:
                 row[key] = convert_int(row[key],counter)
 
+
         try:
             stop_obj = Stop(
                         pk = pk,
                         AgencyCode = row['AgencyCode'],
-                        AgencyName = row['AgencyName'],
+                        AgencyName = row[agency_row_name],
                         DateOfStop = row_date_formatted,
                         TimeOfStop = row_time_formatted,
                         DurationOfStop = row_duration_formatted,
