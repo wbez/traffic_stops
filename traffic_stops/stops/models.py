@@ -2,12 +2,14 @@ from django.db import models
 
 # Create your models here.
 class Stop(models.Model):
+    # 2012+ schema
     AgencyCode = models.TextField()
     AgencyName = models.CharField(max_length=100,null=True)
+    year = models.IntegerField(null=True) 
     DateOfStop = models.DateField(null=True)
     TimeOfStop = models.TimeField(null=True)
     DurationOfStop = models.CharField(max_length=99,null=True) # minutes?
-    zipcode = models.CharField(max_length=100,null=True)
+    ZIP = models.CharField(max_length=100,null=True)
     VehicleMake = models.TextField(null=True)
     VehicleYear = models.CharField(max_length=99,null=True)
     DriversYearofBirth = models.CharField(max_length=99,null=True)
@@ -57,7 +59,48 @@ class Stop(models.Model):
     PoliceDogOtherContrabandFound  = models.CharField(max_length=99,null=True)
     PoliceDogDrugAmount  = models.CharField(max_length=99,null=True)
 
+    #2007-2011
+    SearchConducted  = models.CharField(max_length=99,null=True)
+    VehicleSearchType = models.CharField(max_length=99,null=True) # need to add a derived field to reconcile this with 2012+ data
+    PassengersSearchType = models.CharField(max_length=99,null=True) # need to add derived field
+    DriverSearchType = models.CharField(max_length=99,null=True) # need to add derived field
+    ContrabandFound = models.CharField(max_length=99,null=True)
+    DrugsFound = models.CharField(max_length=99,null=True)
+    AlcoholFound = models.CharField(max_length=99,null=True)
+    ParaphernaliaFound = models.CharField(max_length=99,null=True)
+    WeaponFound = models.CharField(max_length=99,null=True)
+    StolenPropertyFound = models.CharField(max_length=99,null=True)
+    OtherContrabandFound = models.CharField(max_length=99,null=True)
+    DrugQuantity = models.CharField(max_length=99,null=True) # need to derive this to reconcile with 2012 via max()
+    ConsentSearchRequested = models.CharField(max_length=99,null=True)
+    WasConsentGranted = models.CharField(max_length=99,null=True)
+    WasConsentSearchPerformed = models.CharField(max_length=99,null=True)
+    WasConsentContrabandFound = models.CharField(max_length=99,null=True)
+    ConsentDrugsFound = models.CharField(max_length=99,null=True)
+    ConsentAlcoholFound = models.CharField(max_length=99,null=True)
+    ConsentParaphernaliaFound = models.CharField(max_length=99,null=True)
+    ConsentWeaponFound = models.CharField(max_length=99,null=True)
+    ConsentStolenPropertyFound = models.CharField(max_length=99,null=True)
+    ConsentOtherContrabandFound = models.CharField(max_length=99,null=True)
+    ConsentDrugQuantity = models.CharField(max_length=99,null=True)
+
+    # 2004-2006
+    TypeOfRoadway = models.CharField(max_length=99,null=True)
+    Passenger1SearchType = models.CharField(max_length=99,null=True)
+    Passenger2SearchType = models.CharField(max_length=99,null=True)
+    Passenger3SearchType = models.CharField(max_length=99,null=True)
+    Passenger4SearchType = models.CharField(max_length=99,null=True)
+    Passenger5SearchType = models.CharField(max_length=99,null=True)
+    Passenger6SearchType = models.CharField(max_length=99,null=True)
+
+
+
+
+
+
 '''
+is this the pedestrian stop schema?
+
 class OldStop(models.Model):
     AgencyName = models.CharField(max_length=100,null=True)
     DateOfStop = models.DateField()
