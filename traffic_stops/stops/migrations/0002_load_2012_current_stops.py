@@ -53,7 +53,7 @@ def load_data(data_csv,year):
         # cleanup to handle imprecise slicing (hours can be single digits)
         if row_time[-1] == ':':
             row_time = row_time[:-1]
-        row_time_formatted = convert_time(row_time,row)
+        row_time_formatted = convert_time(row_time,counter)
         row_duration = row['DurationOfStop']
         row_duration_formatted = convert_duration(row_duration)
         pk = int(year + str(counter))

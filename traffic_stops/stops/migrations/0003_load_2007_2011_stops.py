@@ -4,7 +4,7 @@ from stops.models import Stop
 import os, csv, datetime, dateparser, ipdb
 from traffic_stops.settings import BASE_DIR, LOADER_DEBUG
 from stops.utils.loaders import convert_date, convert_time, \
-        convert_int, convert_duration, get_year
+        convert_int, convert_duration, get_year, convert_time_ampm
 
 
 ### START CONFIG ###
@@ -38,6 +38,7 @@ def load_data(data_csv,year):
     # keep track of each stop
     stop_objs = []
     counter = 1
+    pk = None
     
     # handle inconsistent field names
     agency_row_name = 'AgencyName' if 'AgencyName' in data_csv.fieldnames else 'Agency Name'
@@ -47,32 +48,39 @@ def load_data(data_csv,year):
     #header_assignments = header_assignments()
 
     for row in data_csv:
-        # date, time splitting starts in 2011
-        if year == '2011':
-            row_date = row['DateOfStop']
-            row_time = row['TimeOfStop']
-        else:
-            row_date = row['DateAndTimeOfStop'].split()[0]
-            row_date_formatted = convert_date(row_date)
-            row_time = ' '.join(row['DateAndTimeOfStop'].split()[1:])
-            # cleanup to handle imprecise slicing (hours can be single digits)
-            if row_time[-1] == ':':
-                row_time = row_time[:-1]
-        row_time_formatted = convert_time(row_time,row)
-        row_duration = row['DurationOfStop']
-        row_duration_formatted = convert_duration(row_duration)
-        pk = int(year + str(counter))
-        
-        # cleanup
-        for key in row:
-            if row[key] in ('#REF!',''):
-                row[key] = None
-            # convert ints to int or none
-            if key in ['VehicleYear']:
-                row[key] = convert_int(row[key],counter)
-
-
         try:
+            # date, time splitting starts in 2011
+            if year == '2011':
+                row_date_formatted = convert_date(row['DateOfStop'])
+                row_time = row['TimeOfStop']
+                row_time_formatted = convert_time(row_time, counter)
+            else:
+                row_date = row['DateAndTimeOfStop'].split()[0]
+                row_date_formatted = convert_date(row_date)
+                row_time = ' '.join(row['DateAndTimeOfStop'].split()[1:]) if row['DateAndTimeOfStop'].split() else None
+                # cleanup to handle imprecise slicing (hours can be single digits)
+                if row_time[-1] == ':':
+                    row_time = row_time[:-1]
+                # AM/PM just in these two years
+                if year in ('2009', '2007'):
+                    row_time_formatted = convert_time_ampm(row_time, counter)
+                # for 2010, 2008 it was military time
+                else:
+                    row_time_formatted = convert_time(row_time,counter)
+            
+            row_duration = row['DurationOfStop']
+            row_duration_formatted = convert_duration(row_duration)
+            pk = int(year + str(counter))
+            
+            # cleanup
+            for key in row:
+                if row[key] in ('#REF!',''):
+                    row[key] = None
+                # convert ints to int or none
+                if key in ['VehicleYear']:
+                    row[key] = convert_int(row[key],counter)
+    
+
             stop_obj = Stop(
                         pk = pk,
                         AgencyCode = row['AgencyCode'],
@@ -81,7 +89,6 @@ def load_data(data_csv,year):
                         DateOfStop = row_date_formatted,
                         TimeOfStop = row_time_formatted,
                         DurationOfStop = row_duration_formatted,
-                        ZIP = row[zipcode_row_name],
                         VehicleMake = row['VehicleMake'],
                         VehicleYear = row['VehicleYear'],
                         DriversYearofBirth = row[driver_yob_row_name],
@@ -115,6 +122,9 @@ def load_data(data_csv,year):
                         ConsentOtherContrabandFound = row['ConsentOtherContrabandFound'],
                         ConsentDrugQuantity = row['ConsentDrugQuantity'],
                 )
+            # ZIP codes came out in 2010 I guess
+            if year in ('2010','2011'):
+                stop_obj.ZIP = row[zipcode_row_name]
             stop_objs.append(stop_obj)
 
         except Exception as e:

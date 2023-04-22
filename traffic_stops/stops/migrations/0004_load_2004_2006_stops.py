@@ -4,7 +4,7 @@ from stops.models import Stop
 import os, csv, datetime, dateparser, ipdb
 from traffic_stops.settings import BASE_DIR, LOADER_DEBUG
 from stops.utils.loaders import convert_date, convert_time, \
-        convert_int, get_year
+        convert_int, get_year, convert_time_ampm
 
 
 ### START CONFIG ###
@@ -48,7 +48,7 @@ def load_data(data_csv,year):
         row_date = row['DateAndTimeOfStop'].split()[0]
         row_date_formatted = convert_date(row_date)
         row_time = ' '.join(row['DateAndTimeOfStop'].split()[1:])
-        row_time_formatted = convert_time(row_time,row)
+        row_time_formatted = convert_time_ampm(row_time,counter)
         pk = int(year + str(counter))
         
         # cleanup
@@ -66,8 +66,10 @@ def load_data(data_csv,year):
                         AgencyName = row['AgencyName'],
                         AgencyCode = row['AgencyCode'],
                         year = get_year(row_date_formatted),
-                        DateOfStop = row_date_formatted,
-                        TimeOfStop = row_time_formatted,
+                        #DateOfStop = row_date_formatted,
+                        #TimeOfStop = row_time_formatted,
+                        DateOfStop = row_date,
+                        TimeOfStop = row_time,
                         VehicleMake = row['VehicleMake'],
                         VehicleYear = row['VehicleYear'],
                         DriversYearofBirth = row['DriverYearOfBirth'],

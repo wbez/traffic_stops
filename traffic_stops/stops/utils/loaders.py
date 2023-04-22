@@ -47,12 +47,19 @@ def convert_date(date):
         import ipdb; ipdb.set_trace()
 
 
-def convert_time(time, row):
+def convert_time(time, row_counter):
     try:
         return datetime.datetime.strptime(time,'%H:%M').time()
     except Exception as e:
         # seeing a lot of '12/30' which maybe we ought to str.replace('/',':')
-        print(time,e,row)
+        print('row:',row_counter,'time:',time,'error',e)
+
+
+def convert_time_ampm(time, row_counter):
+    try:
+        return datetime.datetime.strptime(time,'%I:%M:%S %p').time()
+    except Exception as e:
+        print('row:',row_counter,'time:',time,'error',e)
 
 
 def convert_duration(duration):
