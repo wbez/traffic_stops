@@ -1,5 +1,10 @@
 from django.db import models
 
+# for checking if searches match list of true values
+trues = ['1','1.00','Yes','True']
+# TODO: standardize values
+
+
 # Create your models here.
 class Stop(models.Model):
     # 2012+ schema
@@ -93,7 +98,113 @@ class Stop(models.Model):
     Passenger5SearchType = models.CharField(max_length=99,null=True)
     Passenger6SearchType = models.CharField(max_length=99,null=True)
 
+    # summary fields
+    driver_race = models.CharField(max_length=20,null=True)
+    search_conducted = models.BooleanField(null=True)
+    search_hit = models.BooleanField(null=True)
+    consent_search_requested = models.BooleanField(null=True)
+    consent_search_conducted = models.BooleanField(null=True)
+    dog_sniff = models.BooleanField(null=True)
+    dog_search_conducted = models.BooleanField(null=True)
+    dog_search_hit = models.BooleanField(null=True)
+    outcome = models.CharField(max_length=99,null=True)
 
+    # summary field methods
+    def get_driver_race(self):
+        if self.DriverRace in ('Caucasian','1','1.00'):
+            return 'White'
+        elif self.DriverRace in ('African American','2','2.00'):
+            return 'Black'
+        elif self.DriverRace in ('Native American/Alaskan','3','3.00'):
+            return 'Native American'
+        elif self.DriverRace in ('Hispanic','4','4.00'):
+            return 'Hispanic'
+        # note that Asian / PI split up in later years, so now it's difficult to compare across time
+        elif self.DriverRace in ('Asian/Pacific Islander','5','5.00'):
+            return 'Asian'
+        elif self.DriverRace in ('6','6.00'):
+            return 'Native Hawaiian/Pacific Islander'
+
+    def get_search_conducted(self):
+        return self.VehicleSearchConducted in trues \
+            or self.DriverSearchConducted in trues \
+            or self.PassengerSearchConducted in trues \
+            or self.SearchConducted in trues
+
+    def get_search_hit(self):
+        # only count the hit if there was a search?
+        return self.get_search_conducted()\
+            and (\
+                # note there could be weird mix of vehicle/pass searches/hits
+                self.VehicleContrabandFound in trues\
+                or self.VehicleDrugsFound in trues\
+                or self.VehicleDrugParaphernaliaFound in trues\
+                or self.VehicleAlcoholFound in trues\
+                or self.VehicleWeaponFound in trues\
+                or self.VehicleStolenPropertyFound in trues\
+                or self.VehicleOtherContrabandFound in trues\
+                or self.DriverPassengerDrugsFound in trues\
+                or self.DriverPassengerDrugParaphernaliaFound in trues\
+                or self.DriverPassengerAlcoholFound in trues\
+                or self.DriverPassengerWeaponFound in trues\
+                or self.DriverPassengerStolenPropertyFound in trues\
+                or self.DriverPassengerOtherContrabandFound in trues\
+                or self.DrugsFound in trues\
+                or self.AlcoholFound in trues\
+                or self.WeaponFound in trues\
+                or self.ParaphernaliaFound in trues\
+                or self.StolenPropertyFound in trues\
+                or self.OtherContrabandFound in trues\
+                # consent search hits
+                or self.get_consent_search_hit()
+                # dog search hits
+                or self.get_dog_search_hit()
+                )
+
+    def get_consent_search_requested(self):
+        return self.VehicleConsentSearchRequested in trues\
+            or self.DriverConsentSearchRequested in trues\
+            or self.PassengerConsentSearchRequested in trues\
+            or self.ConsentSearchRequested in trues
+
+
+    def get_consent_search_conducted(self):
+        return self.WasConsentSearchPerformed in trues\
+            or self.VehicleConsentGiven in trues\
+            or self.DriverConsentGiven in trues\
+            or self.PassengerConsentGiven in trues
+
+    def get_consent_search_hit(self):
+        return self.WasConsentContrabandFound in trues\
+                or self.ConsentDrugsFound in trues\
+                or self.ConsentAlcoholFound in trues\
+                or self.ConsentParaphernaliaFound in trues\
+                or self.ConsentWeaponFound in trues\
+                or self.ConsentStolenPropertyFound in trues\
+                or self.ConsentOtherContrabandFound in trues
+
+    def get_dog_sniff(self):
+        return self.PoliceDogPerformSniffOfVehicle in trues
+
+    def get_dog_search_conducted(self):
+        return self.PoliceDogVehicleSearched in trues
+
+    def get_dog_search_hit(self):
+        return self.PoliceDogContrabandFound in trues\
+            or self.PoliceDogDrugsFound in trues\
+            or self.PoliceDogDrugParaphernaliaFound in trues\
+            or self.PoliceDogAlcoholFound in trues\
+            or self.PoliceDogWeaponFound in trues\
+            or self.PoliceDogStolenPropertyFound in trues\
+            or self.PoliceDogOtherContrabandFound in trues
+
+    def get_outcome(self):
+        if self.ResultOfStop in ('1','1.00','Citation'):
+            return 'Citation'
+        elif self.ResultOfStop in ('2','2.00','Written Warning'):
+            return 'Written Warning'
+        elif self.ResultOfStop in ('3','3.00','Verbal Warning'):
+            return 'Verbal Warning'
 
 
 
