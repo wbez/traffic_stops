@@ -5,12 +5,27 @@ trues = ['1','1.00','Yes','True']
 # TODO: standardize values
 
 
+class Agency(models.Model):
+    class Meta:
+        db_table = 'agencies'
+
+    name = models.CharField(max_length=99,null=True)
+    code = models.TextField(max_length=5,null=True)
+    fips = models.CharField(max_length=7,null=True)
+
+
 # Create your models here.
 class Stop(models.Model):
+    # metadata
+    class Meta:
+        db_table = 'stops'
+    year = models.IntegerField(null=True) 
+    record_ref = models.CharField(max_length=19)
+
     # 2012+ schema
     AgencyCode = models.TextField()
     AgencyName = models.CharField(max_length=100,null=True)
-    year = models.IntegerField(null=True) 
+    Agency = models.ForeignKey(Agency,null=True,on_delete=models.SET_NULL)
     DateOfStop = models.DateField(null=True)
     TimeOfStop = models.TimeField(null=True)
     DurationOfStop = models.CharField(max_length=99,null=True) # minutes?
@@ -209,6 +224,9 @@ class Stop(models.Model):
 
 
 
+
+
+
 '''
 is this the pedestrian stop schema?
 
@@ -259,10 +277,6 @@ class OldStop(models.Model):
     WarningCitationIssued = models.CharField(max_length=99,)
     Arrest = models.CharField(max_length=99,)
     ViolationsOrCharges = models.CharField(max_length=100,null=True)
-
-
 '''
 
 
-
-# TODO: model for agencies

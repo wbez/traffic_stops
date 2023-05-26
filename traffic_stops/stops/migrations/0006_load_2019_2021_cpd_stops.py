@@ -3,7 +3,8 @@ from stops.models import Stop
 import os, csv, datetime, dateparser, ipdb
 from traffic_stops.settings import BASE_DIR, LOADER_DEBUG
 from stops.utils.loaders import convert_date, convert_time, \
-        convert_int, convert_duration, get_year
+        convert_int, convert_duration, get_year, \
+        get_max_stop_id, make_record_ref
 from django.db import connection
 
 
@@ -12,6 +13,8 @@ data_dir = str(BASE_DIR) + '/data/'
 data_filenames = ['2019_ITSS_CPD_redacted.txt',
                   '2020_cpd_traffic.csv',
                   '2021_cpd_traffic.csv']
+agency_code = '13194'
+agency_name = 'CHICAGO POLICE'
 ### END CONFIG ###
 
 
@@ -35,8 +38,9 @@ def load_files(apps,schema_editor):
 def load_data(data_csv,year):
     # keep track of each stop
     stop_objs = []
-    counter = connection.cursor().execute("select max(id) from stops_stop where year = " + str(year)).fetchone()[0]
+    counter = 0
 
+    next_stop_id = get_max_stop_id() + 1
 
     for row in data_csv:
         counter += 1
@@ -49,7 +53,6 @@ def load_data(data_csv,year):
         row_time_formatted = convert_time(row_time,counter)
         row_duration = row['DURATION']
         row_duration_formatted = convert_duration(row_duration)
-        pk = int(year + str(counter))
         
         # cleanup
         for key in row:
@@ -62,9 +65,8 @@ def load_data(data_csv,year):
 
         try:
             stop_obj = Stop(
-                        pk = pk,
-                        AgencyCode = '13194',
-                        AgencyName = 'CHICAGO POLICE',
+                        AgencyCode = agency_code,
+                        AgencyName = agency_name,
                         year = year,
                         DateOfStop = row_date_formatted,
                         TimeOfStop = row_time_formatted,
@@ -122,7 +124,7 @@ def load_data(data_csv,year):
             stop_objs.append(stop_obj)
 
         except Exception as e:
-            print('pk:',pk)
+            print('counter:',counter)
             print('error:',e)
             #ipdb.set_trace()
 

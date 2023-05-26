@@ -4,7 +4,8 @@ from stops.models import Stop
 import os, csv, datetime, dateparser, ipdb
 from traffic_stops.settings import BASE_DIR, LOADER_DEBUG
 from stops.utils.loaders import convert_date, convert_time, \
-        convert_int, get_year, convert_time_ampm
+        convert_int, get_year, convert_time_ampm, \
+        get_max_stop_id, make_record_ref
 from django.db import connection
 
 
@@ -35,12 +36,14 @@ def load_files(apps,schema_editor):
 def load_data(data_csv,year,filename):
     # keep track of each stop
     stop_objs = []
+    counter = 0 
     # pick up where we left off
-    counter = connection.cursor().execute("select max(id) from stops_stop where year = 2007").fetchone()[0]
+    next_stop_id = get_max_stop_id() + 1
 
     for row in data_csv:
+        # increment
         counter += 1
-        pk = counter
+        next_stop_id += 1
         
         # cleanup
         for key in row:
@@ -59,10 +62,10 @@ def load_data(data_csv,year,filename):
                 #row_time_formatted = convert_time_ampm(row_time,counter)
 
                 stop_obj = Stop(
-                            pk = pk,
                             AgencyName = row['AgencyName'],
                             AgencyCode = row['AgencyCode'],
                             year = year,
+                            record_ref = make_record_ref(year,counter,'CPD'),
                             DateOfStop = row_date_formatted,
                             TimeOfStop = row_time,
                             VehicleMake = row['Vehicle Make'],
@@ -92,10 +95,10 @@ def load_data(data_csv,year,filename):
                 #row_time_formatted = convert_time_ampm(row_time,counter)
 
                 stop_obj = Stop(
-                            pk = pk,
                             AgencyName = row['AgencyName'],
                             AgencyCode = row['AgencyCode'],
                             year = year,
+                            record_ref = make_record_ref(year,counter,'CPD'),
                             DateOfStop = row_date_formatted,
                             TimeOfStop = row_time,
                             VehicleMake = row['Vehicle Make'],
@@ -139,7 +142,6 @@ def load_data(data_csv,year,filename):
                 row_time = ' '.join(row['DateStop TimeStop'].split()[1:])
 
                 stop_obj = Stop(
-                            pk = pk,
                             AgencyName = row['AgencyName'],
                             AgencyCode = row['AgencyCode'],
                             year = year,
@@ -182,7 +184,7 @@ def load_data(data_csv,year,filename):
             stop_objs.append(stop_obj)
 
         except Exception as e:
-            print('pk:',pk)
+            print('counter:',counter)
             print('error:',e)
             #ipdb.set_trace()
 
@@ -196,7 +198,7 @@ def load_data(data_csv,year,filename):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('stops', '0004_load_2004_2006_stops'),
+        ('stops', '0004_load_2012_current_stops'),
     ]
 
     operations = [

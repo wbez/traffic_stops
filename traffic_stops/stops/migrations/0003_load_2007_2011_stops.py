@@ -4,16 +4,17 @@ from stops.models import Stop
 import os, csv, datetime, dateparser, ipdb
 from traffic_stops.settings import BASE_DIR, LOADER_DEBUG
 from stops.utils.loaders import convert_date, convert_time, \
-        convert_int, convert_duration, get_year, convert_time_ampm
-
+        convert_int, convert_duration, get_year, convert_time_ampm, \
+        make_record_ref, get_max_stop_id
 
 ### START CONFIG ###
 data_dir = str(BASE_DIR) + '/data/'
-data_filenames = ['2011 ITSS Data.txt',
-        '2010 ITSS Data.txt',
-        '2009 Raw Data Statewide.txt',
-        '2008 Raw Data Statewide.txt',
+data_filenames = [
         '2007 Raw Data Statewide without Chicago.txt',
+        '2008 Raw Data Statewide.txt',
+        '2009 Raw Data Statewide.txt',
+        '2010 ITSS Data.txt',
+        '2011 ITSS Data.txt',
         ]
 ### END CONFIG ###
 
@@ -38,7 +39,7 @@ def load_data(data_csv,year):
     # keep track of each stop
     stop_objs = []
     counter = 1
-    pk = None
+    next_stop_id = get_max_stop_id() + 1
     
     # handle inconsistent field names
     agency_row_name = 'AgencyName' if 'AgencyName' in data_csv.fieldnames else 'Agency Name'
@@ -70,7 +71,6 @@ def load_data(data_csv,year):
             
             row_duration = row['DurationOfStop']
             row_duration_formatted = convert_duration(row_duration)
-            pk = int(year + str(counter))
             
             # cleanup
             for key in row:
@@ -80,12 +80,13 @@ def load_data(data_csv,year):
                 if key in ['VehicleYear']:
                     row[key] = convert_int(row[key],counter)
     
+            year = get_year(row_date_formatted)
 
             stop_obj = Stop(
-                        pk = pk,
+                        record_ref = make_record_ref(year,counter),
+                        year = year,
                         AgencyCode = row['AgencyCode'],
                         AgencyName = row[agency_row_name],
-                        year = get_year(row_date_formatted),
                         DateOfStop = row_date_formatted,
                         TimeOfStop = row_time_formatted,
                         DurationOfStop = row_duration_formatted,
@@ -128,10 +129,11 @@ def load_data(data_csv,year):
             stop_objs.append(stop_obj)
 
         except Exception as e:
-            print('pk:',pk)
+            print('counter:',counter)
             print('error:',e)
 
         counter += 1
+        next_stop_id += 1
         if LOADER_DEBUG:
             if counter > 10:
                 break
@@ -142,7 +144,7 @@ def load_data(data_csv,year):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('stops', '0002_load_2012_current_stops'),
+        ('stops', '0002_load_2004_2006_stops'),
     ]
 
     operations = [

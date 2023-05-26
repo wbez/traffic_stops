@@ -1,6 +1,7 @@
 import csv, pprint
 from traffic_stops.settings import BASE_DIR 
 import datetime, dateparser
+from stops.models import Stop
 
 ### START CONFIG ###
 data_dir = str(BASE_DIR) + '/data/'
@@ -80,3 +81,22 @@ def get_year(date_obj):
     # TODO optimize this by taking year string for years where
     # format = YYYY-MM-DD
     return date_obj.strftime('%Y')
+
+
+def get_max_stop_id():
+    if Stop.objects.first():
+        return Stop.objects.last().id
+    else:
+        return 0
+
+
+def make_record_ref(year,counter,agency=None):
+    """
+    include the year, counter
+    and agency name if needed
+    to generate a record ref num
+    """
+    if not agency:
+        return '-'.join([str(year),str(counter)])
+    else:
+        return '-'.join([str(year),agency,str(counter)])
