@@ -25,13 +25,15 @@ class Stop(models.Model):
     # 2012+ schema
     AgencyCode = models.TextField()
     AgencyName = models.CharField(max_length=100,null=True)
-    Agency = models.ForeignKey(Agency,null=True,on_delete=models.SET_NULL)
+    agency = models.ForeignKey(Agency,null=True,on_delete=models.SET_NULL)
     DateOfStop = models.DateField(null=True)
     TimeOfStop = models.TimeField(null=True)
+    # TODO: int/float
     DurationOfStop = models.CharField(max_length=99,null=True) # minutes?
     ZIP = models.CharField(max_length=100,null=True)
     VehicleMake = models.TextField(null=True)
     VehicleYear = models.CharField(max_length=99,null=True)
+    # TODO: int/float
     DriversYearofBirth = models.CharField(max_length=99,null=True)
     DriverSex = models.CharField(max_length=99,null=True)
     DriverRace = models.CharField(max_length=99,null=True)
@@ -50,6 +52,7 @@ class Stop(models.Model):
     VehicleWeaponFound  = models.CharField(max_length=99,null=True)
     VehicleStolenPropertyFound  = models.CharField(max_length=99,null=True)
     VehicleOtherContrabandFound  = models.CharField(max_length=99,null=True)
+    # TODO: float
     VehicleDrugAmount  = models.CharField(max_length=99,null=True)
     DriverConsentSearchRequested  = models.CharField(max_length=99,null=True)
     DriverConsentGiven  = models.CharField(max_length=99,null=True)
@@ -66,6 +69,7 @@ class Stop(models.Model):
     DriverPassengerWeaponFound  = models.CharField(max_length=99,null=True)
     DriverPassengerStolenPropertyFound  = models.CharField(max_length=99,null=True)
     DriverPassengerOtherContrabandFound  = models.CharField(max_length=99,null=True)
+    # TODO: float
     DriverPassengerDrugAmount  = models.CharField(max_length=99,null=True)
     PoliceDogPerformSniffOfVehicle  = models.CharField(max_length=99,null=True)
     PoliceDogAlertIfSniffed  = models.CharField(max_length=99,null=True)
@@ -77,6 +81,7 @@ class Stop(models.Model):
     PoliceDogWeaponFound  = models.CharField(max_length=99,null=True)
     PoliceDogStolenPropertyFound  = models.CharField(max_length=99,null=True)
     PoliceDogOtherContrabandFound  = models.CharField(max_length=99,null=True)
+    # TODO: float
     PoliceDogDrugAmount  = models.CharField(max_length=99,null=True)
 
     #2007-2011
@@ -91,6 +96,7 @@ class Stop(models.Model):
     WeaponFound = models.CharField(max_length=99,null=True)
     StolenPropertyFound = models.CharField(max_length=99,null=True)
     OtherContrabandFound = models.CharField(max_length=99,null=True)
+    # TODO: float
     DrugQuantity = models.CharField(max_length=99,null=True) # need to derive this to reconcile with 2012 via max()
     ConsentSearchRequested = models.CharField(max_length=99,null=True)
     WasConsentGranted = models.CharField(max_length=99,null=True)
@@ -102,6 +108,7 @@ class Stop(models.Model):
     ConsentWeaponFound = models.CharField(max_length=99,null=True)
     ConsentStolenPropertyFound = models.CharField(max_length=99,null=True)
     ConsentOtherContrabandFound = models.CharField(max_length=99,null=True)
+    # TODO: float
     ConsentDrugQuantity = models.CharField(max_length=99,null=True)
 
     # 2004-2006

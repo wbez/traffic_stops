@@ -123,7 +123,7 @@ class Migration(migrations.Migration):
                 ('dog_search_conducted', models.BooleanField(null=True)),
                 ('dog_search_hit', models.BooleanField(null=True)),
                 ('outcome', models.CharField(max_length=99, null=True)),
-                ('Agency', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='stops.agency')),
+                ('agency', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='stops.agency')),
             ],
             options={
                 'db_table': 'stops',
