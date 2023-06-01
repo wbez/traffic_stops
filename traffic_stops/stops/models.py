@@ -13,6 +13,20 @@ class Agency(models.Model):
     code = models.TextField(max_length=5,null=True)
     fips = models.CharField(max_length=7,null=True)
 
+class AgencyData(models.Model):
+    """
+    this table allows us to store
+    agency-level data points
+    without schema migrations
+    """
+    class Meta:
+        db_table = 'agency_data'
+    agency = models.ForeignKey(Agency,on_delete=models.CASCADE)
+    agency_name = models.CharField(max_length=99)
+    year = models.CharField(max_length=20,null=True)
+    metric = models.CharField(max_length=99)
+    value = models.CharField(max_length=99,null=True)
+    rank = models.IntegerField(null=True)
 
 # Create your models here.
 class Stop(models.Model):
