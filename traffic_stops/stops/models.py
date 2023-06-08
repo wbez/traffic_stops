@@ -154,6 +154,7 @@ class Stop(models.Model):
         elif self.DriverRace in ('Native American/Alaskan','3','3.00'):
             return 'Native American'
         elif self.DriverRace in ('Hispanic','4','4.00'):
+            # TODO return Latino
             return 'Hispanic'
         # note that Asian / PI split up in later years, so now it's difficult to compare across time
         elif self.DriverRace in ('Asian/Pacific Islander','5','5.00'):
