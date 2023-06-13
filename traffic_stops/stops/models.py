@@ -11,7 +11,23 @@ class Agency(models.Model):
 
     name = models.CharField(max_length=99,null=True)
     code = models.TextField(max_length=5,null=True)
-    fips = models.CharField(max_length=7,null=True)
+    # for census data
+    geoid = models.CharField(max_length=7,null=True)
+    total_pop = models.IntegerField(null=True)
+    white_nh = models.IntegerField(null=True)
+    black_nh = models.IntegerField(null=True)
+    aian_nh = models.IntegerField(null=True)
+    asian_nh = models.IntegerField(null=True)
+    other_nh = models.IntegerField(null=True)
+    two_or_more_nh = models.IntegerField(null=True)
+    white_h = models.IntegerField(null=True)
+    black_h = models.IntegerField(null=True)
+    aian_h = models.IntegerField(null=True)
+    asian_h = models.IntegerField(null=True)
+    other_h = models.IntegerField(null=True)
+    two_or_more_h = models.IntegerField(null=True)
+
+
 
 class AgencyData(models.Model):
     """

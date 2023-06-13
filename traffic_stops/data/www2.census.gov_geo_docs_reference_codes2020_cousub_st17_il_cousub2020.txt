@@ -1,0 +1,1709 @@
+STATE|STATEFP|COUNTYFP|COUNTYNAME|COUSUBFP|COUSUBNS|COUSUBNAME|CLASSFP|FUNCSTAT
+IL|17|001|Adams County|05742|00428668|Beverly township|T1|A
+IL|17|001|Adams County|10019|00428741|Burton township|T1|A
+IL|17|001|Adams County|10890|00428754|Camp Point township|T1|A
+IL|17|001|Adams County|14780|00428817|Clayton township|T1|A
+IL|17|001|Adams County|15859|00428834|Columbus township|T1|A
+IL|17|001|Adams County|16015|00428836|Concord township|T1|A
+IL|17|001|Adams County|23412|00428956|Ellington township|T1|A
+IL|17|001|Adams County|25258|00428989|Fall Creek township|T1|A
+IL|17|001|Adams County|29288|00429053|Gilmer township|T1|A
+IL|17|001|Adams County|35957|00429143|Honey Creek township|T1|A
+IL|17|001|Adams County|36295|00429151|Houston township|T1|A
+IL|17|001|Adams County|39220|00429198|Keene township|T1|A
+IL|17|001|Adams County|43146|00429253|Liberty township|T1|A
+IL|17|001|Adams County|43458|00429257|Lima township|T1|A
+IL|17|001|Adams County|45746|00422226|McKee township|T1|A
+IL|17|001|Adams County|48203|00429351|Melrose township|T1|A
+IL|17|001|Adams County|48320|00429353|Mendon township|T1|A
+IL|17|001|Adams County|53624|00429455|Northeast township|T1|A
+IL|17|001|Adams County|58278|00429536|Payson township|T1|A
+IL|17|001|Adams County|62380|00429611|Quincy township|T5|B
+IL|17|001|Adams County|63550|00429629|Richfield township|T1|A
+IL|17|001|Adams County|64408|00429646|Riverside township|T1|A
+IL|17|001|Adams County|77057|00429857|Ursa township|T1|A
+IL|17|003|Alexander County|90576|01928455|Cache precinct|Z1|N
+IL|17|003|Alexander County|90612|01928457|Cairo precinct|Z1|N
+IL|17|003|Alexander County|91980|01928563|McClure precinct|Z1|N
+IL|17|003|Alexander County|92304|01928583|Olive Branch precinct|Z1|N
+IL|17|003|Alexander County|93114|01928642|Sandusky precinct|Z1|N
+IL|17|003|Alexander County|93402|01928658|Tamms precinct|Z1|N
+IL|17|003|Alexander County|93420|01928659|Thebes precinct|Z1|N
+IL|17|005|Bond County|09694|00428736|Burgess township|T1|A
+IL|17|005|Bond County|12112|00428780|Central township|T1|A
+IL|17|005|Bond County|40741|00429220|Lagrange township|T1|A
+IL|17|005|Bond County|49321|00429368|Mills township|T1|A
+IL|17|005|Bond County|51297|00429412|Mulberry Grove township|T1|A
+IL|17|005|Bond County|55730|00429484|Old Ripley township|T1|A
+IL|17|005|Bond County|60586|00429579|Pleasant Mound township|T1|A
+IL|17|005|Bond County|69641|00429749|Shoal Creek township|T1|A
+IL|17|005|Bond County|74418|00429823|Tamalco township|T1|A
+IL|17|007|Boone County|05105|00428656|Belvidere township|T1|A
+IL|17|007|Boone County|07302|00427934|Bonus township|T1|A
+IL|17|007|Boone County|07328|00428694|Boone township|T1|A
+IL|17|007|Boone County|10435|00428749|Caledonia township|T1|A
+IL|17|007|Boone County|26441|00429007|Flora township|T1|A
+IL|17|007|Boone County|42951|00429247|LeRoy township|T1|A
+IL|17|007|Boone County|46318|00429315|Manchester township|T1|A
+IL|17|007|Boone County|61158|00429591|Poplar Grove township|T1|A
+IL|17|007|Boone County|71578|00429783|Spring township|T1|A
+IL|17|009|Brown County|09291|00428729|Buckhorn township|T1|A
+IL|17|009|Brown County|16262|00428841|Cooperstown township|T1|A
+IL|17|009|Brown County|23308|00428954|Elkhorn township|T1|A
+IL|17|009|Brown County|42561|00429239|Lee township|T1|A
+IL|17|009|Brown County|49685|00429377|Missouri township|T1|A
+IL|17|009|Brown County|51167|00429409|Mount Sterling township|T1|A
+IL|17|009|Brown County|58330|00429538|Pea Ridge township|T1|A
+IL|17|009|Brown County|64187|00429644|Ripley township|T1|A
+IL|17|009|Brown County|77733|00429869|Versailles township|T1|A
+IL|17|011|Bureau County|02076|00428599|Arispie township|T1|A
+IL|17|011|Bureau County|05430|00428661|Berlin township|T1|A
+IL|17|011|Bureau County|09668|00428735|Bureau township|T1|A
+IL|17|011|Bureau County|14598|00428814|Clarion township|T1|A
+IL|17|011|Bureau County|16028|00428837|Concord township|T1|A
+IL|17|011|Bureau County|20539|00428908|Dover township|T1|A
+IL|17|011|Bureau County|24790|00428985|Fairfield township|T1|A
+IL|17|011|Bureau County|30146|00429057|Gold township|T1|A
+IL|17|011|Bureau County|31602|00429081|Greenville township|T1|A
+IL|17|011|Bureau County|32265|00429097|Hall township|T1|A
+IL|17|011|Bureau County|37413|00429169|Indiantown township|T1|A
+IL|17|011|Bureau County|41807|00429227|La Moille township|T1|A
+IL|17|011|Bureau County|42665|00429243|Leepertown township|T1|A
+IL|17|011|Bureau County|45928|00429306|Macon township|T1|A
+IL|17|011|Bureau County|46435|00429318|Manlius township|T1|A
+IL|17|011|Bureau County|49438|00429371|Milo township|T1|A
+IL|17|011|Bureau County|49529|00429373|Mineral township|T1|A
+IL|17|011|Bureau County|52012|00429426|Neponset township|T1|A
+IL|17|011|Bureau County|55392|00429480|Ohio township|T1|A
+IL|17|011|Bureau County|61912|00429605|Princeton township|T1|A
+IL|17|011|Bureau County|68562|00429727|Selby township|T1|A
+IL|17|011|Bureau County|78539|00429887|Walnut township|T1|A
+IL|17|011|Bureau County|80268|00429915|Westfield township|T1|A
+IL|17|011|Bureau County|81009|00429924|Wheatland township|T1|A
+IL|17|011|Bureau County|83635|00429961|Wyanet township|T1|A
+IL|17|013|Calhoun County|90360|01928445|Belleview precinct|Z1|N
+IL|17|013|Calhoun County|90630|01928458|Carlin precinct|Z1|N
+IL|17|013|Calhoun County|90900|01928469|Crater precinct|Z1|N
+IL|17|013|Calhoun County|91350|01928502|Gilead precinct|Z1|N
+IL|17|013|Calhoun County|91584|01928514|Hamburg precinct|Z1|N
+IL|17|013|Calhoun County|91602|01928515|Hardin precinct|Z1|N
+IL|17|013|Calhoun County|92502|01928602|Point precinct|Z1|N
+IL|17|013|Calhoun County|92988|01928633|Richwood precinct|Z1|N
+IL|17|015|Carroll County|12996|00428798|Cherry Grove-Shannon township|T1|A
+IL|17|015|Carroll County|23321|00422233|Elkhorn Grove township|T1|A
+IL|17|015|Carroll County|24881|00428986|Fairhaven township|T1|A
+IL|17|015|Carroll County|27832|00429028|Freedom township|T1|A
+IL|17|015|Carroll County|50894|00429402|Mount Carroll township|T1|A
+IL|17|015|Carroll County|64892|00429655|Rock Creek-Lima township|T1|A
+IL|17|015|Carroll County|67210|00429701|Salem township|T1|A
+IL|17|015|Carroll County|67834|00429718|Savanna township|T1|A
+IL|17|015|Carroll County|79020|00429897|Washington township|T1|A
+IL|17|015|Carroll County|83076|00429951|Woodland township|T1|A
+IL|17|015|Carroll County|83700|00429963|Wysox township|T1|A
+IL|17|015|Carroll County|83908|00429968|York township|T1|A
+IL|17|017|Cass County|01959|00428598|Arenzville township|T1|A
+IL|17|017|Cass County|02518|00428608|Ashland township|T1|A
+IL|17|017|Cass County|04364|00428644|Beardstown township|T1|A
+IL|17|017|Cass County|06938|00428691|Bluff Springs township|T1|A
+IL|17|017|Cass County|12463|00428788|Chandlerville township|T1|A
+IL|17|017|Cass County|32148|00429093|Hagener township|T1|A
+IL|17|017|Cass County|52662|00429439|Newmansville township|T1|A
+IL|17|017|Cass County|57550|00429525|Panther Creek township|T1|A
+IL|17|017|Cass County|59481|00429556|Philadelphia township|T1|A
+IL|17|017|Cass County|67600|00429712|Sangamon Valley township|T1|A
+IL|17|017|Cass County|78214|00429877|Virginia township|T1|A
+IL|17|019|Champaign County|03246|00428627|Ayers township|T1|A
+IL|17|019|Champaign County|08914|00428720|Brown township|T1|A
+IL|17|019|Champaign County|12398|00428786|Champaign township|T1|A
+IL|17|019|Champaign County|12411|00428787|Champaign City township|T5|B
+IL|17|019|Champaign County|15482|00428830|Colfax township|T1|A
+IL|17|019|Champaign County|15976|00428835|Compromise township|T1|A
+IL|17|019|Champaign County|16080|00428839|Condit township|T1|A
+IL|17|019|Champaign County|17588|00428856|Crittenden township|T1|A
+IL|17|019|Champaign County|18121|00428864|Cunningham township|T5|B
+IL|17|019|Champaign County|21566|00428928|East Bend township|T1|A
+IL|17|019|Champaign County|33422|00429120|Harwood township|T1|A
+IL|17|019|Champaign County|34189|00429129|Hensley township|T1|A
+IL|17|019|Champaign County|39688|00429204|Kerr township|T1|A
+IL|17|019|Champaign County|45187|00429290|Ludlow township|T1|A
+IL|17|019|Champaign County|46149|00429309|Mahomet township|T1|A
+IL|17|019|Champaign County|52376|00429433|Newcomb township|T1|A
+IL|17|019|Champaign County|55288|00429479|Ogden township|T1|A
+IL|17|019|Champaign County|59286|00429554|Pesotum township|T1|A
+IL|17|019|Champaign County|59546|00429558|Philo township|T1|A
+IL|17|019|Champaign County|62796|00429618|Rantoul township|T1|A
+IL|17|019|Champaign County|62952|00429621|Raymond township|T1|A
+IL|17|019|Champaign County|66547|00429691|Sadorus township|T1|A
+IL|17|019|Champaign County|66963|00429698|St. Joseph township|T1|A
+IL|17|019|Champaign County|68289|00429723|Scott township|T1|A
+IL|17|019|Champaign County|69888|00429751|Sidney township|T1|A
+IL|17|019|Champaign County|70382|00429757|Somer township|T1|A
+IL|17|019|Champaign County|70863|00429768|South Homer township|T1|A
+IL|17|019|Champaign County|72273|00429793|Stanton township|T1|A
+IL|17|019|Champaign County|75627|00429835|Tolono township|T1|A
+IL|17|019|Champaign County|77018|00429856|Urbana township|T1|A
+IL|17|021|Christian County|02622|00428612|Assumption township|T1|A
+IL|17|021|Christian County|04325|00428642|Bear Creek township|T1|A
+IL|17|021|Christian County|09239|00428727|Buckhart township|T1|A
+IL|17|021|Christian County|31641|00429082|Greenwood township|T1|A
+IL|17|021|Christian County|38492|00429186|Johnson township|T1|A
+IL|17|021|Christian County|39948|00429209|King township|T1|A
+IL|17|021|Christian County|44251|00429272|Locust township|T1|A
+IL|17|021|Christian County|47631|00429342|May township|T1|A
+IL|17|021|Christian County|50686|00429397|Mosquito township|T1|A
+IL|17|021|Christian County|50842|00429401|Mount Auburn township|T1|A
+IL|17|021|Christian County|57485|00429524|Pana township|T1|A
+IL|17|021|Christian County|61730|00429602|Prairieton township|T1|A
+IL|17|021|Christian County|63797|00429637|Ricks township|T1|A
+IL|17|021|Christian County|65598|00429669|Rosamond township|T1|A
+IL|17|021|Christian County|70798|00429766|South Fork township|T1|A
+IL|17|021|Christian County|72962|00429802|Stonington township|T1|A
+IL|17|021|Christian County|74587|00429827|Taylorville township|T1|A
+IL|17|023|Clark County|01465|00428591|Anderson township|T1|A
+IL|17|023|Clark County|02908|00428618|Auburn township|T1|A
+IL|17|023|Clark County|11631|00428772|Casey township|T1|A
+IL|17|023|Clark County|18680|00428874|Darwin township|T1|A
+IL|17|023|Clark County|20279|00428901|Dolson township|T1|A
+IL|17|023|Clark County|20461|00428905|Douglas township|T1|A
+IL|17|023|Clark County|38505|00429187|Johnson township|T1|A
+IL|17|023|Clark County|47176|00429329|Marshall township|T1|A
+IL|17|023|Clark County|47267|00429333|Martinsville township|T1|A
+IL|17|023|Clark County|48229|00429352|Melrose township|T1|A
+IL|17|023|Clark County|56302|00429499|Orange township|T1|A
+IL|17|023|Clark County|57667|00429529|Parker township|T1|A
+IL|17|023|Clark County|78279|00429878|Wabash township|T1|A
+IL|17|023|Clark County|80294|00429916|Westfield township|T1|A
+IL|17|023|Clark County|83934|00429969|York township|T1|A
+IL|17|025|Clay County|05807|00428669|Bible Grove township|T1|A
+IL|17|025|Clay County|06392|00428679|Blair township|T1|A
+IL|17|025|Clay County|14728|00428816|Clay City township|T1|A
+IL|17|025|Clay County|33266|00429117|Harter township|T1|A
+IL|17|025|Clay County|36087|00429146|Hoosier township|T1|A
+IL|17|025|Clay County|42158|00429234|Larkinsburg township|T1|A
+IL|17|025|Clay County|44940|00429284|Louisville township|T1|A
+IL|17|025|Clay County|56835|00429510|Oskaloosa township|T1|A
+IL|17|025|Clay County|60261|00429573|Pixley township|T1|A
+IL|17|025|Clay County|70486|00429760|Songer township|T1|A
+IL|17|025|Clay County|72247|00429792|Stanford township|T1|A
+IL|17|025|Clay County|83752|00429965|Xenia township|T1|A
+IL|17|027|Clinton County|07926|00428705|Breese township|T1|A
+IL|17|027|Clinton County|08732|00428716|Brookside township|T1|A
+IL|17|027|Clinton County|11241|00428762|Carlyle township|T1|A
+IL|17|027|Clinton County|14884|00428820|Clement township|T1|A
+IL|17|027|Clinton County|21748|00428931|East Fork township|T1|A
+IL|17|027|Clinton County|29054|00429050|Germantown township|T1|A
+IL|17|027|Clinton County|37673|00429171|Irishtown township|T1|A
+IL|17|027|Clinton County|40871|00429222|Lake township|T1|A
+IL|17|027|Clinton County|44667|00429280|Looking Glass township|T1|A
+IL|17|027|Clinton County|48476|00427930|Meridian township|T1|A
+IL|17|027|Clinton County|67171|00429700|St. Rose township|T1|A
+IL|17|027|Clinton County|67652|00427929|Santa Fe township|T1|A
+IL|17|027|Clinton County|73365|00429808|Sugar Creek township|T1|A
+IL|17|027|Clinton County|78344|00429880|Wade township|T1|A
+IL|17|027|Clinton County|80996|00429923|Wheatfield township|T1|A
+IL|17|029|Coles County|02570|00428610|Ashmore township|T1|A
+IL|17|029|Coles County|12580|00428790|Charleston township|T1|A
+IL|17|029|Coles County|22138|00428937|East Oakland township|T1|A
+IL|17|029|Coles County|36555|00422230|Humboldt township|T1|A
+IL|17|029|Coles County|36880|00429161|Hutton township|T1|A
+IL|17|029|Coles County|40637|00429218|Lafayette township|T1|A
+IL|17|029|Coles County|47566|00429340|Mattoon township|T1|A
+IL|17|029|Coles County|50400|00429393|Morgan township|T1|A
+IL|17|029|Coles County|54014|00429462|North Okaw township|T1|A
+IL|17|029|Coles County|57615|00429527|Paradise township|T1|A
+IL|17|029|Coles County|60469|00429577|Pleasant Grove township|T1|A
+IL|17|029|Coles County|68718|00427931|Seven Hickory township|T1|A
+IL|17|031|Cook County|00000|00000000|County subdivisions not defined|Z9|F
+IL|17|031|Cook County|03831|00428638|Barrington township|T1|A
+IL|17|031|Cook County|05586|00428666|Berwyn township|T5|B
+IL|17|031|Cook County|06561|00428682|Bloom township|T1|A
+IL|17|031|Cook County|07939|00428706|Bremen township|T1|A
+IL|17|031|Cook County|10474|00428750|Calumet township|T1|A
+IL|17|031|Cook County|14000|00428803|Chicago city|C5|F
+IL|17|031|Cook County|14364|00428810|Cicero township|T5|C
+IL|17|031|Cook County|23243|00428952|Elk Grove township|T1|A
+IL|17|031|Cook County|24582|02394709|Evanston city|C5|F
+IL|17|031|Cook County|32694|00429105|Hanover township|T1|A
+IL|17|031|Cook County|42808|00429244|Lemont township|T1|A
+IL|17|031|Cook County|43120|00429252|Leyden township|T1|A
+IL|17|031|Cook County|45447|00429298|Lyons township|T1|A
+IL|17|031|Cook County|46162|00429310|Maine township|T1|A
+IL|17|031|Cook County|52909|00429445|New Trier township|T1|A
+IL|17|031|Cook County|53013|00429447|Niles township|T1|A
+IL|17|031|Cook County|53676|00429457|Northfield township|T1|A
+IL|17|031|Cook County|54430|00429467|Norwood Park township|T1|A
+IL|17|031|Cook County|54898|00429472|Oak Park township|T5|B
+IL|17|031|Cook County|56614|00429505|Orland township|T1|A
+IL|17|031|Cook County|57238|00429520|Palatine township|T1|A
+IL|17|031|Cook County|57355|00429523|Palos township|T1|A
+IL|17|031|Cook County|62133|00429608|Proviso township|T1|A
+IL|17|031|Cook County|63498|00429628|Rich township|T1|A
+IL|17|031|Cook County|64317|00429645|River Forest township|T5|B
+IL|17|031|Cook County|64434|00429647|Riverside township|T1|A
+IL|17|031|Cook County|68016|00429720|Schaumburg township|T1|A
+IL|17|031|Cook County|72689|00429798|Stickney township|T1|A
+IL|17|031|Cook County|75198|00422238|Thornton township|T1|A
+IL|17|031|Cook County|81100|00429927|Wheeling township|T1|A
+IL|17|031|Cook County|83531|00429958|Worth township|T1|A
+IL|17|033|Crawford County|35970|00429144|Honey Creek township|T1|A
+IL|17|033|Crawford County|36854|00429160|Hutsonville township|T1|A
+IL|17|033|Crawford County|41833|00429229|Lamotte township|T1|A
+IL|17|033|Crawford County|43315|00429256|Licking township|T1|A
+IL|17|033|Crawford County|47202|00429330|Martin township|T1|A
+IL|17|033|Crawford County|50205|00429388|Montgomery township|T1|A
+IL|17|033|Crawford County|55119|00429474|Oblong township|T1|A
+IL|17|033|Crawford County|61470|00429594|Prairie township|T1|A
+IL|17|033|Crawford County|64720|00429651|Robinson township|T1|A
+IL|17|033|Crawford County|71344|00429780|Southwest township|T1|A
+IL|17|035|Cumberland County|16587|00428849|Cottonwood township|T1|A
+IL|17|035|Cumberland County|17640|00428858|Crooked Creek township|T1|A
+IL|17|035|Cumberland County|31537|00429080|Greenup township|T1|A
+IL|17|035|Cumberland County|51993|00429425|Neoga township|T1|A
+IL|17|035|Cumberland County|72143|00429790|Spring Point township|T1|A
+IL|17|035|Cumberland County|73729|00429817|Sumpter township|T1|A
+IL|17|035|Cumberland County|76641|00429850|Union township|T1|A
+IL|17|035|Cumberland County|82959|00429950|Woodbury township|T1|A
+IL|17|037|DeKalb County|00386|00428573|Afton township|T1|A
+IL|17|037|DeKalb County|14988|00428821|Clinton township|T1|A
+IL|17|037|DeKalb County|16483|00422242|Cortland township|T1|A
+IL|17|037|DeKalb County|19174|00428884|DeKalb township|T1|A
+IL|17|037|DeKalb County|27650|00429025|Franklin township|T1|A
+IL|17|037|DeKalb County|28911|00429047|Genoa township|T1|A
+IL|17|037|DeKalb County|40078|00429210|Kingston township|T1|A
+IL|17|037|DeKalb County|46292|00429314|Malta township|T1|A
+IL|17|037|DeKalb County|47696|00429345|Mayfield township|T1|A
+IL|17|037|DeKalb County|48983|00429362|Milan township|T1|A
+IL|17|037|DeKalb County|58200|00429535|Paw Paw township|T1|A
+IL|17|037|DeKalb County|59676|00429561|Pierce township|T1|A
+IL|17|037|DeKalb County|67561|00429710|Sandwich township|T1|A
+IL|17|037|DeKalb County|68835|00429734|Shabbona township|T1|A
+IL|17|037|DeKalb County|70473|00429759|Somonauk township|T1|A
+IL|17|037|DeKalb County|70837|00429767|South Grove township|T1|A
+IL|17|037|DeKalb County|72182|00429791|Squaw Grove township|T1|A
+IL|17|037|DeKalb County|74236|00429820|Sycamore township|T1|A
+IL|17|037|DeKalb County|77798|00429870|Victor township|T1|A
+IL|17|039|De Witt County|03714|00428634|Barnett township|T1|A
+IL|17|039|De Witt County|15014|00428822|Clintonia township|T1|A
+IL|17|039|De Witt County|17302|00428853|Creek township|T1|A
+IL|17|039|De Witt County|19785|00428894|De Witt township|T1|A
+IL|17|039|De Witt County|33058|00429112|Harp township|T1|A
+IL|17|039|De Witt County|53117|00429449|Nixon township|T1|A
+IL|17|039|De Witt County|66469|00429689|Rutledge township|T1|A
+IL|17|039|De Witt County|67639|00429713|Santa Anna township|T1|A
+IL|17|039|De Witt County|74769|00429831|Texas township|T1|A
+IL|17|039|De Witt County|76342|00429846|Tunbridge township|T1|A
+IL|17|039|De Witt County|78786|00429892|Wapella township|T1|A
+IL|17|039|De Witt County|79462|00429906|Waynesville township|T1|A
+IL|17|039|De Witt County|82140|00429942|Wilson township|T1|A
+IL|17|041|Douglas County|01894|00428597|Arcola township|T1|A
+IL|17|041|Douglas County|07458|00428695|Bourbon township|T1|A
+IL|17|041|Douglas County|07497|00428697|Bowdre township|T1|A
+IL|17|041|Douglas County|10604|00428751|Camargo township|T1|A
+IL|17|041|Douglas County|28755|00429043|Garrett township|T1|A
+IL|17|041|Douglas County|51427|00429414|Murdock township|T1|A
+IL|17|041|Douglas County|52636|00429438|Newman township|T1|A
+IL|17|041|Douglas County|67730|00429716|Sargent township|T1|A
+IL|17|041|Douglas County|76420|00429847|Tuscola township|T1|A
+IL|17|043|DuPage County|00250|00428571|Addison township|T1|A
+IL|17|043|DuPage County|06600|00428683|Bloomingdale township|T1|A
+IL|17|043|DuPage County|14000|00428803|Chicago city|C5|F
+IL|17|043|DuPage County|20604|00428909|Downers Grove township|T1|A
+IL|17|043|DuPage County|43952|00429264|Lisle township|T1|A
+IL|17|043|DuPage County|49451|00429372|Milton township|T1|A
+IL|17|043|DuPage County|51635|00429419|Naperville township|T1|A
+IL|17|043|DuPage County|79410|00429905|Wayne township|T1|A
+IL|17|043|DuPage County|82413|00429945|Winfield township|T1|A
+IL|17|043|DuPage County|83947|00429970|York township|T1|A
+IL|17|045|Edgar County|08901|00428719|Brouilletts Creek township|T1|A
+IL|17|045|Edgar County|09213|00428726|Buck township|T1|A
+IL|17|045|Edgar County|22502|00428941|Edgar township|T1|A
+IL|17|045|Edgar County|22912|00428946|Elbridge township|T1|A
+IL|17|045|Edgar County|23958|00428966|Embarrass township|T1|A
+IL|17|045|Edgar County|30822|00422253|Grandview township|T1|A
+IL|17|045|Edgar County|36685|00429156|Hunter township|T1|A
+IL|17|045|Edgar County|38999|00429195|Kansas township|T1|A
+IL|17|045|Edgar County|57641|00429528|Paris township|T1|A
+IL|17|045|Edgar County|61483|00429595|Prairie township|T1|A
+IL|17|045|Edgar County|65923|00429675|Ross township|T1|A
+IL|17|045|Edgar County|69498|00429744|Shiloh township|T1|A
+IL|17|045|Edgar County|73092|00429804|Stratton township|T1|A
+IL|17|045|Edgar County|74288|00429821|Symmes township|T1|A
+IL|17|045|Edgar County|84064|00429972|Young America township|T1|A
+IL|17|047|Edwards County|90039|01928424|Albion No. 1 precinct|Z1|N
+IL|17|047|Edwards County|90041|01928425|Albion No. 2 precinct|Z1|N
+IL|17|047|Edwards County|90044|01928426|Albion No. 3 precinct|Z1|N
+IL|17|047|Edwards County|90486|01928450|Bone Gap precinct|Z1|N
+IL|17|047|Edwards County|90540|01928453|Browns precinct|Z1|N
+IL|17|047|Edwards County|90954|01928471|Dixon precinct|Z1|N
+IL|17|047|Edwards County|91152|01928491|Ellery precinct|Z1|N
+IL|17|047|Edwards County|91296|01928499|French Creek precinct|Z1|N
+IL|17|047|Edwards County|93081|01928639|Salem No. 1 precinct|Z1|N
+IL|17|047|Edwards County|93084|01928640|Salem No. 2 precinct|Z1|N
+IL|17|047|Edwards County|93153|01928645|Shelby No. 1 precinct|Z1|N
+IL|17|047|Edwards County|93156|01928646|Shelby No. 2 precinct|Z1|N
+IL|17|049|Effingham County|03558|00428632|Banner township|T1|A
+IL|17|049|Effingham County|06145|00428676|Bishop township|T1|A
+IL|17|049|Effingham County|20474|00428906|Douglas township|T1|A
+IL|17|049|Effingham County|38063|00429178|Jackson township|T1|A
+IL|17|049|Effingham County|43159|00429254|Liberty township|T1|A
+IL|17|049|Effingham County|45161|00429289|Lucas township|T1|A
+IL|17|049|Effingham County|47462|00429337|Mason township|T1|A
+IL|17|049|Effingham County|49763|00429378|Moccasin township|T1|A
+IL|17|049|Effingham County|50725|00429398|Mound township|T1|A
+IL|17|049|Effingham County|66807|00429696|St. Francis township|T1|A
+IL|17|049|Effingham County|73651|00429814|Summit township|T1|A
+IL|17|049|Effingham County|74756|00429830|Teutopolis township|T1|A
+IL|17|049|Effingham County|76654|00429851|Union township|T1|A
+IL|17|049|Effingham County|79254|00429901|Watson township|T1|A
+IL|17|049|Effingham County|79891|00429910|West township|T1|A
+IL|17|051|Fayette County|03155|00428624|Avena township|T1|A
+IL|17|051|Fayette County|04377|00428645|Bear Grove township|T1|A
+IL|17|051|Fayette County|07562|00428700|Bowling Green township|T1|A
+IL|17|051|Fayette County|11501|00428769|Carson township|T1|A
+IL|17|051|Fayette County|36802|00429159|Hurricane township|T1|A
+IL|17|051|Fayette County|39116|00429197|Kaskaskia township|T1|A
+IL|17|051|Fayette County|40533|00429215|La Clede township|T1|A
+IL|17|051|Fayette County|44459|00429276|Lone Grove township|T1|A
+IL|17|051|Fayette County|44901|00429283|Loudon township|T1|A
+IL|17|051|Fayette County|56913|00429512|Otego township|T1|A
+IL|17|051|Fayette County|61106|00429590|Pope township|T1|A
+IL|17|051|Fayette County|62640|00429616|Ramsey township|T1|A
+IL|17|051|Fayette County|68549|00429726|Sefton township|T1|A
+IL|17|051|Fayette County|68601|00429728|Seminary township|T1|A
+IL|17|051|Fayette County|68926|00429735|Shafter township|T1|A
+IL|17|051|Fayette County|69017|00429736|Sharon township|T1|A
+IL|17|051|Fayette County|70876|00429769|South Hurricane township|T1|A
+IL|17|051|Fayette County|77330|00429862|Vandalia township|T1|A
+IL|17|051|Fayette County|81022|00429925|Wheatland township|T1|A
+IL|17|051|Fayette County|81568|00429934|Wilberton township|T1|A
+IL|17|053|Ford County|07978|00428707|Brenton township|T1|A
+IL|17|053|Ford County|10214|00428746|Button township|T1|A
+IL|17|053|Ford County|20110|00428898|Dix township|T1|A
+IL|17|053|Ford County|20799|00428911|Drummer township|T1|A
+IL|17|053|Ford County|45252|00429292|Lyman township|T1|A
+IL|17|053|Ford County|49919|00429381|Mona township|T1|A
+IL|17|053|Ford County|58122|00429533|Patton township|T1|A
+IL|17|053|Ford County|58317|00429537|Peach Orchard township|T1|A
+IL|17|053|Ford County|58512|00429542|Pella township|T1|A
+IL|17|053|Ford County|65273|00429664|Rogers township|T1|A
+IL|17|053|Ford County|73521|00429813|Sullivant township|T1|A
+IL|17|053|Ford County|78474|00429885|Wall township|T1|A
+IL|17|055|Franklin County|03818|00428637|Barren township|T1|A
+IL|17|055|Franklin County|05313|00428659|Benton township|T1|A
+IL|17|055|Franklin County|08940|00428721|Browning township|T1|A
+IL|17|055|Franklin County|11813|00428777|Cave township|T1|A
+IL|17|055|Franklin County|19421|00428888|Denning township|T1|A
+IL|17|055|Franklin County|21735|00428930|Eastern township|T1|A
+IL|17|055|Franklin County|24686|00428984|Ewing township|T1|A
+IL|17|055|Franklin County|27611|00429023|Frankfort township|T1|A
+IL|17|055|Franklin County|30406|00429059|Goode township|T1|A
+IL|17|055|Franklin County|53637|00429456|Northern township|T1|A
+IL|17|055|Franklin County|70070|00429754|Six Mile township|T1|A
+IL|17|055|Franklin County|76576|00429849|Tyrone township|T1|A
+IL|17|057|Fulton County|02648|00428613|Astoria township|T1|A
+IL|17|057|Fulton County|03584|00428633|Banner township|T1|A
+IL|17|057|Fulton County|05469|00428662|Bernadotte township|T1|A
+IL|17|057|Fulton County|09265|00428728|Buckheart township|T1|A
+IL|17|057|Fulton County|11020|00428758|Canton township|T1|A
+IL|17|057|Fulton County|11696|00428775|Cass township|T1|A
+IL|17|057|Fulton County|18979|00428880|Deerfield township|T1|A
+IL|17|057|Fulton County|23542|00428958|Ellisville township|T1|A
+IL|17|057|Fulton County|25076|00428988|Fairview township|T1|A
+IL|17|057|Fulton County|25427|00428992|Farmers township|T1|A
+IL|17|057|Fulton County|25544|00428993|Farmington township|T1|A
+IL|17|057|Fulton County|33110|00429113|Harris township|T1|A
+IL|17|057|Fulton County|37842|00429175|Isabel township|T1|A
+IL|17|057|Fulton County|38713|00429191|Joshua township|T1|A
+IL|17|057|Fulton County|39714|00429205|Kerton township|T1|A
+IL|17|057|Fulton County|42574|00429240|Lee township|T1|A
+IL|17|057|Fulton County|43068|00429250|Lewistown township|T1|A
+IL|17|057|Fulton County|44134|00429269|Liverpool township|T1|A
+IL|17|057|Fulton County|56588|00429504|Orion township|T1|A
+IL|17|057|Fulton County|60430|00429576|Pleasant township|T1|A
+IL|17|057|Fulton County|62276|00429609|Putman township|T1|A
+IL|17|057|Fulton County|76667|00429852|Union township|T1|A
+IL|17|057|Fulton County|77655|00429867|Vermont township|T1|A
+IL|17|057|Fulton County|79137|00429900|Waterford township|T1|A
+IL|17|057|Fulton County|83089|00429952|Woodland township|T1|A
+IL|17|057|Fulton County|84077|00429973|Young Hickory township|T1|A
+IL|17|059|Gallatin County|02427|00428604|Asbury township|T1|A
+IL|17|059|Gallatin County|07536|00428698|Bowlesville township|T1|A
+IL|17|059|Gallatin County|21449|00428925|Eagle Creek township|T1|A
+IL|17|059|Gallatin County|24361|00428975|Equality township|T1|A
+IL|17|059|Gallatin County|30302|00429058|Gold Hill township|T1|A
+IL|17|059|Gallatin County|52519|00429436|New Haven township|T1|A
+IL|17|059|Gallatin County|53702|00429458|North Fork township|T1|A
+IL|17|059|Gallatin County|56016|00429489|Omaha township|T1|A
+IL|17|059|Gallatin County|64031|00429640|Ridgway township|T1|A
+IL|17|059|Gallatin County|69069|00429737|Shawnee township|T1|A
+IL|17|061|Greene County|02700|00428614|Athensville township|T1|A
+IL|17|061|Greene County|06860|00428690|Bluffdale township|T1|A
+IL|17|061|Greene County|11475|00428768|Carrollton township|T1|A
+IL|17|061|Greene County|38882|00429193|Kane township|T1|A
+IL|17|061|Greene County|43809|00429261|Linder township|T1|A
+IL|17|061|Greene County|58096|00429532|Patterson township|T1|A
+IL|17|061|Greene County|64824|00429653|Rockbridge township|T1|A
+IL|17|061|Greene County|65494|00429667|Roodhouse township|T1|A
+IL|17|061|Greene County|66235|00429681|Rubicon township|T1|A
+IL|17|061|Greene County|78461|00429884|Walkerville township|T1|A
+IL|17|061|Greene County|81269|00429929|White Hall township|T1|A
+IL|17|061|Greene County|83401|00429956|Woodville township|T1|A
+IL|17|061|Greene County|83583|00429960|Wrights township|T1|A
+IL|17|063|Grundy County|03090|00428623|Aux Sable township|T1|A
+IL|17|063|Grundy County|07653|00428702|Braceville township|T1|A
+IL|17|063|Grundy County|24400|00428977|Erienna township|T1|A
+IL|17|063|Grundy County|25778|00428998|Felix township|T1|A
+IL|17|063|Grundy County|28677|00429042|Garfield township|T1|A
+IL|17|063|Grundy County|30432|00429060|Goodfarm township|T1|A
+IL|17|063|Grundy County|30549|00429062|Goose Lake township|T1|A
+IL|17|063|Grundy County|31381|00429078|Greenfield township|T1|A
+IL|17|063|Grundy County|34657|00429135|Highland township|T1|A
+IL|17|063|Grundy County|46175|00429311|Maine township|T1|A
+IL|17|063|Grundy County|47800|00429346|Mazon township|T1|A
+IL|17|063|Grundy County|50504|00429395|Morris township|T1|A
+IL|17|063|Grundy County|52038|00429427|Nettle Creek township|T1|A
+IL|17|063|Grundy County|53286|00429454|Norman township|T1|A
+IL|17|063|Grundy County|67678|00429714|Saratoga township|T1|A
+IL|17|063|Grundy County|77850|00429872|Vienna township|T1|A
+IL|17|063|Grundy County|79345|00429904|Wauponsee township|T1|A
+IL|17|065|Hamilton County|04481|00428648|Beaver Creek township|T1|A
+IL|17|065|Hamilton County|17627|00428857|Crook township|T1|A
+IL|17|065|Hamilton County|17809|00428861|Crouch township|T1|A
+IL|17|065|Hamilton County|18316|00428867|Dahlgren township|T1|A
+IL|17|065|Hamilton County|26324|00429004|Flannigan township|T1|A
+IL|17|065|Hamilton County|40299|00429213|Knight Prairie township|T1|A
+IL|17|065|Hamilton County|45837|00429303|McLeansboro township|T1|A
+IL|17|065|Hamilton County|47657|00429344|Mayberry township|T1|A
+IL|17|065|Hamilton County|70655|00429762|South Crouch township|T1|A
+IL|17|065|Hamilton County|70785|00429765|South Flannigan township|T1|A
+IL|17|065|Hamilton County|71305|00429779|South Twigg township|T1|A
+IL|17|065|Hamilton County|76472|00429848|Twigg township|T1|A
+IL|17|067|Hancock County|01621|00428595|Appanoose township|T1|A
+IL|17|067|Hancock County|02999|00428620|Augusta township|T1|A
+IL|17|067|Hancock County|04338|00428643|Bear Creek township|T1|A
+IL|17|067|Hancock County|11540|00428770|Carthage township|T1|A
+IL|17|067|Hancock County|14104|00428805|Chili township|T1|A
+IL|17|067|Hancock County|18433|00428870|Dallas City township|T1|A
+IL|17|067|Hancock County|21306|00428922|Durham township|T1|A
+IL|17|067|Hancock County|27325|00429019|Fountain Green township|T1|A
+IL|17|067|Hancock County|32629|00429103|Hancock township|T1|A
+IL|17|067|Hancock County|32993|00429111|Harmony township|T1|A
+IL|17|067|Hancock County|40845|00429221|La Harpe township|T1|A
+IL|17|067|Hancock County|50140|00429386|Montebello township|T1|A
+IL|17|067|Hancock County|51804|00429422|Nauvoo township|T1|A
+IL|17|067|Hancock County|59845|00429566|Pilot Grove township|T1|A
+IL|17|067|Hancock County|61093|00429589|Pontoosuc township|T1|A
+IL|17|067|Hancock County|61496|00429596|Prairie township|T1|A
+IL|17|067|Hancock County|64876|00429654|Rock Creek township|T1|A
+IL|17|067|Hancock County|65240|02797203|Rocky Run-Wilcox township|T1|A
+IL|17|067|Hancock County|66612|00429692|St. Albans township|T1|A
+IL|17|067|Hancock County|67054|00429699|St. Mary township|T1|A
+IL|17|067|Hancock County|70499|00429761|Sonora township|T1|A
+IL|17|067|Hancock County|78422|00429883|Walker township|T1|A
+IL|17|067|Hancock County|78955|00429896|Warsaw township|T5|B
+IL|17|067|Hancock County|83713|00429964|Wythe township|T1|A
+IL|17|069|Hardin County|90666|01928459|Cave-In-Rock precinct|Z1|N
+IL|17|069|Hardin County|91998|01928564|McFarlan precinct|Z1|N
+IL|17|069|Hardin County|92170|01928574|Monroe precinct|Z1|N
+IL|17|069|Hardin County|92995|01928635|Rock precinct|Z1|N
+IL|17|069|Hardin County|93050|00422243|Rosiclare precinct|Z1|N
+IL|17|069|Hardin County|93276|01928651|Stone Church precinct|Z1|N
+IL|17|071|Henderson County|03415|00428629|Bald Bluff township|T1|A
+IL|17|071|Henderson County|05911|00428671|Biggsville township|T1|A
+IL|17|071|Henderson County|11280|00428763|Carman township|T1|A
+IL|17|071|Henderson County|29444|00429055|Gladstone township|T1|A
+IL|17|071|Henderson County|44394|00429275|Lomax township|T1|A
+IL|17|071|Henderson County|48086|00429349|Media township|T1|A
+IL|17|071|Henderson County|56250|00429496|Oquawka township|T1|A
+IL|17|071|Henderson County|62861|00429619|Raritan township|T1|A
+IL|17|071|Henderson County|66222|00429680|Rozetta township|T1|A
+IL|17|071|Henderson County|73274|00429805|Stronghurst township|T1|A
+IL|17|071|Henderson County|74730|00429829|Terre Haute township|T1|A
+IL|17|073|Henry County|00503|00428575|Alba township|T1|A
+IL|17|073|Henry County|01504|00428592|Andover township|T1|A
+IL|17|073|Henry County|01582|00428593|Annawan township|T1|A
+IL|17|073|Henry County|02739|00428615|Atkinson township|T1|A
+IL|17|073|Henry County|09824|00428738|Burns township|T1|A
+IL|17|073|Henry County|10656|00428752|Cambridge township|T1|A
+IL|17|073|Henry County|15040|00428823|Clover township|T1|A
+IL|17|073|Henry County|15677|00428833|Colona township|T1|A
+IL|17|073|Henry County|16444|00428845|Cornwall township|T1|A
+IL|17|073|Henry County|22476|00428940|Edford township|T1|A
+IL|17|073|Henry County|28443|00429037|Galva township|T1|A
+IL|17|073|Henry County|28859|00429045|Geneseo township|T1|A
+IL|17|073|Henry County|32642|00429104|Hanna township|T1|A
+IL|17|073|Henry County|39740|00429206|Kewanee township|T1|A
+IL|17|073|Henry County|44732|00429281|Loraine township|T1|A
+IL|17|073|Henry County|45304|00429295|Lynn township|T1|A
+IL|17|073|Henry County|51388|00429413|Munson township|T1|A
+IL|17|073|Henry County|56809|00429509|Osco township|T1|A
+IL|17|073|Henry County|57108|00429519|Oxford township|T1|A
+IL|17|073|Henry County|59462|00429555|Phenix township|T1|A
+IL|17|073|Henry County|79722|00429908|Weller township|T1|A
+IL|17|073|Henry County|80190|00429913|Western township|T1|A
+IL|17|073|Henry County|80983|00429922|Wethersfield township|T1|A
+IL|17|073|Henry County|84012|00429971|Yorktown township|T1|A
+IL|17|075|Iroquois County|02401|00428603|Artesia township|T1|A
+IL|17|075|Iroquois County|02453|00428605|Ash Grove township|T1|A
+IL|17|075|Iroquois County|02492|00428607|Ashkum township|T1|A
+IL|17|075|Iroquois County|04455|00428647|Beaver township|T1|A
+IL|17|075|Iroquois County|04520|00428649|Beaverville township|T1|A
+IL|17|075|Iroquois County|05014|00428655|Belmont township|T1|A
+IL|17|075|Iroquois County|12814|00428794|Chebanse township|T1|A
+IL|17|075|Iroquois County|16041|00428838|Concord township|T1|A
+IL|17|075|Iroquois County|17367|00428854|Crescent township|T1|A
+IL|17|075|Iroquois County|18511|00428871|Danforth township|T1|A
+IL|17|075|Iroquois County|20487|00428907|Douglas township|T1|A
+IL|17|075|Iroquois County|27286|00429018|Fountain Creek township|T1|A
+IL|17|075|Iroquois County|37725|00429172|Iroquois township|T1|A
+IL|17|075|Iroquois County|44277|00429273|Loda township|T1|A
+IL|17|075|Iroquois County|44979|00429286|Lovejoy township|T1|A
+IL|17|075|Iroquois County|47293|00429334|Martinton township|T1|A
+IL|17|075|Iroquois County|48814|00429360|Middleport township|T1|A
+IL|17|075|Iroquois County|49061|00429363|Milford township|T1|A
+IL|17|075|Iroquois County|49074|00429364|Milks Grove township|T1|A
+IL|17|075|Iroquois County|56094|00429492|Onarga township|T1|A
+IL|17|075|Iroquois County|57589|00429526|Papineau township|T1|A
+IL|17|075|Iroquois County|59767|00429562|Pigeon Grove township|T1|A
+IL|17|075|Iroquois County|61665|00429601|Prairie Green township|T1|A
+IL|17|075|Iroquois County|63901|00429639|Ridgeland township|T1|A
+IL|17|075|Iroquois County|69225|00429740|Sheldon township|T1|A
+IL|17|075|Iroquois County|72773|00429800|Stockland township|T1|A
+IL|17|077|Jackson County|07731|00428704|Bradley township|T1|A
+IL|17|077|Jackson County|11170|00428760|Carbondale township|T1|A
+IL|17|077|Jackson County|19148|00428883|Degognia township|T1|A
+IL|17|077|Jackson County|19629|00428892|De Soto township|T1|A
+IL|17|077|Jackson County|23217|00428951|Elk township|T1|A
+IL|17|077|Jackson County|27260|00429017|Fountain Bluff township|T1|A
+IL|17|077|Jackson County|30783|00429068|Grand Tower township|T1|A
+IL|17|077|Jackson County|40104|00429211|Kinkaid township|T1|A
+IL|17|077|Jackson County|42990|00429248|Levan township|T1|A
+IL|17|077|Jackson County|46227|00429312|Makanda township|T1|A
+IL|17|077|Jackson County|51466|00429415|Murphysboro township|T1|A
+IL|17|077|Jackson County|56276|00429497|Ora township|T1|A
+IL|17|077|Jackson County|60963|00429587|Pomona township|T1|A
+IL|17|077|Jackson County|67522|00429709|Sand Ridge township|T1|A
+IL|17|077|Jackson County|70408|00429758|Somerset township|T1|A
+IL|17|077|Jackson County|77538|00429865|Vergennes township|T1|A
+IL|17|079|Jasper County|17653|00428859|Crooked Creek township|T1|A
+IL|17|079|Jasper County|27390|00429021|Fox township|T1|A
+IL|17|079|Jasper County|30887|00429069|Grandville township|T1|A
+IL|17|079|Jasper County|31888|00429087|Grove township|T1|A
+IL|17|079|Jasper County|36659|00429155|Hunt City township|T1|A
+IL|17|079|Jasper County|54001|00429461|North Muddy township|T1|A
+IL|17|079|Jasper County|66803|00422229|Ste. Marie township|T1|A
+IL|17|079|Jasper County|70200|00429755|Smallwood township|T1|A
+IL|17|079|Jasper County|71084|00429773|South Muddy township|T1|A
+IL|17|079|Jasper County|78357|00429881|Wade township|T1|A
+IL|17|079|Jasper County|82023|00429940|Willow Hill township|T1|A
+IL|17|081|Jefferson County|03428|00428630|Bald Hill township|T1|A
+IL|17|081|Jefferson County|06496|00428681|Blissville township|T1|A
+IL|17|081|Jefferson County|11670|00428774|Casner township|T1|A
+IL|17|081|Jefferson County|20227|00428900|Dodds township|T1|A
+IL|17|081|Jefferson County|23334|00428955|Elk Prairie township|T1|A
+IL|17|081|Jefferson County|25648|00428995|Farrington township|T1|A
+IL|17|081|Jefferson County|25986|00429001|Field township|T1|A
+IL|17|081|Jefferson County|30731|00429066|Grand Prairie township|T1|A
+IL|17|081|Jefferson County|45512|00429299|McClellan township|T1|A
+IL|17|081|Jefferson County|50348|00429392|Moores Prairie township|T1|A
+IL|17|081|Jefferson County|51193|00429410|Mount Vernon township|T1|A
+IL|17|081|Jefferson County|58564|00429544|Pendleton township|T1|A
+IL|17|081|Jefferson County|65377|00429665|Rome township|T1|A
+IL|17|081|Jefferson County|69511|00429745|Shiloh township|T1|A
+IL|17|081|Jefferson County|72039|00429787|Spring Garden township|T1|A
+IL|17|081|Jefferson County|79514|00429907|Webber township|T1|A
+IL|17|083|Jersey County|23789|00428964|Elsah township|T1|A
+IL|17|083|Jersey County|24231|00428973|English township|T1|A
+IL|17|083|Jersey County|25973|00429000|Fidelity township|T1|A
+IL|17|083|Jersey County|38401|00429184|Jersey township|T1|A
+IL|17|083|Jersey County|49672|00429376|Mississippi township|T1|A
+IL|17|083|Jersey County|56952|00429514|Otter Creek township|T1|A
+IL|17|083|Jersey County|59598|00429559|Piasa township|T1|A
+IL|17|083|Jersey County|62354|00429610|Quarry township|T1|A
+IL|17|083|Jersey County|63745|00429636|Richwood township|T1|A
+IL|17|083|Jersey County|65689|00429672|Rosedale township|T1|A
+IL|17|083|Jersey County|66482|00429690|Ruyle township|T1|A
+IL|17|085|Jo Daviess County|01686|00428596|Apple River township|T1|A
+IL|17|085|Jo Daviess County|05495|00428663|Berreman township|T1|A
+IL|17|085|Jo Daviess County|16639|00428850|Council Hill township|T1|A
+IL|17|085|Jo Daviess County|19551|00428890|Derinda township|T1|A
+IL|17|085|Jo Daviess County|21202|00428919|Dunleith township|T1|A
+IL|17|085|Jo Daviess County|21813|00428933|East Galena township|T1|A
+IL|17|085|Jo Daviess County|23178|00428950|Elizabeth township|T1|A
+IL|17|085|Jo Daviess County|31979|00429091|Guilford township|T1|A
+IL|17|085|Jo Daviess County|32720|00429106|Hanover township|T1|A
+IL|17|085|Jo Daviess County|48372|00429355|Menominee township|T1|A
+IL|17|085|Jo Daviess County|53208|00429452|Nora township|T1|A
+IL|17|085|Jo Daviess County|60664|00429582|Pleasant Valley township|T1|A
+IL|17|085|Jo Daviess County|62926|00429620|Rawlins township|T1|A
+IL|17|085|Jo Daviess County|63472|00429627|Rice township|T1|A
+IL|17|085|Jo Daviess County|66326|00429684|Rush township|T1|A
+IL|17|085|Jo Daviess County|67938|00429719|Scales Mound township|T1|A
+IL|17|085|Jo Daviess County|72793|00429801|Stockton township|T1|A
+IL|17|085|Jo Daviess County|75146|00429832|Thompson township|T1|A
+IL|17|085|Jo Daviess County|78084|00429873|Vinegar Hill township|T1|A
+IL|17|085|Jo Daviess County|78799|00429893|Wards Grove township|T1|A
+IL|17|085|Jo Daviess County|78864|00429894|Warren township|T1|A
+IL|17|085|Jo Daviess County|80359|00429917|West Galena township|T1|A
+IL|17|085|Jo Daviess County|82907|00429949|Woodbine township|T1|A
+IL|17|087|Johnson County|90346|01928444|Belknap precinct|Z1|N
+IL|17|087|Johnson County|90450|01928448|Bloomfield precinct|Z1|N
+IL|17|087|Johnson County|90558|01928454|Burnside precinct|Z1|N
+IL|17|087|Johnson County|90594|01928456|Cache precinct|Z1|N
+IL|17|087|Johnson County|91188|01928493|Elvira precinct|Z1|N
+IL|17|087|Johnson County|91440|01928507|Goreville No. 1 precinct|Z1|N
+IL|17|087|Johnson County|91458|01928508|Goreville No. 2 precinct|Z1|N
+IL|17|087|Johnson County|91512|01928511|Grantsburg No. 1 precinct|Z1|N
+IL|17|087|Johnson County|91530|01928512|Grantsburg No. 2 precinct|Z1|N
+IL|17|087|Johnson County|91840|01928552|Lake No. 1 precinct|Z1|N
+IL|17|087|Johnson County|91842|01928553|Lake No. 2 precinct|Z1|N
+IL|17|087|Johnson County|92340|01928585|Ozark precinct|Z1|N
+IL|17|087|Johnson County|93168|01928647|Simpson precinct|Z1|N
+IL|17|087|Johnson County|93456|01928661|Tunnel Hill precinct|Z1|N
+IL|17|087|Johnson County|93528|01928665|Vienna No. 1 precinct|Z1|N
+IL|17|087|Johnson County|93546|01928666|Vienna No. 2 precinct|Z1|N
+IL|17|087|Johnson County|93552|01928667|Vienna No. 3 precinct|Z1|N
+IL|17|089|Kane County|03025|00428621|Aurora township|T1|A
+IL|17|089|Kane County|04091|00428640|Batavia township|T1|A
+IL|17|089|Kane County|05989|00428673|Big Rock township|T1|A
+IL|17|089|Kane County|06262|00428677|Blackberry township|T1|A
+IL|17|089|Kane County|09772|00428737|Burlington township|T1|A
+IL|17|089|Kane County|10903|00428755|Campton township|T1|A
+IL|17|089|Kane County|21046|00428917|Dundee township|T1|A
+IL|17|089|Kane County|23087|00428948|Elgin township|T1|A
+IL|17|089|Kane County|28885|00429046|Geneva township|T1|A
+IL|17|089|Kane County|32538|00429101|Hampshire township|T1|A
+IL|17|089|Kane County|38908|00422241|Kaneville township|T1|A
+IL|17|089|Kane County|60365|00429575|Plato township|T1|A
+IL|17|089|Kane County|66430|00429687|Rutland township|T1|A
+IL|17|089|Kane County|66716|00429694|St. Charles township|T1|A
+IL|17|089|Kane County|73404|00429809|Sugar Grove township|T1|A
+IL|17|089|Kane County|78188|00429876|Virgil township|T1|A
+IL|17|091|Kankakee County|02245|00428600|Aroma township|T1|A
+IL|17|091|Kankakee County|07484|00428696|Bourbonnais township|T1|A
+IL|17|091|Kankakee County|24465|00428980|Essex township|T1|A
+IL|17|091|Kankakee County|28456|00429038|Ganeer township|T1|A
+IL|17|091|Kankakee County|38947|00429194|Kankakee township|T1|A
+IL|17|091|Kankakee County|43497|00429258|Limestone township|T1|A
+IL|17|091|Kankakee County|46513|00429320|Manteno township|T1|A
+IL|17|091|Kankakee County|49906|00429380|Momence township|T1|A
+IL|17|091|Kankakee County|54352|00429466|Norton township|T1|A
+IL|17|091|Kankakee County|57017|00429516|Otto township|T1|A
+IL|17|091|Kankakee County|58538|00429543|Pembroke township|T1|A
+IL|17|091|Kankakee County|59819|00429564|Pilot township|T1|A
+IL|17|091|Kankakee County|65195|00429662|Rockville township|T1|A
+IL|17|091|Kankakee County|66651|00429693|St. Anne township|T1|A
+IL|17|091|Kankakee County|67262|00429704|Salina township|T1|A
+IL|17|091|Kankakee County|73690|00429815|Sumner township|T1|A
+IL|17|091|Kankakee County|83856|00429967|Yellowhead township|T1|A
+IL|17|093|Kendall County|05872|00428670|Big Grove township|T1|A
+IL|17|093|Kendall County|08368|00428711|Bristol township|T1|A
+IL|17|093|Kendall County|27416|00429022|Fox township|T1|A
+IL|17|093|Kendall County|39454|00429202|Kendall township|T1|A
+IL|17|093|Kendall County|43913|00429263|Lisbon township|T1|A
+IL|17|093|Kendall County|44043|00429266|Little Rock township|T1|A
+IL|17|093|Kendall County|51531|00429416|Na-Au-Say township|T1|A
+IL|17|093|Kendall County|56900|00429511|Oswego township|T1|A
+IL|17|093|Kendall County|68757|00429732|Seward township|T1|A
+IL|17|095|Knox County|11891|00428779|Cedar township|T1|A
+IL|17|095|Knox County|13217|00428802|Chestnut township|T1|A
+IL|17|095|Knox County|16275|00428842|Copley township|T1|A
+IL|17|095|Knox County|22879|00428945|Elba township|T1|A
+IL|17|095|Knox County|28339|00429035|Galesburg township|T1|A
+IL|17|095|Knox County|28352|00429036|Galesburg City township|T5|B
+IL|17|095|Knox County|33552|00429122|Haw Creek township|T1|A
+IL|17|095|Knox County|34020|00429126|Henderson township|T1|A
+IL|17|095|Knox County|37361|00429167|Indian Point township|T1|A
+IL|17|095|Knox County|40403|00429214|Knox township|T1|A
+IL|17|095|Knox County|45330|00429296|Lynn township|T1|A
+IL|17|095|Knox County|46708|00429321|Maquon township|T1|A
+IL|17|095|Knox County|56172|00429494|Ontario township|T1|A
+IL|17|095|Knox County|56315|00429500|Orange township|T1|A
+IL|17|095|Knox County|59221|00429552|Persifer township|T1|A
+IL|17|095|Knox County|64161|00429643|Rio township|T1|A
+IL|17|095|Knox County|67223|00429702|Salem township|T1|A
+IL|17|095|Knox County|71435|00429782|Sparta township|T1|A
+IL|17|095|Knox County|76303|00429845|Truro township|T1|A
+IL|17|095|Knox County|77824|00429871|Victoria township|T1|A
+IL|17|095|Knox County|78565|00429888|Walnut Grove township|T1|A
+IL|17|097|Lake County|00000|00000000|County subdivisions not defined|Z9|F
+IL|17|097|Lake County|01608|00428594|Antioch township|T1|A
+IL|17|097|Lake County|03220|00428626|Avon township|T1|A
+IL|17|097|Lake County|05326|00428660|Benton township|T1|A
+IL|17|097|Lake County|18004|00428863|Cuba township|T1|A
+IL|17|097|Lake County|22853|00428944|Ela township|T1|A
+IL|17|097|Lake County|27923|00429031|Fremont township|T1|A
+IL|17|097|Lake County|30952|00429071|Grant township|T1|A
+IL|17|097|Lake County|41599|00429224|Lake Villa township|T1|A
+IL|17|097|Lake County|43263|00429255|Libertyville township|T1|A
+IL|17|097|Lake County|50364|01848161|Moraine township|T1|A
+IL|17|097|Lake County|52753|00429440|Newport township|T1|A
+IL|17|097|Lake County|69485|00429743|Shields township|T1|A
+IL|17|097|Lake County|77668|00429868|Vernon township|T1|A
+IL|17|097|Lake County|78877|00429895|Warren township|T1|A
+IL|17|097|Lake County|79280|00429902|Wauconda township|T1|A
+IL|17|097|Lake County|79306|00429903|Waukegan township|T1|A
+IL|17|097|Lake County|80112|00429912|West Deerfield township|T1|A
+IL|17|097|Lake County|84233|00429976|Zion township|T5|B
+IL|17|099|LaSalle County|00204|00428570|Adams township|T1|A
+IL|17|099|LaSalle County|00763|00428580|Allen township|T1|A
+IL|17|099|LaSalle County|08583|00428713|Brookfield township|T1|A
+IL|17|099|LaSalle County|09057|00428723|Bruce township|T1|A
+IL|17|099|LaSalle County|18784|00428876|Dayton township|T1|A
+IL|17|099|LaSalle County|19096|00428882|Deer Park township|T1|A
+IL|17|099|LaSalle County|19980|00428896|Dimmick township|T1|A
+IL|17|099|LaSalle County|21436|00428924|Eagle township|T1|A
+IL|17|099|LaSalle County|21527|00428927|Earl township|T1|A
+IL|17|099|LaSalle County|22424|00428939|Eden township|T1|A
+IL|17|099|LaSalle County|25284|00428990|Fall River township|T1|A
+IL|17|099|LaSalle County|25583|00428994|Farm Ridge township|T1|A
+IL|17|099|LaSalle County|27845|00429029|Freedom township|T1|A
+IL|17|099|LaSalle County|30744|00429067|Grand Rapids township|T1|A
+IL|17|099|LaSalle County|31914|00429088|Groveland township|T1|A
+IL|17|099|LaSalle County|36100|00429147|Hope township|T1|A
+IL|17|099|LaSalle County|42197|00422227|LaSalle township|T1|A
+IL|17|099|LaSalle County|46448|00429319|Manlius township|T1|A
+IL|17|099|LaSalle County|48346|00429354|Mendota township|T1|A
+IL|17|099|LaSalle County|48463|00429357|Meriden township|T1|A
+IL|17|099|LaSalle County|49204|00429366|Miller township|T1|A
+IL|17|099|LaSalle County|49646|00429375|Mission township|T1|A
+IL|17|099|LaSalle County|54248|00429465|Northville township|T1|A
+IL|17|099|LaSalle County|56224|00429495|Ophir township|T1|A
+IL|17|099|LaSalle County|56731|00429507|Osage township|T1|A
+IL|17|099|LaSalle County|56939|00429513|Ottawa township|T1|A
+IL|17|099|LaSalle County|56965|00429515|Otter Creek township|T1|A
+IL|17|099|LaSalle County|59247|00429553|Peru township|T1|A
+IL|17|099|LaSalle County|63576|00429630|Richland township|T1|A
+IL|17|099|LaSalle County|66456|00429688|Rutland township|T1|A
+IL|17|099|LaSalle County|68692|00429731|Serena township|T1|A
+IL|17|099|LaSalle County|71110|00429774|South Ottawa township|T1|A
+IL|17|099|LaSalle County|76238|00429844|Troy Grove township|T1|A
+IL|17|099|LaSalle County|77096|00429859|Utica township|T1|A
+IL|17|099|LaSalle County|77623|00429866|Vermillion township|T1|A
+IL|17|099|LaSalle County|78487|00429886|Wallace township|T1|A
+IL|17|099|LaSalle County|78682|00429891|Waltham township|T1|A
+IL|17|101|Lawrence County|00906|00428583|Allison township|T1|A
+IL|17|101|Lawrence County|07198|00428693|Bond township|T1|A
+IL|17|101|Lawrence County|08199|00428708|Bridgeport township|T1|A
+IL|17|101|Lawrence County|14299|00428809|Christy township|T1|A
+IL|17|101|Lawrence County|19395|00428887|Denison township|T1|A
+IL|17|101|Lawrence County|42379|00429236|Lawrence township|T1|A
+IL|17|101|Lawrence County|45200|00429291|Lukin township|T1|A
+IL|17|101|Lawrence County|59377|00427928|Petty township|T1|A
+IL|17|101|Lawrence County|66378|00429686|Russell township|T1|A
+IL|17|103|Lee County|01101|00428585|Alto township|T1|A
+IL|17|103|Lee County|01283|00428587|Amboy township|T1|A
+IL|17|103|Lee County|02596|00428611|Ashton township|T1|A
+IL|17|103|Lee County|07679|00428703|Bradford township|T1|A
+IL|17|103|Lee County|08654|00428714|Brooklyn township|T1|A
+IL|17|103|Lee County|20175|00428899|Dixon township|T1|A
+IL|17|103|Lee County|21865|00428934|East Grove township|T1|A
+IL|17|103|Lee County|27695|00428807|Franklin Grove township|T1|A
+IL|17|103|Lee County|32447|00429100|Hamilton township|T1|A
+IL|17|103|Lee County|32980|00429110|Harmon township|T1|A
+IL|17|103|Lee County|42613|00422223|Lee Center township|T1|A
+IL|17|103|Lee County|46890|00429324|Marion township|T1|A
+IL|17|103|Lee County|47644|00429343|May township|T1|A
+IL|17|103|Lee County|51557|00429417|Nachusa township|T1|A
+IL|17|103|Lee County|51960|00429424|Nelson township|T1|A
+IL|17|103|Lee County|57316|00429522|Palmyra township|T1|A
+IL|17|103|Lee County|63407|00429626|Reynolds township|T1|A
+IL|17|103|Lee County|70694|00429763|South Dixon township|T1|A
+IL|17|103|Lee County|73300|00429806|Sublette township|T1|A
+IL|17|103|Lee County|78110|00429874|Viola township|T1|A
+IL|17|103|Lee County|81971|00429939|Willow Creek township|T1|A
+IL|17|103|Lee County|83674|00429962|Wyoming township|T1|A
+IL|17|105|Livingston County|01348|00428588|Amity township|T1|A
+IL|17|105|Livingston County|03194|00428625|Avoca township|T1|A
+IL|17|105|Livingston County|04780|00428651|Belle Prairie township|T1|A
+IL|17|105|Livingston County|08888|00428718|Broughton township|T1|A
+IL|17|105|Livingston County|12606|00428791|Charlotte township|T1|A
+IL|17|105|Livingston County|12723|00428793|Chatsworth township|T1|A
+IL|17|105|Livingston County|21371|00428923|Dwight township|T1|A
+IL|17|105|Livingston County|24309|00428974|Eppards Point township|T1|A
+IL|17|105|Livingston County|24426|00428979|Esmen township|T1|A
+IL|17|105|Livingston County|25700|00428996|Fayette township|T1|A
+IL|17|105|Livingston County|27039|00429012|Forrest township|T1|A
+IL|17|105|Livingston County|29106|00429051|Germanville township|T1|A
+IL|17|105|Livingston County|37244|00429166|Indian Grove township|T1|A
+IL|17|105|Livingston County|44589|00429279|Long Point township|T1|A
+IL|17|105|Livingston County|51895|00429423|Nebraska township|T1|A
+IL|17|105|Livingston County|52077|00429428|Nevada township|T1|A
+IL|17|105|Livingston County|52883|00429444|Newtown township|T1|A
+IL|17|105|Livingston County|55184|00429476|Odell township|T1|A
+IL|17|105|Livingston County|57056|00429517|Owego township|T1|A
+IL|17|105|Livingston County|59780|00429563|Pike township|T1|A
+IL|17|105|Livingston County|60612|00429580|Pleasant Ridge township|T1|A
+IL|17|105|Livingston County|61028|00429588|Pontiac township|T1|A
+IL|17|105|Livingston County|63017|00429623|Reading township|T1|A
+IL|17|105|Livingston County|65520|00429668|Rooks Creek township|T1|A
+IL|17|105|Livingston County|65988|00429678|Round Grove township|T1|A
+IL|17|105|Livingston County|67808|00429717|Saunemin township|T1|A
+IL|17|105|Livingston County|73482|00429811|Sullivan township|T1|A
+IL|17|105|Livingston County|73781|00429818|Sunbury township|T1|A
+IL|17|105|Livingston County|76680|00429853|Union township|T1|A
+IL|17|105|Livingston County|78409|00429882|Waldo township|T1|A
+IL|17|107|Logan County|00360|00428572|Aetna township|T1|A
+IL|17|107|Logan County|02765|00428616|Atlanta township|T1|A
+IL|17|107|Logan County|08485|00428712|Broadwell township|T1|A
+IL|17|107|Logan County|13126|00428800|Chester township|T1|A
+IL|17|107|Logan County|16496|00428846|Corwin township|T1|A
+IL|17|107|Logan County|21982|00428935|East Lincoln township|T1|A
+IL|17|107|Logan County|23282|00428953|Elkhart township|T1|A
+IL|17|107|Logan County|24049|00428967|Eminence township|T1|A
+IL|17|107|Logan County|36789|00429158|Hurlbut township|T1|A
+IL|17|107|Logan County|40624|00429217|Laenna township|T1|A
+IL|17|107|Logan County|41144|00429223|Lake Fork township|T1|A
+IL|17|107|Logan County|51141|00429408|Mount Pulaski township|T1|A
+IL|17|107|Logan County|56289|00429498|Oran township|T1|A
+IL|17|107|Logan County|56705|00429506|Orvil township|T1|A
+IL|17|107|Logan County|61574|00429599|Prairie Creek township|T1|A
+IL|17|107|Logan County|69290|00429741|Sheridan township|T1|A
+IL|17|107|Logan County|80593|00429919|West Lincoln township|T1|A
+IL|17|109|McDonough County|05638|00428667|Bethel township|T1|A
+IL|17|109|McDonough County|06483|00428680|Blandinsville township|T1|A
+IL|17|109|McDonough County|10123|00428743|Bushnell township|T1|A
+IL|17|109|McDonough County|12333|00428784|Chalmers township|T1|A
+IL|17|109|McDonough County|15391|00428827|Colchester township|T1|A
+IL|17|109|McDonough County|22996|00428947|Eldorado township|T1|A
+IL|17|109|McDonough County|24101|00428969|Emmet township|T1|A
+IL|17|109|McDonough County|35333|00429138|Hire township|T1|A
+IL|17|109|McDonough County|37452|00429170|Industry township|T1|A
+IL|17|109|McDonough County|41820|00429228|Lamoine township|T1|A
+IL|17|109|McDonough County|45902|00429304|Macomb township|T1|A
+IL|17|109|McDonough County|45915|00429305|Macomb City township|T5|B
+IL|17|109|McDonough County|50738|00429399|Mound township|T1|A
+IL|17|109|McDonough County|52792|00429441|New Salem township|T1|A
+IL|17|109|McDonough County|61561|00429598|Prairie City township|T1|A
+IL|17|109|McDonough County|68211|00429721|Sciota township|T1|A
+IL|17|109|McDonough County|68250|00429722|Scotland township|T1|A
+IL|17|109|McDonough County|74678|00429828|Tennessee township|T1|A
+IL|17|109|McDonough County|78591|00429889|Walnut Grove township|T1|A
+IL|17|111|McHenry County|00607|00428577|Alden township|T1|A
+IL|17|111|McHenry County|00698|00428578|Algonquin township|T1|A
+IL|17|111|McHenry County|10032|00428742|Burton township|T1|A
+IL|17|111|McHenry County|12892|00428795|Chemung township|T1|A
+IL|17|111|McHenry County|16314|00428843|Coral township|T1|A
+IL|17|111|McHenry County|20396|00428904|Dorr township|T1|A
+IL|17|111|McHenry County|21111|00428918|Dunham township|T1|A
+IL|17|111|McHenry County|30666|00429064|Grafton township|T1|A
+IL|17|111|McHenry County|31680|00429083|Greenwood township|T1|A
+IL|17|111|McHenry County|33305|00429118|Hartland township|T1|A
+IL|17|111|McHenry County|33864|00429124|Hebron township|T1|A
+IL|17|111|McHenry County|45707|00429300|McHenry township|T1|A
+IL|17|111|McHenry County|46799|00429322|Marengo township|T1|A
+IL|17|111|McHenry County|54495|00429468|Nunda township|T1|A
+IL|17|111|McHenry County|63654|00429634|Richmond township|T1|A
+IL|17|111|McHenry County|64096|00429642|Riley township|T1|A
+IL|17|111|McHenry County|68653|00429730|Seneca township|T1|A
+IL|17|113|McLean County|00893|00428582|Allin township|T1|A
+IL|17|113|McLean County|01374|00428589|Anchor township|T1|A
+IL|17|113|McLean County|02369|00428602|Arrowsmith township|T1|A
+IL|17|113|McLean County|04910|00428653|Bellflower township|T1|A
+IL|17|113|McLean County|06626|00428684|Bloomington township|T1|A
+IL|17|113|McLean County|06639|00428685|Bloomington City township|T5|B
+IL|17|113|McLean County|06743|00428687|Blue Mound township|T1|A
+IL|17|113|McLean County|12905|00428796|Cheney's Grove township|T1|A
+IL|17|113|McLean County|12944|00428797|Chenoa township|T1|A
+IL|17|113|McLean County|17705|00428860|Cropsey township|T1|A
+IL|17|113|McLean County|18381|00428869|Dale township|T1|A
+IL|17|113|McLean County|18550|00428872|Danvers township|T1|A
+IL|17|113|McLean County|18732|00428875|Dawson township|T1|A
+IL|17|113|McLean County|20656|00428910|Downs township|T1|A
+IL|17|113|McLean County|20838|00428913|Dry Grove township|T1|A
+IL|17|113|McLean County|24140|00428970|Empire township|T1|A
+IL|17|113|McLean County|28209|00429034|Funks Grove township|T1|A
+IL|17|113|McLean County|31745|00429084|Gridley township|T1|A
+IL|17|113|McLean County|36451|00429153|Hudson township|T1|A
+IL|17|113|McLean County|42353|00429235|Lawndale township|T1|A
+IL|17|113|McLean County|43107|00429251|Lexington township|T1|A
+IL|17|113|McLean County|47215|00429331|Martin township|T1|A
+IL|17|113|McLean County|49971|00429383|Money Creek township|T1|A
+IL|17|113|McLean County|50972|00429404|Mount Hope township|T1|A
+IL|17|113|McLean County|53247|00429453|Normal township|T1|A
+IL|17|113|McLean County|55782|00429485|Old Town township|T1|A
+IL|17|113|McLean County|62692|00429617|Randolph township|T1|A
+IL|17|113|McLean County|75835|00429839|Towanda township|T1|A
+IL|17|113|McLean County|79904|00429911|West township|T1|A
+IL|17|113|McLean County|81321|00429930|White Oak township|T1|A
+IL|17|113|McLean County|83804|00429966|Yates township|T1|A
+IL|17|115|Macon County|03051|00428622|Austin township|T1|A
+IL|17|115|Macon County|06769|00428688|Blue Mound township|T1|A
+IL|17|115|Macon County|18836|00428877|Decatur township|T1|A
+IL|17|115|Macon County|27988|00429032|Friends Creek township|T1|A
+IL|17|115|Macon County|33240|00429116|Harristown township|T1|A
+IL|17|115|Macon County|34527|00429134|Hickory Point township|T1|A
+IL|17|115|Macon County|37023|00429162|Illini township|T1|A
+IL|17|115|Macon County|44511|00429278|Long Creek township|T1|A
+IL|17|115|Macon County|47085|00429327|Maroa township|T1|A
+IL|17|115|Macon County|51219|00429411|Mount Zion township|T1|A
+IL|17|115|Macon County|52974|00429446|Niantic township|T1|A
+IL|17|115|Macon County|54859|00429471|Oakley township|T1|A
+IL|17|115|Macon County|60677|00429583|Pleasant View township|T1|A
+IL|17|115|Macon County|70967|00429771|South Macon township|T1|A
+IL|17|115|Macon County|71357|00429781|South Wheatland township|T1|A
+IL|17|115|Macon County|81464|00429933|Whitmore township|T1|A
+IL|17|117|Macoupin County|03792|00428636|Barr township|T1|A
+IL|17|117|Macoupin County|06067|00427932|Bird township|T1|A
+IL|17|117|Macoupin County|08277|00428709|Brighton township|T1|A
+IL|17|117|Macoupin County|09135|00428725|Brushy Mound township|T1|A
+IL|17|117|Macoupin County|09590|00428734|Bunker Hill township|T1|A
+IL|17|117|Macoupin County|10357|00428748|Cahokia township|T1|A
+IL|17|117|Macoupin County|11209|00428761|Carlinville township|T1|A
+IL|17|117|Macoupin County|13178|00428801|Chesterfield township|T1|A
+IL|17|117|Macoupin County|20383|00428903|Dorchester township|T1|A
+IL|17|117|Macoupin County|29249|00429052|Gillespie township|T1|A
+IL|17|117|Macoupin County|29405|00429054|Girard township|T1|A
+IL|17|117|Macoupin County|35242|00429137|Hillyard township|T1|A
+IL|17|117|Macoupin County|35996|00429145|Honey Point township|T1|A
+IL|17|117|Macoupin County|51037|00429406|Mount Olive township|T1|A
+IL|17|117|Macoupin County|53052|00429448|Nilwood township|T1|A
+IL|17|117|Macoupin County|54040|00429463|North Otter township|T1|A
+IL|17|117|Macoupin County|54053|00429464|North Palmyra township|T1|A
+IL|17|117|Macoupin County|60924|00429586|Polk township|T1|A
+IL|17|117|Macoupin County|68419|00429725|Scottville township|T1|A
+IL|17|117|Macoupin County|69121|00429738|Shaws Point township|T1|A
+IL|17|117|Macoupin County|69576|00429747|Shipman township|T1|A
+IL|17|117|Macoupin County|71123|00429775|South Otter township|T1|A
+IL|17|117|Macoupin County|71136|00429776|South Palmyra township|T1|A
+IL|17|117|Macoupin County|72416|00429794|Staunton township|T1|A
+IL|17|117|Macoupin County|78162|00429875|Virden township|T1|A
+IL|17|117|Macoupin County|80229|00429914|Western Mound township|T1|A
+IL|17|119|Madison County|00750|00428579|Alhambra township|T1|A
+IL|17|119|Madison County|01127|00428586|Alton township|T5|B
+IL|17|119|Madison County|14260|00428808|Chouteau township|T1|A
+IL|17|119|Madison County|15612|00428831|Collinsville township|T1|A
+IL|17|119|Madison County|22710|00428943|Edwardsville township|T1|A
+IL|17|119|Madison County|27130|00429014|Fort Russell township|T1|A
+IL|17|119|Madison County|27182|00429015|Foster township|T1|A
+IL|17|119|Madison County|30094|02398984|Godfrey village|C5|F
+IL|17|119|Madison County|30939|00429070|Granite City township|T1|A
+IL|17|119|Madison County|32421|00429099|Hamel township|T1|A
+IL|17|119|Madison County|33981|00429125|Helvetia township|T1|A
+IL|17|119|Madison County|38245|00429181|Jarvis township|T1|A
+IL|17|119|Madison County|42652|00429242|Leef township|T1|A
+IL|17|119|Madison County|46877|00429323|Marine township|T1|A
+IL|17|119|Madison County|50465|00429394|Moro township|T1|A
+IL|17|119|Madison County|51583|00429418|Nameoki township|T1|A
+IL|17|119|Madison County|52428|00429434|New Douglas township|T1|A
+IL|17|119|Madison County|55834|00429487|Olive township|T1|A
+IL|17|119|Madison County|56068|00429491|Omphghent township|T1|A
+IL|17|119|Madison County|60014|00429570|Pin Oak township|T1|A
+IL|17|119|Madison County|66872|00429697|St. Jacob township|T1|A
+IL|17|119|Madison County|67275|00429705|Saline township|T1|A
+IL|17|119|Madison County|77486|00429864|Venice township|T1|A
+IL|17|119|Madison County|83284|00429953|Wood River township|T1|A
+IL|17|121|Marion County|00932|00428584|Alma township|T1|A
+IL|17|121|Marion County|11436|00428766|Carrigan township|T1|A
+IL|17|121|Marion County|12177|00428781|Centralia township|T1|A
+IL|17|121|Marion County|27195|00429016|Foster township|T1|A
+IL|17|121|Marion County|32187|00429095|Haines township|T1|A
+IL|17|121|Marion County|37946|00429177|Iuka township|T1|A
+IL|17|121|Marion County|40130|00429212|Kinmundy township|T1|A
+IL|17|121|Marion County|47826|00429347|Meacham township|T1|A
+IL|17|121|Marion County|55223|00429477|Odin township|T1|A
+IL|17|121|Marion County|56055|00429490|Omega township|T1|A
+IL|17|121|Marion County|58070|00429531|Patoka township|T1|A
+IL|17|121|Marion County|62445|00429613|Raccoon township|T1|A
+IL|17|121|Marion County|65455|00429666|Romine township|T1|A
+IL|17|121|Marion County|67249|00429703|Salem township|T1|A
+IL|17|121|Marion County|67457|00429707|Sandoval township|T1|A
+IL|17|121|Marion County|72598|00429797|Stevenson township|T1|A
+IL|17|121|Marion County|75744|00429837|Tonti township|T1|A
+IL|17|123|Marshall County|04949|00428654|Bell Plain township|T1|A
+IL|17|123|Marshall County|05235|00428658|Bennington township|T1|A
+IL|17|123|Marshall County|24569|00428982|Evans township|T1|A
+IL|17|123|Marshall County|34176|00429128|Henry township|T1|A
+IL|17|123|Marshall County|36152|00429149|Hopewell township|T1|A
+IL|17|123|Marshall County|40572|00429216|Lacon township|T1|A
+IL|17|123|Marshall County|42093|00429233|La Prairie township|T1|A
+IL|17|123|Marshall County|63589|00429631|Richland township|T1|A
+IL|17|123|Marshall County|64668|00429650|Roberts township|T1|A
+IL|17|123|Marshall County|67691|00429715|Saratoga township|T1|A
+IL|17|123|Marshall County|72585|00429796|Steuben township|T1|A
+IL|17|123|Marshall County|81230|00429928|Whitefield township|T1|A
+IL|17|125|Mason County|00844|00428581|Allens Grove township|T1|A
+IL|17|125|Mason County|04169|00428641|Bath township|T1|A
+IL|17|125|Mason County|17250|00428852|Crane Creek township|T1|A
+IL|17|125|Mason County|26766|00429011|Forest City township|T1|A
+IL|17|125|Mason County|33526|00429121|Havana township|T1|A
+IL|17|125|Mason County|39870|00422228|Kilbourne township|T1|A
+IL|17|125|Mason County|45265|00429293|Lynchburg township|T1|A
+IL|17|125|Mason County|46396|00429317|Manito township|T1|A
+IL|17|125|Mason County|47482|00429338|Mason City township|T1|A
+IL|17|125|Mason County|58629|00429547|Pennsylvania township|T1|A
+IL|17|125|Mason County|62419|00429612|Quiver township|T1|A
+IL|17|125|Mason County|67353|00429706|Salt Creek township|T1|A
+IL|17|125|Mason County|69329|00429742|Sherman township|T1|A
+IL|17|127|Massac County|90018|01928422|Adkins precinct|Z1|N
+IL|17|127|Massac County|90396|01928446|Benton precinct|Z1|N
+IL|17|127|Massac County|91026|01928486|East Brooklyn precinct|Z1|N
+IL|17|127|Massac County|91260|01928497|Franklin precinct|Z1|N
+IL|17|127|Massac County|91332|01928501|Georges Creek precinct|Z1|N
+IL|17|127|Massac County|91494|01928510|Grant precinct|Z1|N
+IL|17|127|Massac County|91638|01928516|Hillerman precinct|Z1|N
+IL|17|127|Massac County|91692|01928519|Jackson precinct|Z1|N
+IL|17|127|Massac County|91740|01928547|Jefferson precinct|Z1|N
+IL|17|127|Massac County|91908|01928557|Lincoln precinct|Z1|N
+IL|17|127|Massac County|91944|01928559|Logan precinct|Z1|N
+IL|17|127|Massac County|92070|01928568|Metropolis No. 1 precinct|Z1|N
+IL|17|127|Massac County|92088|01928569|Metropolis No. 2 precinct|Z1|N
+IL|17|127|Massac County|92106|01928570|Metropolis No. 3 precinct|Z1|N
+IL|17|127|Massac County|92124|01928571|Metropolis No. 4 precinct|Z1|N
+IL|17|127|Massac County|93618|01928671|Washington precinct|Z1|N
+IL|17|127|Massac County|93672|01928676|West Brooklyn precinct|Z1|N
+IL|17|129|Menard County|90256|01928438|Athens North No. 2 precinct|Z1|N
+IL|17|129|Menard County|90262|01928439|Athens South No. 1 precinct|Z1|N
+IL|17|129|Menard County|90270|01928440|Atterberry No. 10 precinct|Z1|N
+IL|17|129|Menard County|91242|01928496|Fancy Prairie No. 3 precinct|Z1|N
+IL|17|129|Menard County|91566|01928513|Greenview No. 6 precinct|Z1|N
+IL|17|129|Menard County|91656|01928517|Indian Creek No. 7 precinct|Z1|N
+IL|17|129|Menard County|91674|01928518|Irish Grove No. 4 precinct|Z1|N
+IL|17|129|Menard County|92286|01928582|Oakford No. 9 precinct|Z1|N
+IL|17|129|Menard County|92433|01928589|Petersburg East No. 13 precinct|Z1|N
+IL|17|129|Menard County|92436|01928590|Petersburg North No. 14 precinct|Z1|N
+IL|17|129|Menard County|92439|01928591|Petersburg South No. 15 precinct|Z1|N
+IL|17|129|Menard County|92441|01928592|Petersburg West No. 16 precinct|Z1|N
+IL|17|129|Menard County|93024|01928634|Rock Creek No. 12 precinct|Z1|N
+IL|17|129|Menard County|93096|01928641|Sandridge No. 8 precinct|Z1|N
+IL|17|129|Menard County|93312|01928652|Sugar Grove No. 5 precinct|Z1|N
+IL|17|129|Menard County|93366|01928655|Tallula No. 11 precinct|Z1|N
+IL|17|131|Mercer County|00126|00428569|Abington township|T1|A
+IL|17|131|Mercer County|20968|00428916|Duncan township|T1|A
+IL|17|131|Mercer County|23152|00428949|Eliza township|T1|A
+IL|17|131|Mercer County|31342|00429076|Greene township|T1|A
+IL|17|131|Mercer County|39311|00429200|Keithsburg township|T1|A
+IL|17|131|Mercer County|48398|00429356|Mercer township|T1|A
+IL|17|131|Mercer County|49256|00429367|Millersburg township|T1|A
+IL|17|131|Mercer County|52233|00429431|New Boston township|T1|A
+IL|17|131|Mercer County|53806|00429459|North Henderson township|T1|A
+IL|17|131|Mercer County|55405|00429481|Ohio Grove township|T1|A
+IL|17|131|Mercer County|59182|00429551|Perryton township|T1|A
+IL|17|131|Mercer County|61795|00429603|Preemption township|T1|A
+IL|17|131|Mercer County|63628|00429633|Richland Grove township|T1|A
+IL|17|131|Mercer County|64551|00429648|Rivoli township|T1|A
+IL|17|131|Mercer County|73339|00429807|Suez township|T1|A
+IL|17|133|Monroe County|92550|01928604|Precinct 1|Z1|N
+IL|17|133|Monroe County|92555|01928614|Precinct 2|Z1|N
+IL|17|133|Monroe County|92560|01928623|Precinct 3|Z1|N
+IL|17|133|Monroe County|92565|01928624|Precinct 4|Z1|N
+IL|17|133|Monroe County|92570|01928625|Precinct 5|Z1|N
+IL|17|133|Monroe County|92575|01928626|Precinct 6|Z1|N
+IL|17|133|Monroe County|92580|01928627|Precinct 7|Z1|N
+IL|17|133|Monroe County|92585|01928628|Precinct 8|Z1|N
+IL|17|133|Monroe County|92590|01928629|Precinct 9|Z1|N
+IL|17|133|Monroe County|92595|01928605|Precinct 10|Z1|N
+IL|17|133|Monroe County|92600|01928606|Precinct 11|Z1|N
+IL|17|133|Monroe County|92605|01928607|Precinct 12|Z1|N
+IL|17|133|Monroe County|92610|01928608|Precinct 13|Z1|N
+IL|17|133|Monroe County|92615|01952862|Precinct 14|Z1|N
+IL|17|133|Monroe County|92620|01928609|Precinct 15|Z1|N
+IL|17|133|Monroe County|92625|01928610|Precinct 16|Z1|N
+IL|17|133|Monroe County|92630|01928611|Precinct 17|Z1|N
+IL|17|133|Monroe County|92635|01928612|Precinct 18|Z1|N
+IL|17|133|Monroe County|92640|01928613|Precinct 19|Z1|N
+IL|17|133|Monroe County|92645|01928615|Precinct 20|Z1|N
+IL|17|133|Monroe County|92650|01928616|Precinct 21|Z1|N
+IL|17|133|Monroe County|92655|01928617|Precinct 22|Z1|N
+IL|17|133|Monroe County|92660|01928618|Precinct 23|Z1|N
+IL|17|133|Monroe County|92665|01928619|Precinct 24|Z1|N
+IL|17|133|Monroe County|92670|01928620|Precinct 25|Z1|N
+IL|17|133|Monroe County|92675|01928621|Precinct 26|Z1|N
+IL|17|133|Monroe County|92680|01928622|Precinct 27|Z1|N
+IL|17|133|Monroe County|92685|01952852|Precinct 28|Z1|N
+IL|17|133|Monroe County|92690|01952853|Precinct 29|Z1|N
+IL|17|133|Monroe County|92695|01952850|Precinct 30|Z1|N
+IL|17|133|Monroe County|92700|01952855|Precinct 31|Z1|N
+IL|17|133|Monroe County|92705|01952856|Precinct 32|Z1|N
+IL|17|133|Monroe County|92710|01952857|Precinct 33|Z1|N
+IL|17|133|Monroe County|92715|01952858|Precinct 34|Z1|N
+IL|17|133|Monroe County|92720|01952859|Precinct 35|Z1|N
+IL|17|133|Monroe County|92725|01952860|Precinct 36|Z1|N
+IL|17|133|Monroe County|92730|01952861|Precinct 37|Z1|N
+IL|17|135|Montgomery County|02960|00427933|Audubon township|T1|A
+IL|17|135|Montgomery County|07107|00422236|Bois D'Arc township|T1|A
+IL|17|135|Montgomery County|10175|00428745|Butler Grove township|T1|A
+IL|17|135|Montgomery County|21761|00428932|East Fork township|T1|A
+IL|17|135|Montgomery County|26904|02787904|Fillmore Consolidated township|T1|A
+IL|17|135|Montgomery County|31836|00429086|Grisham township|T1|A
+IL|17|135|Montgomery County|33370|00429119|Harvel township|T1|A
+IL|17|135|Montgomery County|35060|00429136|Hillsboro township|T1|A
+IL|17|135|Montgomery County|37751|00429173|Irving township|T1|A
+IL|17|135|Montgomery County|53182|00429451|Nokomis township|T1|A
+IL|17|135|Montgomery County|53949|00429460|North Litchfield township|T1|A
+IL|17|135|Montgomery County|60183|00429571|Pitman township|T1|A
+IL|17|135|Montgomery County|62978|00429622|Raymond township|T1|A
+IL|17|135|Montgomery County|66092|00429679|Rountree township|T1|A
+IL|17|135|Montgomery County|70928|00429770|South Litchfield township|T1|A
+IL|17|135|Montgomery County|78669|00429890|Walshville township|T1|A
+IL|17|135|Montgomery County|82738|00429948|Witt township|T1|A
+IL|17|135|Montgomery County|84129|00429974|Zanesville township|T1|A
+IL|17|137|Morgan County|90054|01928427|Alexander precinct|Z1|N
+IL|17|137|Morgan County|90234|01928437|Arcadia precinct|Z1|N
+IL|17|137|Morgan County|90720|01928461|Chapin precinct|Z1|N
+IL|17|137|Morgan County|90828|01928467|Concord precinct|Z1|N
+IL|17|137|Morgan County|91278|01928498|Franklin precinct|Z1|N
+IL|17|137|Morgan County|91711|01928520|Jacksonville No. 1 precinct|Z1|N
+IL|17|137|Morgan County|91712|01928531|Jacksonville No. 2 precinct|Z1|N
+IL|17|137|Morgan County|91713|01928539|Jacksonville No. 3 precinct|Z1|N
+IL|17|137|Morgan County|91714|01928540|Jacksonville No. 4 precinct|Z1|N
+IL|17|137|Morgan County|91715|01928541|Jacksonville No. 5 precinct|Z1|N
+IL|17|137|Morgan County|91716|01928542|Jacksonville No. 6 precinct|Z1|N
+IL|17|137|Morgan County|91717|01928543|Jacksonville No. 7 precinct|Z1|N
+IL|17|137|Morgan County|91718|01928544|Jacksonville No. 8 precinct|Z1|N
+IL|17|137|Morgan County|91719|01928545|Jacksonville No. 9 precinct|Z1|N
+IL|17|137|Morgan County|91720|01928521|Jacksonville No. 10 precinct|Z1|N
+IL|17|137|Morgan County|91721|01928522|Jacksonville No. 11 precinct|Z1|N
+IL|17|137|Morgan County|91722|01928523|Jacksonville No. 12 precinct|Z1|N
+IL|17|137|Morgan County|91723|01928524|Jacksonville No. 13 precinct|Z1|N
+IL|17|137|Morgan County|91724|01928525|Jacksonville No. 14 precinct|Z1|N
+IL|17|137|Morgan County|91725|01928526|Jacksonville No. 15 precinct|Z1|N
+IL|17|137|Morgan County|91726|01928527|Jacksonville No. 16 precinct|Z1|N
+IL|17|137|Morgan County|91727|01928528|Jacksonville No. 17 precinct|Z1|N
+IL|17|137|Morgan County|91728|01928529|Jacksonville No. 18 precinct|Z1|N
+IL|17|137|Morgan County|91926|01928558|Literberry precinct|Z1|N
+IL|17|137|Morgan County|91962|01928560|Lynnville precinct|Z1|N
+IL|17|137|Morgan County|92034|01928562|Markham precinct|Z1|N
+IL|17|137|Morgan County|92043|01928565|Meredosia No. 1 precinct|Z1|N
+IL|17|137|Morgan County|92045|01928566|Meredosia No. 2 precinct|Z1|N
+IL|17|137|Morgan County|92232|02438415|Murrayville precinct|Z1|N
+IL|17|137|Morgan County|92268|01928581|Nortonville precinct|Z1|N
+IL|17|137|Morgan County|92484|01928601|Pisgah precinct|Z1|N
+IL|17|137|Morgan County|92934|01928630|Prentice-Sinclair precinct|Z1|N
+IL|17|137|Morgan County|93206|02435850|South Jacksonville No. 1 precinct|Z1|N
+IL|17|137|Morgan County|93208|02435851|South Jacksonville No. 2 precinct|Z1|N
+IL|17|137|Morgan County|93210|02435852|South Jacksonville No. 3 precinct|Z1|N
+IL|17|137|Morgan County|93212|02435853|South Jacksonville No. 4 precinct|Z1|N
+IL|17|137|Morgan County|93640|01928672|Waverly No. 1 precinct|Z1|N
+IL|17|137|Morgan County|93642|01928673|Waverly No. 2 precinct|Z1|N
+IL|17|137|Morgan County|93644|01928674|Waverly No. 3 precinct|Z1|N
+IL|17|137|Morgan County|93852|01928684|Woodson precinct|Z1|N
+IL|17|139|Moultrie County|20344|00428902|Dora township|T1|A
+IL|17|139|Moultrie County|22099|00428936|East Nelson township|T1|A
+IL|17|139|Moultrie County|38609|00429189|Jonathan Creek township|T1|A
+IL|17|139|Moultrie County|45057|00429287|Lovington township|T1|A
+IL|17|139|Moultrie County|45083|00429288|Lowe township|T1|A
+IL|17|139|Moultrie County|47124|00429328|Marrowbone township|T1|A
+IL|17|139|Moultrie County|73508|00429812|Sullivan township|T1|A
+IL|17|139|Moultrie County|81451|00429932|Whitley township|T1|A
+IL|17|141|Ogle County|08784|00428717|Brookville township|T1|A
+IL|17|141|Ogle County|09421|00428731|Buffalo township|T1|A
+IL|17|141|Ogle County|10253|00428747|Byron township|T1|A
+IL|17|141|Ogle County|19382|00428886|Dement township|T1|A
+IL|17|141|Ogle County|21501|00428926|Eagle Point township|T1|A
+IL|17|141|Ogle County|26298|00429003|Flagg township|T1|A
+IL|17|141|Ogle County|27078|00429013|Forreston township|T1|A
+IL|17|141|Ogle County|30718|00429065|Grand Detour township|T1|A
+IL|17|141|Ogle County|40650|00429219|Lafayette township|T1|A
+IL|17|141|Ogle County|42470|00429237|Leaf River township|T1|A
+IL|17|141|Ogle County|43549|01784905|Lincoln township|T1|A
+IL|17|141|Ogle County|45382|00429297|Lynnville township|T1|A
+IL|17|141|Ogle County|46903|00429325|Marion township|T1|A
+IL|17|141|Ogle County|47358|00429335|Maryland township|T1|A
+IL|17|141|Ogle County|50049|00429385|Monroe township|T1|A
+IL|17|141|Ogle County|51011|00429405|Mount Morris township|T1|A
+IL|17|141|Ogle County|56504|00429420|Oregon-Nashua township|T1|A
+IL|17|141|Ogle County|59897|00429568|Pine Creek township|T1|A
+IL|17|141|Ogle County|59975|00429569|Pine Rock township|T1|A
+IL|17|141|Ogle County|65182|00429661|Rockvale township|T1|A
+IL|17|141|Ogle County|68302|00429724|Scott township|T1|A
+IL|17|141|Ogle County|74535|00429826|Taylor township|T1|A
+IL|17|141|Ogle County|81399|00429931|White Rock township|T1|A
+IL|17|141|Ogle County|83492|00429957|Woosung township|T1|A
+IL|17|143|Peoria County|00477|00428574|Akron township|T1|A
+IL|17|143|Peoria County|08316|00428710|Brimfield township|T1|A
+IL|17|143|Peoria County|14130|00428806|Chillicothe township|T1|A
+IL|17|143|Peoria County|23711|00428962|Elmwood township|T1|A
+IL|17|143|Peoria County|32304|00429098|Hallock township|T1|A
+IL|17|143|Peoria County|35645|00429141|Hollis township|T1|A
+IL|17|143|Peoria County|38765|00429192|Jubilee township|T1|A
+IL|17|143|Peoria County|39818|00429207|Kickapoo township|T1|A
+IL|17|143|Peoria County|43523|00429259|Limestone township|T1|A
+IL|17|143|Peoria County|44342|00429274|Logan township|T1|A
+IL|17|143|Peoria County|48099|00429350|Medina township|T1|A
+IL|17|143|Peoria County|49113|00429365|Millbrook township|T1|A
+IL|17|143|Peoria County|59013|00429548|Peoria City township|T1|A
+IL|17|143|Peoria County|61938|00429606|Princeville township|T1|A
+IL|17|143|Peoria County|62510|00429614|Radnor township|T1|A
+IL|17|143|Peoria County|63771|00422224|Richwoods township|T1|A
+IL|17|143|Peoria County|65715|00429673|Rosefield township|T1|A
+IL|17|143|Peoria County|75289|00429833|Timber township|T1|A
+IL|17|143|Peoria County|76121|00429842|Trivoli township|T1|A
+IL|17|143|Peoria County|80749|00429920|West Peoria township|T1|A
+IL|17|145|Perry County|90342|01928443|Beaucoup precinct|Z1|N
+IL|17|145|Perry County|90936|01928470|Cutler precinct|Z1|N
+IL|17|145|Perry County|91010|01928474|Du Quoin No. 1 precinct|Z1|N
+IL|17|145|Perry County|91011|01928478|Du Quoin No. 2 precinct|Z1|N
+IL|17|145|Perry County|91012|01928479|Du Quoin No. 3 precinct|Z1|N
+IL|17|145|Perry County|91013|01928480|Du Quoin No. 4 precinct|Z1|N
+IL|17|145|Perry County|91014|01928481|Du Quoin No. 5 precinct|Z1|N
+IL|17|145|Perry County|91015|01928482|Du Quoin No. 6 precinct|Z1|N
+IL|17|145|Perry County|91016|01928483|Du Quoin No. 7 precinct|Z1|N
+IL|17|145|Perry County|91017|01928484|Du Quoin No. 8 precinct|Z1|N
+IL|17|145|Perry County|91018|01928485|Du Quoin No. 9 precinct|Z1|N
+IL|17|145|Perry County|91019|01928475|Du Quoin No. 10 precinct|Z1|N
+IL|17|145|Perry County|91020|01928476|Du Quoin No. 11 precinct|Z1|N
+IL|17|145|Perry County|91021|01928477|Du Quoin No. 12 precinct|Z1|N
+IL|17|145|Perry County|92468|01928593|Pinckneyville No. 1 precinct|Z1|N
+IL|17|145|Perry County|92469|01928594|Pinckneyville No. 2 precinct|Z1|N
+IL|17|145|Perry County|92470|01928595|Pinckneyville No. 3 precinct|Z1|N
+IL|17|145|Perry County|92471|01928596|Pinckneyville No. 4 precinct|Z1|N
+IL|17|145|Perry County|92472|01928597|Pinckneyville No. 5 precinct|Z1|N
+IL|17|145|Perry County|92473|01928598|Pinckneyville No. 6 precinct|Z1|N
+IL|17|145|Perry County|92474|01928599|Pinckneyville No. 7 precinct|Z1|N
+IL|17|145|Perry County|92475|01928600|Pinckneyville No. 8 precinct|Z1|N
+IL|17|145|Perry County|93330|01928653|Sunfield precinct|Z1|N
+IL|17|145|Perry County|93348|01928654|Swanwick precinct|Z1|N
+IL|17|145|Perry County|93384|01928656|Tamaroa No. 1 precinct|Z1|N
+IL|17|145|Perry County|93386|01928657|Tamaroa No. 2 precinct|Z1|N
+IL|17|145|Perry County|93762|01928679|Willisville precinct|Z1|N
+IL|17|147|Piatt County|05157|00428657|Bement township|T1|A
+IL|17|147|Piatt County|06808|00428689|Blue Ridge township|T1|A
+IL|17|147|Piatt County|12275|00428783|Cerro Gordo township|T1|A
+IL|17|147|Piatt County|30523|00429061|Goose Creek township|T1|A
+IL|17|147|Piatt County|50257|00429390|Monticello township|T1|A
+IL|17|147|Piatt County|67587|00429711|Sangamon township|T1|A
+IL|17|147|Piatt County|76888|00429855|Unity township|T1|A
+IL|17|147|Piatt County|81906|00429938|Willow Branch township|T1|A
+IL|17|149|Pike County|02791|00428617|Atlas township|T1|A
+IL|17|149|Pike County|03974|00428639|Barry township|T1|A
+IL|17|149|Pike County|12359|00428785|Chambersburg township|T1|A
+IL|17|149|Pike County|14390|00428811|Cincinnati township|T1|A
+IL|17|149|Pike County|19577|00428891|Derry township|T1|A
+IL|17|149|Pike County|19694|00428893|Detroit township|T1|A
+IL|17|149|Pike County|24972|00428987|Fairmount township|T1|A
+IL|17|149|Pike County|26415|00429006|Flint township|T1|A
+IL|17|149|Pike County|31784|00429085|Griggsville township|T1|A
+IL|17|149|Pike County|32070|00429092|Hadley township|T1|A
+IL|17|149|Pike County|32863|00429107|Hardin township|T1|A
+IL|17|149|Pike County|39935|00429208|Kinderhook township|T1|A
+IL|17|149|Pike County|43003|00429249|Levee township|T1|A
+IL|17|149|Pike County|47241|00429332|Martinsburg township|T1|A
+IL|17|149|Pike County|50192|00429387|Montezuma township|T1|A
+IL|17|149|Pike County|52259|00429432|Newburg township|T1|A
+IL|17|149|Pike County|52818|00429442|New Salem township|T1|A
+IL|17|149|Pike County|58356|00429539|Pearl township|T1|A
+IL|17|149|Pike County|59169|00429550|Perry township|T1|A
+IL|17|149|Pike County|60235|00429572|Pittsfield township|T1|A
+IL|17|149|Pike County|60547|00429578|Pleasant Hill township|T1|A
+IL|17|149|Pike County|60651|00429581|Pleasant Vale township|T1|A
+IL|17|149|Pike County|65936|00429676|Ross township|T1|A
+IL|17|149|Pike County|71617|00429785|Spring Creek township|T1|A
+IL|17|151|Pope County|91116|01928489|Eddyville No. 6 precinct|Z1|N
+IL|17|151|Pope County|91386|01928504|Golconda No. 1 precinct|Z1|N
+IL|17|151|Pope County|91404|01928505|Golconda No. 2 precinct|Z1|N
+IL|17|151|Pope County|91422|01928506|Golconda No. 3 precinct|Z1|N
+IL|17|151|Pope County|91746|01928546|Jefferson No. 4 precinct|Z1|N
+IL|17|151|Pope County|93654|01928675|Webster No. 5 precinct|Z1|N
+IL|17|153|Pulaski County|90108|01928430|America precinct|Z1|N
+IL|17|153|Pulaski County|91476|01928509|Grand Chain precinct|Z1|N
+IL|17|153|Pulaski County|91800|01928550|Karnak precinct|Z1|N
+IL|17|153|Pulaski County|92178|01928575|Mound City precinct|Z1|N
+IL|17|153|Pulaski County|92196|01928576|Mounds precinct|Z1|N
+IL|17|153|Pulaski County|92322|01928584|Olmsted precinct|Z1|N
+IL|17|153|Pulaski County|92412|01928588|Perks precinct|Z1|N
+IL|17|153|Pulaski County|92952|01928631|Pulaski precinct|Z1|N
+IL|17|153|Pulaski County|93474|01928662|Ullin precinct|Z1|N
+IL|17|153|Pulaski County|93564|01928668|Villa Ridge precinct|Z1|N
+IL|17|153|Pulaski County|93744|01928678|Wetaug precinct|Z1|N
+IL|17|155|Putnam County|31030|00429073|Granville township|T1|A
+IL|17|155|Putnam County|34124|00429127|Hennepin township|T1|A
+IL|17|155|Putnam County|46123|00429308|Magnolia township|T1|A
+IL|17|155|Putnam County|68627|00429729|Senachwine township|T1|A
+IL|17|157|Randolph County|90306|01928442|Baldwin precinct|Z1|N
+IL|17|157|Randolph County|90504|01928451|Bremen precinct|Z1|N
+IL|17|157|Randolph County|90522|01928452|Brewerville precinct|Z1|N
+IL|17|157|Randolph County|90702|01928460|Central precinct|Z1|N
+IL|17|157|Randolph County|90738|01928462|Chester precinct|Z1|N
+IL|17|157|Randolph County|90864|01928468|Coulterville precinct|Z1|N
+IL|17|157|Randolph County|91170|01928492|Ellis Grove precinct|Z1|N
+IL|17|157|Randolph County|91206|01928494|Evansville precinct|Z1|N
+IL|17|157|Randolph County|91818|01928551|Kaskaskia precinct|Z1|N
+IL|17|157|Randolph County|92358|01928586|Palestine precinct|Z1|N
+IL|17|157|Randolph County|92394|01928587|Percy precinct|Z1|N
+IL|17|157|Randolph County|92520|01928603|Prairie du Rocher precinct|Z1|N
+IL|17|157|Randolph County|92970|01928632|Red Bud precinct|Z1|N
+IL|17|157|Randolph County|93042|01928636|Rockwood precinct|Z1|N
+IL|17|157|Randolph County|93060|01928637|Ruma precinct|Z1|N
+IL|17|157|Randolph County|93222|01928648|Sparta precinct|Z1|N
+IL|17|157|Randolph County|93240|01928649|Steeleville precinct|Z1|N
+IL|17|157|Randolph County|93438|01928660|Tilden precinct|Z1|N
+IL|17|157|Randolph County|93600|01928670|Walsh precinct|Z1|N
+IL|17|157|Randolph County|93834|01928683|Wine Hill precinct|Z1|N
+IL|17|159|Richland County|07289|00422235|Bonpas township|T1|A
+IL|17|159|Richland County|14546|00428813|Claremont township|T1|A
+IL|17|159|Richland County|18862|00428878|Decker township|T1|A
+IL|17|159|Richland County|19486|00428889|Denver township|T1|A
+IL|17|159|Richland County|29028|00429049|German township|T1|A
+IL|17|159|Richland County|46006|00429307|Madison township|T1|A
+IL|17|159|Richland County|53156|00429450|Noble township|T1|A
+IL|17|159|Richland County|55925|00429488|Olney township|T1|A
+IL|17|159|Richland County|61847|00429604|Preston township|T1|A
+IL|17|161|Rock Island County|01439|00428590|Andalusia township|T1|A
+IL|17|161|Rock Island County|06301|00428678|Blackhawk township|T1|A
+IL|17|161|Rock Island County|07549|00428699|Bowling township|T1|A
+IL|17|161|Rock Island County|09512|00428733|Buffalo Prairie township|T1|A
+IL|17|161|Rock Island County|10955|00428756|Canoe Creek township|T1|A
+IL|17|161|Rock Island County|15248|00428825|Coal Valley township|T1|A
+IL|17|161|Rock Island County|15326|00428826|Coe township|T1|A
+IL|17|161|Rock Island County|16379|00428844|Cordova township|T1|A
+IL|17|161|Rock Island County|20825|00428912|Drury township|T1|A
+IL|17|161|Rock Island County|22632|00428942|Edgington township|T1|A
+IL|17|161|Rock Island County|32577|00429102|Hampton township|T1|A
+IL|17|161|Rock Island County|49880|00429379|Moline township|T1|A
+IL|17|161|Rock Island County|61236|00429592|Port Byron township|T1|A
+IL|17|161|Rock Island County|65091|00429658|Rock Island township|T1|A
+IL|17|161|Rock Island County|66300|00429682|Rural township|T1|A
+IL|17|161|Rock Island County|70993|00429772|South Moline township|T1|A
+IL|17|161|Rock Island County|71201|00429777|South Rock Island township|T1|A
+IL|17|161|Rock Island County|84246|00429977|Zuma township|T1|A
+IL|17|163|St. Clair County|04845|02394118|Belleville city|C5|F
+IL|17|163|St. Clair County|10968|00428757|Canteen township|T1|A
+IL|17|163|St. Clair County|11657|00428773|Caseyville township|T1|A
+IL|17|163|St. Clair County|12210|00428782|Centreville township|T1|A
+IL|17|163|St. Clair County|22268|00428938|East St. Louis township|T5|B
+IL|17|163|St. Clair County|24205|00428972|Engelmann township|T1|A
+IL|17|163|St. Clair County|25726|00428997|Fayetteville township|T1|A
+IL|17|163|St. Clair County|27819|00429027|Freeburg township|T1|A
+IL|17|163|St. Clair County|42509|00429238|Lebanon township|T1|A
+IL|17|163|St. Clair County|42873|00429246|Lenzburg township|T1|A
+IL|17|163|St. Clair County|46968|00429326|Marissa township|T1|A
+IL|17|163|St. Clair County|47436|00429336|Mascoutah township|T1|A
+IL|17|163|St. Clair County|49399|00429370|Millstadt township|T1|A
+IL|17|163|St. Clair County|52129|00429429|New Athens township|T1|A
+IL|17|163|St. Clair County|55262|00429478|O'Fallon township|T1|A
+IL|17|163|St. Clair County|61600|00429600|Prairie Du Long township|T1|A
+IL|17|163|St. Clair County|66729|00429695|St. Clair township|T1|A
+IL|17|163|St. Clair County|69550|00429746|Shiloh Valley township|T1|A
+IL|17|163|St. Clair County|70265|00429756|Smithton township|T1|A
+IL|17|163|St. Clair County|72741|00429799|Stites township|T1|A
+IL|17|163|St. Clair County|72988|00429803|Stookey township|T1|A
+IL|17|163|St. Clair County|73456|00429810|Sugar Loaf township|T1|A
+IL|17|165|Saline County|09122|00428724|Brushy township|T1|A
+IL|17|165|Saline County|11404|00428765|Carrier Mills township|T1|A
+IL|17|165|Saline County|16535|00428847|Cottage township|T1|A
+IL|17|165|Saline County|21709|00428929|East Eldorado township|T1|A
+IL|17|165|Saline County|28274|00422231|Galatia township|T1|A
+IL|17|165|Saline County|33149|00429114|Harrisburg township|T1|A
+IL|17|165|Saline County|37205|00429164|Independence township|T1|A
+IL|17|165|Saline County|44485|00429277|Long Branch township|T1|A
+IL|17|165|Saline County|50803|00429400|Mountain township|T1|A
+IL|17|165|Saline County|62601|00429615|Raleigh township|T1|A
+IL|17|165|Saline County|63030|00429624|Rector township|T1|A
+IL|17|165|Saline County|72897|00422239|Stonefort township|T1|A
+IL|17|165|Saline County|74509|00429825|Tate township|T1|A
+IL|17|167|Sangamon County|02928|00428619|Auburn township|T1|A
+IL|17|167|Sangamon County|03506|00428631|Ball township|T1|A
+IL|17|167|Sangamon County|09486|00428732|Buffalo Hart township|T1|A
+IL|17|167|Sangamon County|11046|00428759|Capital township|T1|A
+IL|17|167|Sangamon County|11579|00428771|Cartwright township|T1|A
+IL|17|167|Sangamon County|12697|00428792|Chatham township|T1|A
+IL|17|167|Sangamon County|14858|00428819|Clear Lake township|T1|A
+IL|17|167|Sangamon County|16223|00428840|Cooper township|T1|A
+IL|17|167|Sangamon County|16574|00428848|Cotton Hill township|T1|A
+IL|17|167|Sangamon County|18160|00428865|Curran township|T1|A
+IL|17|167|Sangamon County|20058|00428897|Divernon township|T1|A
+IL|17|167|Sangamon County|25323|00428991|Fancy Creek township|T1|A
+IL|17|167|Sangamon County|28651|00429041|Gardner township|T1|A
+IL|17|167|Sangamon County|37140|00429163|Illiopolis township|T1|A
+IL|17|167|Sangamon County|37881|00429176|Island Grove township|T1|A
+IL|17|167|Sangamon County|41976|00429231|Lanesville township|T1|A
+IL|17|167|Sangamon County|44186|00429270|Loami township|T1|A
+IL|17|167|Sangamon County|47618|00429341|Maxwell township|T1|A
+IL|17|167|Sangamon County|48034|00429348|Mechanicsburg township|T1|A
+IL|17|167|Sangamon County|52181|00429430|New Berlin township|T1|A
+IL|17|167|Sangamon County|58187|00429534|Pawnee township|T1|A
+IL|17|167|Sangamon County|64772|00429652|Rochester township|T1|A
+IL|17|167|Sangamon County|72013|00429786|Springfield township|T1|A
+IL|17|167|Sangamon County|74340|00429822|Talkington township|T1|A
+IL|17|167|Sangamon County|81776|00429937|Williams township|T1|A
+IL|17|167|Sangamon County|83310|00429954|Woodside township|T1|A
+IL|17|169|Schuyler County|03350|00428628|Bainbridge township|T1|A
+IL|17|169|Schuyler County|06132|00428675|Birmingham township|T1|A
+IL|17|169|Schuyler County|08693|00428715|Brooklyn township|T1|A
+IL|17|169|Schuyler County|08966|00428722|Browning township|T1|A
+IL|17|169|Schuyler County|09395|00428730|Buena Vista township|T1|A
+IL|17|169|Schuyler County|10708|00428753|Camden township|T1|A
+IL|17|169|Schuyler County|27793|00429026|Frederick township|T1|A
+IL|17|169|Schuyler County|34462|00429132|Hickory township|T1|A
+IL|17|169|Schuyler County|36776|00429157|Huntsville township|T1|A
+IL|17|169|Schuyler County|44069|00429267|Littleton township|T1|A
+IL|17|169|Schuyler County|54794|00429470|Oakland township|T1|A
+IL|17|169|Schuyler County|66352|00429685|Rushville township|T1|A
+IL|17|169|Schuyler County|83362|00429955|Woodstock township|T1|A
+IL|17|171|Scott County|90072|01928428|Alsey precinct|Z1|N
+IL|17|171|Scott County|90468|01928449|Bloomfield precinct|Z1|N
+IL|17|171|Scott County|91224|01928495|Exeter-Bluffs precinct|Z1|N
+IL|17|171|Scott County|91368|01928503|Glasgow precinct|Z1|N
+IL|17|171|Scott County|92016|01928561|Manchester precinct|Z1|N
+IL|17|171|Scott County|92052|01928567|Merritt precinct|Z1|N
+IL|17|171|Scott County|92250|01928580|Naples-Bluffs precinct|Z1|N
+IL|17|171|Scott County|93780|01928680|Winchester No. 1 precinct|Z1|N
+IL|17|171|Scott County|93798|01928681|Winchester No. 2 precinct|Z1|N
+IL|17|171|Scott County|93816|01928682|Winchester No. 3 precinct|Z1|N
+IL|17|173|Shelby County|02466|00428606|Ash Grove township|T1|A
+IL|17|173|Shelby County|06002|00428674|Big Spring township|T1|A
+IL|17|173|Shelby County|14637|00428815|Clarksburg township|T1|A
+IL|17|173|Shelby County|15417|00428829|Cold Spring township|T1|A
+IL|17|173|Shelby County|20851|00428914|Dry Point township|T1|A
+IL|17|173|Shelby County|26337|00429005|Flat Branch township|T1|A
+IL|17|173|Shelby County|34345|00429131|Herrick township|T1|A
+IL|17|173|Shelby County|35567|00429140|Holland township|T1|A
+IL|17|173|Shelby County|41690|00429225|Lakewood township|T1|A
+IL|17|173|Shelby County|51245|00422225|Moweaqua township|T1|A
+IL|17|173|Shelby County|55145|00429475|Oconee township|T1|A
+IL|17|173|Shelby County|55457|00429482|Okaw township|T1|A
+IL|17|173|Shelby County|58590|00429545|Penn township|T1|A
+IL|17|173|Shelby County|59663|00429560|Pickaway township|T1|A
+IL|17|173|Shelby County|61522|00429597|Prairie township|T1|A
+IL|17|173|Shelby County|63615|00429632|Richland township|T1|A
+IL|17|173|Shelby County|63836|00429638|Ridge township|T1|A
+IL|17|173|Shelby County|65637|00429671|Rose township|T1|A
+IL|17|173|Shelby County|66313|00429683|Rural township|T1|A
+IL|17|173|Shelby County|69199|00429739|Shelbyville township|T1|A
+IL|17|173|Shelby County|69927|00429752|Sigel township|T1|A
+IL|17|173|Shelby County|75588|00429834|Todds Point township|T1|A
+IL|17|173|Shelby County|75861|00429840|Tower Hill township|T1|A
+IL|17|173|Shelby County|82335|00429944|Windsor township|T1|A
+IL|17|175|Stark County|23646|00428960|Elmira township|T1|A
+IL|17|175|Stark County|24478|00428981|Essex township|T1|A
+IL|17|175|Stark County|30627|00429063|Goshen township|T1|A
+IL|17|175|Stark County|56783|00429508|Osceola township|T1|A
+IL|17|175|Stark County|58603|00429546|Penn township|T1|A
+IL|17|175|Stark County|75796|00429838|Toulon township|T1|A
+IL|17|175|Stark County|77174|00429860|Valley township|T1|A
+IL|17|175|Stark County|80489|00429918|West Jersey township|T1|A
+IL|17|177|Stephenson County|09226|00422234|Buckeye township|T1|A
+IL|17|177|Stephenson County|18355|00428868|Dakota township|T1|A
+IL|17|177|Stephenson County|24413|00428978|Erin township|T1|A
+IL|17|177|Stephenson County|26506|00429008|Florence township|T1|A
+IL|17|177|Stephenson County|27897|00429030|Freeport township|T5|B
+IL|17|177|Stephenson County|32902|00429108|Harlem township|T1|A
+IL|17|177|Stephenson County|38284|00429183|Jefferson township|T1|A
+IL|17|177|Stephenson County|39610|00429203|Kent township|T1|A
+IL|17|177|Stephenson County|41885|00429230|Lancaster township|T1|A
+IL|17|177|Stephenson County|44758|00429282|Loran township|T1|A
+IL|17|177|Stephenson County|56120|00429493|Oneco township|T1|A
+IL|17|177|Stephenson County|64057|00429641|Ridott township|T1|A
+IL|17|177|Stephenson County|65065|00429657|Rock Grove township|T1|A
+IL|17|177|Stephenson County|65143|00429659|Rock Run township|T1|A
+IL|17|177|Stephenson County|69953|00429753|Silver Creek township|T1|A
+IL|17|177|Stephenson County|78318|00429879|Waddams township|T1|A
+IL|17|177|Stephenson County|80788|00429921|West Point township|T1|A
+IL|17|177|Stephenson County|82556|00429947|Winslow township|T1|A
+IL|17|179|Tazewell County|07627|00428701|Boynton township|T1|A
+IL|17|179|Tazewell County|14403|00428812|Cincinnati township|T1|A
+IL|17|179|Tazewell County|18953|00428879|Deer Creek township|T1|A
+IL|17|179|Tazewell County|19239|00428885|Delavan township|T1|A
+IL|17|179|Tazewell County|19941|00428895|Dillon township|T1|A
+IL|17|179|Tazewell County|23607|00428959|Elm Grove township|T1|A
+IL|17|179|Tazewell County|26636|00422232|Fondulac township|T1|A
+IL|17|179|Tazewell County|31940|00429089|Groveland township|T1|A
+IL|17|179|Tazewell County|35359|00429139|Hittle township|T1|A
+IL|17|179|Tazewell County|36139|00429148|Hopedale township|T1|A
+IL|17|179|Tazewell County|44017|00429265|Little Mackinaw township|T1|A
+IL|17|179|Tazewell County|45792|00429302|Mackinaw township|T1|A
+IL|17|179|Tazewell County|46266|00429313|Malone township|T1|A
+IL|17|179|Tazewell County|50634|00429396|Morton township|T1|A
+IL|17|179|Tazewell County|58460|00429541|Pekin township|T1|A
+IL|17|179|Tazewell County|67483|00429708|Sand Prairie township|T1|A
+IL|17|179|Tazewell County|72130|00429789|Spring Lake township|T1|A
+IL|17|179|Tazewell County|75978|00429841|Tremont township|T1|A
+IL|17|179|Tazewell County|79046|00429898|Washington township|T1|A
+IL|17|181|Union County|90090|01928429|Alto Pass precinct|Z1|N
+IL|17|181|Union County|90126|01928431|Anna District 1 precinct|Z1|N
+IL|17|181|Union County|90144|01928432|Anna District 2 precinct|Z1|N
+IL|17|181|Union County|90162|01928433|Anna District 3 precinct|Z1|N
+IL|17|181|Union County|90180|01928434|Anna District 4 precinct|Z1|N
+IL|17|181|Union County|90198|01928435|Anna District 5 precinct|Z1|N
+IL|17|181|Union County|90216|01928436|Anna District 6 precinct|Z1|N
+IL|17|181|Union County|90224|02393871|Anna District 7 precinct|Z1|N
+IL|17|181|Union County|90288|01928441|Balcom precinct|Z1|N
+IL|17|181|Union County|90756|01928463|Cobden District 1 precinct|Z1|N
+IL|17|181|Union County|90774|01928464|Cobden District 2 precinct|Z1|N
+IL|17|181|Union County|90972|01928472|Dongola District 1 precinct|Z1|N
+IL|17|181|Union County|90990|01928473|Dongola District 2 precinct|Z1|N
+IL|17|181|Union County|91764|01928548|Jonesboro District 1 precinct|Z1|N
+IL|17|181|Union County|91782|01928549|Jonesboro District 2 precinct|Z1|N
+IL|17|181|Union County|91792|02397414|Jonesboro District 3 precinct|Z1|N
+IL|17|181|Union County|91872|01928555|Lick Creek precinct|Z1|N
+IL|17|181|Union County|92142|01928572|Mill Creek precinct|Z1|N
+IL|17|181|Union County|93258|01928650|Stokes precinct|Z1|N
+IL|17|181|Union County|93484|02397904|Union precinct|Z1|N
+IL|17|183|Vermilion County|06678|00428686|Blount township|T1|A
+IL|17|183|Vermilion County|10162|00428744|Butler township|T1|A
+IL|17|183|Vermilion County|11449|00428767|Carroll township|T1|A
+IL|17|183|Vermilion County|11787|00428776|Catlin township|T1|A
+IL|17|183|Vermilion County|18576|00428873|Danville township|T1|A
+IL|17|183|Vermilion County|23932|00428965|Elwood township|T1|A
+IL|17|183|Vermilion County|28976|00429048|Georgetown township|T1|A
+IL|17|183|Vermilion County|30965|00429072|Grant township|T1|A
+IL|17|183|Vermilion County|38180|00429180|Jamaica township|T1|A
+IL|17|183|Vermilion County|44953|00429285|Love township|T1|A
+IL|17|183|Vermilion County|45772|00429301|McKendree township|T1|A
+IL|17|183|Vermilion County|48775|00429359|Middlefork township|T1|A
+IL|17|183|Vermilion County|52454|00429435|Newell township|T1|A
+IL|17|183|Vermilion County|55015|00429473|Oakwood township|T1|A
+IL|17|183|Vermilion County|59832|00429565|Pilot township|T1|A
+IL|17|183|Vermilion County|65949|00429677|Ross township|T1|A
+IL|17|183|Vermilion County|69849|00429750|Sidell township|T1|A
+IL|17|183|Vermilion County|71227|00429778|South Ross township|T1|A
+IL|17|183|Vermilion County|77304|00429861|Vance township|T1|A
+IL|17|185|Wabash County|90378|00422254|Bellmont precinct|Z1|N
+IL|17|185|Wabash County|90792|01928465|Coffee precinct|Z1|N
+IL|17|185|Wabash County|90810|01928466|Compton precinct|Z1|N
+IL|17|185|Wabash County|91314|01928500|Friendsville precinct|Z1|N
+IL|17|185|Wabash County|91854|01928554|Lancaster precinct|Z1|N
+IL|17|185|Wabash County|91890|01928556|Lick Prairie precinct|Z1|N
+IL|17|185|Wabash County|92214|01928577|Mount Carmel precinct|Z1|N
+IL|17|185|Wabash County|93582|01928669|Wabash precinct|Z1|N
+IL|17|187|Warren County|05560|00428665|Berwick township|T1|A
+IL|17|187|Warren County|15404|00428828|Coldbrook township|T1|A
+IL|17|187|Warren County|23516|00428957|Ellison township|T1|A
+IL|17|187|Warren County|26610|00429010|Floyd township|T1|A
+IL|17|187|Warren County|31277|00429075|Greenbush township|T1|A
+IL|17|187|Warren County|32226|00429096|Hale township|T1|A
+IL|17|187|Warren County|39396|00429201|Kelly township|T1|A
+IL|17|187|Warren County|42847|00429245|Lenox township|T1|A
+IL|17|187|Warren County|50023|00429384|Monmouth township|T1|A
+IL|17|187|Warren County|60898|00429585|Point Pleasant township|T1|A
+IL|17|187|Warren County|65858|00429674|Roseville township|T1|A
+IL|17|187|Warren County|72065|00429788|Spring Grove township|T1|A
+IL|17|187|Warren County|73716|00429816|Sumner township|T1|A
+IL|17|187|Warren County|74093|00429819|Swan township|T1|A
+IL|17|187|Warren County|75692|00429836|Tompkins township|T1|A
+IL|17|189|Washington County|02544|00428609|Ashley township|T1|A
+IL|17|189|Washington County|04442|00428646|Beaucoup township|T1|A
+IL|17|189|Washington County|07172|00428692|Bolo township|T1|A
+IL|17|189|Washington County|17042|00428851|Covington township|T1|A
+IL|17|189|Washington County|20877|00428915|Du Bois township|T1|A
+IL|17|189|Washington County|36360|00429152|Hoyleton township|T1|A
+IL|17|189|Washington County|37790|00429174|Irvington township|T1|A
+IL|17|189|Washington County|38453|00429185|Johannisburg township|T1|A
+IL|17|189|Washington County|44108|00429268|Lively Grove township|T1|A
+IL|17|189|Washington County|51713|00429421|Nashville township|T1|A
+IL|17|189|Washington County|54599|00429469|Oakdale township|T1|A
+IL|17|189|Washington County|55483|00429483|Okawville township|T1|A
+IL|17|189|Washington County|59858|00429567|Pilot Knob township|T1|A
+IL|17|189|Washington County|60807|00429584|Plum Hill township|T1|A
+IL|17|189|Washington County|63732|00429635|Richview township|T1|A
+IL|17|189|Washington County|77434|00429863|Venedy township|T1|A
+IL|17|191|Wayne County|02297|00428601|Arrington township|T1|A
+IL|17|191|Wayne County|03753|00428635|Barnhill township|T1|A
+IL|17|191|Wayne County|04559|00428650|Bedford township|T1|A
+IL|17|191|Wayne County|05521|00428664|Berry township|T1|A
+IL|17|191|Wayne County|05950|00428672|Big Mound township|T1|A
+IL|17|191|Wayne County|23685|00428961|Elm River township|T1|A
+IL|17|191|Wayne County|27364|00429020|Four Mile township|T1|A
+IL|17|191|Wayne County|28534|00429039|Garden Hill township|T1|A
+IL|17|191|Wayne County|31953|00429090|Grover township|T1|A
+IL|17|191|Wayne County|34501|00429133|Hickory Hill township|T1|A
+IL|17|191|Wayne County|37387|00429168|Indian Prairie township|T1|A
+IL|17|191|Wayne County|38258|00429182|Jasper township|T1|A
+IL|17|191|Wayne County|39285|00429199|Keith township|T1|A
+IL|17|191|Wayne County|41755|00429226|Lamard township|T1|A
+IL|17|191|Wayne County|42626|00429241|Leech township|T1|A
+IL|17|191|Wayne County|47501|00429339|Massilon township|T1|A
+IL|17|191|Wayne County|50946|00429403|Mount Erie township|T1|A
+IL|17|191|Wayne County|56367|00429501|Orchard township|T1|A
+IL|17|191|Wayne County|56510|00429503|Orel township|T1|A
+IL|17|191|Wayne County|84194|00429975|Zif township|T1|A
+IL|17|193|White County|09902|00428739|Burnt Prairie township|T1|A
+IL|17|193|White County|11306|00428764|Carmi township|T1|A
+IL|17|193|White County|24088|00428968|Emma township|T1|A
+IL|17|193|White County|24192|00428971|Enfield township|T1|A
+IL|17|193|White County|31069|00429074|Gray township|T1|A
+IL|17|193|White County|33591|00429123|Hawthorne township|T1|A
+IL|17|193|White County|34228|00429130|Heralds Prairie township|T1|A
+IL|17|193|White County|37231|00429165|Indian Creek township|T1|A
+IL|17|193|White County|49360|00429369|Mill Shoals township|T1|A
+IL|17|193|White County|59507|00429557|Phillips township|T1|A
+IL|17|195|Whiteside County|00529|00428576|Albany township|T1|A
+IL|17|195|Whiteside County|15144|00428824|Clyde township|T1|A
+IL|17|195|Whiteside County|15651|00428832|Coloma township|T1|A
+IL|17|195|Whiteside County|24387|00428976|Erie township|T1|A
+IL|17|195|Whiteside County|25817|00428999|Fenton township|T1|A
+IL|17|195|Whiteside County|28157|00429033|Fulton township|T1|A
+IL|17|195|Whiteside County|28586|00429040|Garden Plain township|T1|A
+IL|17|195|Whiteside County|28833|00429044|Genesee township|T1|A
+IL|17|195|Whiteside County|32174|00429094|Hahnaman township|T1|A
+IL|17|195|Whiteside County|36178|00429150|Hopkins township|T1|A
+IL|17|195|Whiteside County|36581|00429154|Hume township|T1|A
+IL|17|195|Whiteside County|38700|00429190|Jordan township|T1|A
+IL|17|195|Whiteside County|45291|00429294|Lyndon township|T1|A
+IL|17|195|Whiteside County|50270|00429391|Montmorency township|T1|A
+IL|17|195|Whiteside County|51076|00429407|Mount Pleasant township|T1|A
+IL|17|195|Whiteside County|52857|00429443|Newton township|T1|A
+IL|17|195|Whiteside County|61262|00429593|Portland township|T1|A
+IL|17|195|Whiteside County|61990|00429607|Prophetstown township|T1|A
+IL|17|195|Whiteside County|72553|00429795|Sterling township|T1|A
+IL|17|195|Whiteside County|74483|00429824|Tampico township|T1|A
+IL|17|195|Whiteside County|76758|00429854|Union Grove township|T1|A
+IL|17|195|Whiteside County|77070|00429858|Ustick township|T1|A
+IL|17|197|Will County|12483|00428789|Channahon township|T1|A
+IL|17|197|Will County|17536|00428855|Crete township|T1|A
+IL|17|197|Will County|18199|00428866|Custer township|T1|A
+IL|17|197|Will County|21241|00428920|Du Page township|T1|A
+IL|17|197|Will County|26519|00429009|Florence township|T1|A
+IL|17|197|Will County|27631|00429024|Frankfort township|T1|A
+IL|17|197|Will County|31394|00429079|Green Garden township|T1|A
+IL|17|197|Will County|35827|00429142|Homer township|T1|A
+IL|17|197|Will County|38076|00429179|Jackson township|T1|A
+IL|17|197|Will County|38583|00429188|Joliet township|T1|A
+IL|17|197|Will County|44238|00429271|Lockport township|T1|A
+IL|17|197|Will County|46370|00429316|Manhattan township|T1|A
+IL|17|197|Will County|49958|00429382|Monee township|T1|A
+IL|17|197|Will County|52597|00429437|New Lenox township|T1|A
+IL|17|197|Will County|59065|00429549|Peotone township|T1|A
+IL|17|197|Will County|60300|00429574|Plainfield township|T1|A
+IL|17|197|Will County|63108|00429625|Reed township|T1|A
+IL|17|197|Will County|76212|00429843|Troy township|T1|A
+IL|17|197|Will County|79059|00429899|Washington township|T1|A
+IL|17|197|Will County|79865|00429909|Wesley township|T1|A
+IL|17|197|Will County|81035|00429926|Wheatland township|T1|A
+IL|17|197|Will County|81711|00429936|Will township|T1|A
+IL|17|197|Will County|82114|00429941|Wilmington township|T1|A
+IL|17|197|Will County|82244|00429943|Wilton township|T1|A
+IL|17|199|Williamson County|90432|02393873|Blairsville precinct|Z1|N
+IL|17|199|Williamson County|90648|02393874|Carterville precinct|Z1|N
+IL|17|199|Williamson County|90846|02397406|Corinth precinct|Z1|N
+IL|17|199|Williamson County|90882|02397407|Crab Orchard precinct|Z1|N
+IL|17|199|Williamson County|90918|02397408|Creal Springs precinct|Z1|N
+IL|17|199|Williamson County|91062|02397409|East Marion precinct|Z1|N
+IL|17|199|Williamson County|91548|02397410|Grassy precinct|Z1|N
+IL|17|199|Williamson County|91620|02397413|Herrin precinct|Z1|N
+IL|17|199|Williamson County|91836|02397415|Lake Creek precinct|Z1|N
+IL|17|199|Williamson County|93204|02397417|Southern precinct|Z1|N
+IL|17|199|Williamson County|93294|02397418|Stonefort precinct|Z1|N
+IL|17|199|Williamson County|93690|02399759|West Marion precinct|Z1|N
+IL|17|201|Winnebago County|09915|00428740|Burritt township|T1|A
+IL|17|201|Winnebago County|13087|00428799|Cherry Valley township|T1|A
+IL|17|201|Winnebago County|21293|00428921|Durand township|T1|A
+IL|17|201|Winnebago County|32928|00429109|Harlem township|T1|A
+IL|17|201|Winnebago County|33188|00429115|Harrison township|T1|A
+IL|17|201|Winnebago County|42054|00429232|Laona township|T1|A
+IL|17|201|Winnebago County|57069|00429518|Owen township|T1|A
+IL|17|201|Winnebago County|58421|00429540|Pecatonica township|T1|A
+IL|17|201|Winnebago County|65013|00429656|Rockford township|T1|A
+IL|17|201|Winnebago County|65169|00429660|Rockton township|T1|A
+IL|17|201|Winnebago County|65624|00429670|Roscoe township|T1|A
+IL|17|201|Winnebago County|68783|00429733|Seward township|T1|A
+IL|17|201|Winnebago County|69615|00429748|Shirland township|T1|A
+IL|17|201|Winnebago County|82504|00429946|Winnebago township|T1|A
+IL|17|203|Woodford County|11878|00428778|Cazenovia township|T1|A
+IL|17|203|Woodford County|14793|00428818|Clayton township|T1|A
+IL|17|203|Woodford County|17861|00428862|Cruger township|T1|A
+IL|17|203|Woodford County|23750|00428963|El Paso township|T1|A
+IL|17|203|Woodford County|31355|00429077|Greene township|T1|A
+IL|17|203|Woodford County|39012|00429196|Kansas township|T1|A
+IL|17|203|Woodford County|43835|00429262|Linn township|T1|A
+IL|17|203|Woodford County|48619|00429358|Metamora township|T1|A
+IL|17|203|Woodford County|49581|00429374|Minonk township|T1|A
+IL|17|203|Woodford County|50231|00429389|Montgomery township|T1|A
+IL|17|203|Woodford County|55821|00429486|Olio township|T1|A
+IL|17|203|Woodford County|57290|00429521|Palestine township|T1|A
+IL|17|203|Woodford County|57537|00422240|Panola township|T1|A
+IL|17|203|Woodford County|58018|00429530|Partridge township|T1|A
+IL|17|203|Woodford County|64603|00429649|Roanoke township|T1|A
+IL|17|203|Woodford County|71611|00429784|Spring Bay township|T1|A
+IL|17|203|Woodford County|83544|00429959|Worth township|T1|A

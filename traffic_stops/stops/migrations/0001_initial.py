@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=99, null=True)),
                 ('code', models.TextField(max_length=5, null=True)),
-                ('fips', models.CharField(max_length=7, null=True)),
+                ('geoid', models.CharField(max_length=7, null=True)),
             ],
             options={
                 'db_table': 'agencies',
