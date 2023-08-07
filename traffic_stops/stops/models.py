@@ -182,7 +182,8 @@ class Stop(models.Model):
         return self.VehicleSearchConducted in trues \
             or self.DriverSearchConducted in trues \
             or self.PassengerSearchConducted in trues \
-            or self.SearchConducted in trues
+            or self.SearchConducted in trues \
+            or self.get_consent_search_conducted()
 
     def get_search_hit(self):
         # only count the hit if there was a search?

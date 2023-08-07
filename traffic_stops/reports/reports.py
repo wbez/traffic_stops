@@ -11,11 +11,11 @@ stop_headers = list(Stop.objects.first().__dict__.keys())[1:]
 # metadata
 agency_codes = [x['code'] for x in Agency.objects.values('code').distinct()]
 # update years - ranges don't include last number
-years = [x for x in range(2004022)]
+years = [x for x in range(2004,2023)] # TODO: mix/max from db
 # db stuff
 cursor = connection.cursor()
 #race_categories = ['White','Hispanic','Black','Native Hawaiian/Pacific Islander','Asian','Native American']
-race_categories = [x['driver_race'] for x in Stop.objects.values('driver_race').distinct()]
+race_categories = [x['driver_race'] for x in Stop.objects.values('driver_race').distinct() if x['driver_race']]
 ### END CONFIGS ###
 
 def write_out(name,data):
@@ -135,7 +135,7 @@ def agency_export():
     """
     for agency_code in agency_codes:
         try:
-            data = Stop.objects.raw('select * from stops_stop where AgencyCode = "' + agency_code + '"')
+            data = Stop.objects.raw('select * from stops where AgencyCode = "' + agency_code + '"')
             agency_name = Stop.objects.filter(AgencyCode=agency)[0].AgencyName
             outfile = open(outfile_dir + agency_name + '.csv','w')
             outcsv = csv.DictWriter(outfile,stop_headers)
@@ -157,10 +157,10 @@ def stops_searches_citations_by_race(agency_codes=None,year=None):
     total stops, searches, citations
     by race
     """
-    codes_string = ','.join([str(x) for x in agency_codes])
     # queries
-    stops_q = "select count(*) from stops_stop where driver_race = %s"
-    if agency_code:
+    stops_q = "select count(*) from stops where driver_race = %s"
+    if agency_codes:
+        codes_string = ','.join([str(x) for x in agency_codes])
         stops_q += " and AgencyCode in (" + codes_string +")"
     if year:
         stops_q += 'and year =' + str(year)
@@ -188,7 +188,7 @@ def stops_searches_citations_by_race(agency_codes=None,year=None):
     return data
 
 
-def ssc_over_time(agency_code=None,writeout=True):
+def ssc_over_time(agency_codes=None,writeout=True):
     """
     a wrapper for stops_searches_citations_by_race
     that iterates over every year 
@@ -198,7 +198,7 @@ def ssc_over_time(agency_code=None,writeout=True):
     year_data = []
     for year in years:
         print(year)
-        data = stops_searches_citations_by_race(agency_code=agency_code,year=year)
+        data = stops_searches_citations_by_race(agency_codes=agency_codes,year=year)
         data['year'] = year
         year_data.append(data)
     
@@ -213,11 +213,11 @@ def ssc_over_time(agency_code=None,writeout=True):
                 for stop_category in stop_categories:
                     headers.append(race + '_driver_' + stop_category)
             # only adds agency name if an agency code was specified
-            agency_name = ''
-            if agency_code:
-                agency_name = '-' + Stops.objects.filter(AgencyCode=agency_code).first().AgencyName
+            agency_names = ''
+            if agency_codes:
+                agency_names = '-' + '-'.join([x['AgencyName'] for x in Stop.objects.filter(AgencyCode__in=agency_codes).values('AgencyName').distinct()])
             # setup output file
-            outfile_path = outfile_dir + 'ssc_over_time' + agency_name + '.csv'
+            outfile_path = outfile_dir + 'ssc_over_time' + agency_names + '.csv'
             outfile = open(outfile_path,'w')
             outcsv = csv.DictWriter(outfile,headers)
             outcsv.writeheader()
