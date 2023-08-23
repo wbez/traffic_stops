@@ -20,6 +20,7 @@ class Migration(migrations.Migration):
                 ('metric', models.CharField(max_length=99)),
                 ('value', models.CharField(max_length=99, null=True)),
                 ('rank', models.IntegerField(null=True)),
+                ('notes', models.CharField(max_length=99, null=True)),
                 ('agency', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='stops.agency')),
             ],
             options={

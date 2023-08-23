@@ -27,6 +27,8 @@ class Agency(models.Model):
     other_h = models.IntegerField(null=True)
     two_or_more_h = models.IntegerField(null=True)
 
+    def driving_age_pop_by_race(self):
+        return
 
 
 class AgencyData(models.Model):
@@ -43,6 +45,7 @@ class AgencyData(models.Model):
     metric = models.CharField(max_length=99)
     value = models.CharField(max_length=99,null=True)
     rank = models.IntegerField(null=True)
+    notes = models.CharField(max_length=99)
 
 # Create your models here.
 class Stop(models.Model):
