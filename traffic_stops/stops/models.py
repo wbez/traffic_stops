@@ -3,6 +3,16 @@ from django.db import models
 # for checking if searches match list of true values
 trues = ['1','1.00','Yes','True']
 # TODO: standardize values
+# for B01001 sex by race by age pops
+table_codes = { 
+        'white_nh': 'H', # White Alone, Not Hispanic or Latino
+        'hispanic': 'I', # Hispanic or Latino
+        'black':    'B', # Black or African American Alone
+        'ai_an':    'C', # American Indian and Alaska Native Alone
+        'asian':    'D', # Asian Alone
+        'h_opi':    'E', # Native Hawaiian and Other Pacific Islander Alone
+        }
+
 
 
 class Agency(models.Model):
@@ -28,7 +38,58 @@ class Agency(models.Model):
     two_or_more_h = models.IntegerField(null=True)
 
     def driving_age_pop_by_race(self):
-        return
+        """
+        sum up and return the totals and pcts 
+        of driving population (15+) 
+        for each racial group 
+        """
+        # keep track
+        data = {}
+        # get all data points on this agency
+        agency_data = self.agencydata_set.all()
+        # filter by race 
+        for race in table_codes:
+            # lookup census code by race
+            code = table_codes[race]
+            # the race code is always the 7th character
+            race_data = [x for x in agency_data if x.metric[6] == code]
+            # let's count by the number at the end of the field name
+            race_driving_age = sum([int(x.value) for x in race_data \
+                    if int(x.metric[-3:]) in list(range(6,17)) + list(range(21,32))])
+            data[race] = {'total':race_driving_age}
+
+        # now get percents
+        # need total first
+        total = sum([data[x]['total'] for x in table_codes])
+        if not total:
+            return
+        for race in table_codes:
+            data[race]['pct'] = data[race]['total']/total
+        
+        # return
+        return data
+
+    def pct_blk_drivers_stopped(self,year=2022):
+        """
+        what pct of drivers stopped are black last year?
+        """
+        last_year_stops = self.stop_set.filter(year=year)
+        black_drivers_last_year = last_year_stops.filter(driver_race='Black')
+        if last_year_stops:
+            return len(black_drivers_last_year)/len(last_year_stops)
+
+    def ratio_blk_drivers_stopped_to_driving_pop(self):
+        """
+        the ratio of black drivers stop share 
+        compared to black driving population share.
+        large numbers are red flags
+        """
+        driving_pop = self.driving_age_pop_by_race()
+        if driving_pop:
+            blk_driving_pct = driving_pop['black']['pct']
+            blk_stop_pct = self.pct_blk_drivers_stopped()
+            if blk_stop_pct and blk_driving_pct:
+                return blk_stop_pct/blk_driving_pct
 
 
 class AgencyData(models.Model):
