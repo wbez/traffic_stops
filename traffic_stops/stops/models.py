@@ -21,54 +21,48 @@ class Agency(models.Model):
 
     name = models.CharField(max_length=99,null=True)
     code = models.TextField(max_length=5,null=True)
-    # for census data
+    # all census data is 18+ TODO relabel these fields accordingly
     geoid = models.CharField(max_length=7,null=True)
     total_pop = models.IntegerField(null=True)
+    latino = models.IntegerField(null=True)
     white_nh = models.IntegerField(null=True)
     black_nh = models.IntegerField(null=True)
     aian_nh = models.IntegerField(null=True)
+    nhpi_nh = models.IntegerField(null=True)
     asian_nh = models.IntegerField(null=True)
-    other_nh = models.IntegerField(null=True)
-    two_or_more_nh = models.IntegerField(null=True)
-    white_h = models.IntegerField(null=True)
-    black_h = models.IntegerField(null=True)
-    aian_h = models.IntegerField(null=True)
-    asian_h = models.IntegerField(null=True)
-    other_h = models.IntegerField(null=True)
-    two_or_more_h = models.IntegerField(null=True)
+    other = models.IntegerField(null=True)
+    two_or_more = models.IntegerField(null=True)
 
-    def driving_age_pop_by_race(self):
+    def adult_pop_by_race(self,pct=False):
         """
         sum up and return the totals and pcts 
-        of driving population (15+) 
+        of rough driving population (18+) 
         for each racial group 
         """
         # keep track
-        data = {}
-        # get all data points on this agency
-        agency_data = self.agencydata_set.all()
-        # filter by race 
-        for race in table_codes:
-            # lookup census code by race
-            code = table_codes[race]
-            # the race code is always the 7th character
-            race_data = [x for x in agency_data if x.metric[6] == code]
-            # let's count by the number at the end of the field name
-            race_driving_age = sum([int(x.value) for x in race_data \
-                    if int(x.metric[-3:]) in list(range(6,17)) + list(range(21,32))])
-            data[race] = {'total':race_driving_age}
-
-        # now get percents
-        # need total first
-        total = sum([data[x]['total'] for x in table_codes])
-        if not total:
-            return
-        for race in table_codes:
-            data[race]['pct'] = data[race]['total']/total
-        
-        # return
+        data = {
+                'total_pop': self.total_pop,
+                'latino': self.latino,
+                'white_nh': self.white_nh,
+                'black_nh': self.black_nh,
+                'aian_nh': self.aian_nh,
+                'nhpi_nh': self.nhpi_nh,
+                'asian_nh': self.asian_nh,
+                'other': self.other,
+                'two_or_more': self.two_or_more,
+                }
+        if pct:
+            # get list of dict keys to iterate through
+            keys = [x for x in data.keys()]
+            # calc pct by race
+            for key in keys:
+                # skip total field, and any nulls
+                if key != 'total_pop' and data[key]:
+                    # divide race by total
+                    data[key + '_pct'] = data[key]/data['total_pop']
         return data
 
+        
     def pct_blk_drivers_stopped(self,year=2022):
         """
         what pct of drivers stopped are black last year?
@@ -78,15 +72,18 @@ class Agency(models.Model):
         if last_year_stops:
             return len(black_drivers_last_year)/len(last_year_stops)
 
+
     def ratio_blk_drivers_stopped_to_driving_pop(self):
         """
         the ratio of black drivers stop share 
         compared to black driving population share.
         large numbers are red flags
         """
-        driving_pop = self.driving_age_pop_by_race()
-        if driving_pop:
-            blk_driving_pct = driving_pop['black']['pct']
+        # get adult driving pop by race w/ pcts
+        driving_pop = self.adult_pop_by_race(pct=True)
+        # make sure we have data
+        if driving_pop and driving_pop['total_pop'] and 'black_nh_pct' in driving_pop:
+            blk_driving_pct = driving_pop['black_nh_pct']
             blk_stop_pct = self.pct_blk_drivers_stopped()
             if blk_stop_pct and blk_driving_pct:
                 return blk_stop_pct/blk_driving_pct
