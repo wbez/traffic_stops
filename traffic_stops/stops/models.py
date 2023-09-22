@@ -1,4 +1,5 @@
 from django.db import models
+from collections import OrderedDict
 
 # for checking if searches match list of true values
 trues = ['1','1.00','Yes','True']
@@ -33,34 +34,43 @@ class Agency(models.Model):
     other = models.IntegerField(null=True)
     two_or_more = models.IntegerField(null=True)
 
-    def adult_pop_by_race(self,pct=False):
+    def adult_pop_by_race(self,totals=False,pct=True):
         """
         sum up and return the totals and pcts 
         of rough driving population (18+) 
         for each racial group 
+        work in progress but it's config'd to return 
+        either pcts or totals, could be both
         """
         # keep track
-        data = {
+        total_data = OrderedDict({
                 'total_pop': self.total_pop,
-                'latino': self.latino,
                 'white_nh': self.white_nh,
-                'black_nh': self.black_nh,
-                'aian_nh': self.aian_nh,
-                'nhpi_nh': self.nhpi_nh,
-                'asian_nh': self.asian_nh,
+                'hispanic': self.latino,
+                'black': self.black_nh,
+                'ai_an': self.aian_nh,
+                'asian': self.asian_nh,
+                'h_opi': self.nhpi_nh,
                 'other': self.other,
                 'two_or_more': self.two_or_more,
-                }
+                })
         if pct:
+            pct_data = {}
             # get list of dict keys to iterate through
-            keys = [x for x in data.keys()]
+            keys = [x for x in total_data.keys()]
             # calc pct by race
             for key in keys:
                 # skip total field, and any nulls
-                if key != 'total_pop' and data[key]:
+                if key != 'total_pop' and total_data[key]:
                     # divide race by total
-                    data[key + '_pct'] = data[key]/data['total_pop']
-        return data
+                    pct_data[key] = round(total_data[key]/total_data['total_pop']*100,1)
+        
+        # inelegant
+        if pct:
+            return pct_data
+        
+        if totals:
+            return total_data
 
         
     def pct_blk_drivers_stopped(self,year=2022):
@@ -104,6 +114,7 @@ class AgencyData(models.Model):
     value = models.CharField(max_length=99,null=True)
     rank = models.IntegerField(null=True)
     notes = models.CharField(max_length=99)
+
 
 # Create your models here.
 class Stop(models.Model):
@@ -287,7 +298,16 @@ class Stop(models.Model):
         return self.WasConsentSearchPerformed in trues\
             or self.VehicleConsentGiven in trues\
             or self.DriverConsentGiven in trues\
-            or self.PassengerConsentGiven in trues
+            or self.PassengerConsentGiven in trues\
+            or self.DriverSearchType == 'Consent'\
+            or self.PassengerSearchType == 'Consent'\
+            or self.VehicleSearchType == 'Consent'\
+            or self.Passenger1SearchType == 'Consent'\
+            or self.Passenger2SearchType == 'Consent'\
+            or self.Passenger3SearchType == 'Consent'\
+            or self.Passenger4SearchType == 'Consent'\
+            or self.Passenger5SearchType == 'Consent'\
+            or self.Passenger6SearchType == 'Consent'
 
     def get_consent_search_hit(self):
         return self.WasConsentContrabandFound in trues\

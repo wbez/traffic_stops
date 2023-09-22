@@ -237,3 +237,19 @@ def ssc_over_time(agency_codes=None,writeout=True):
             import ipdb; ipdb.set_trace()
     # return
     return year_data
+
+
+
+def outside_chicago():
+    for year in range(2004,2023):
+        non_chi_stops = Stop.objects.filter(year=year).exclude(AgencyName='CHICAGO POLICE')
+        blk_non_chi_stops = non_chi_stops.filter(driver_race='Black')
+        print(year,len(non_chi_stops),len(blk_non_chi_stops),len(blk_non_chi_stops)/round(float(len(non_chi_stops)),2))
+
+def more_blk_drivers_stopped_than_pop():
+    watchlist = []
+    for agency in Agency.objects.all():
+        if len(agency.stop_set.filter(year=2022,driver_race='Black')) and agency.black_nh and len(agency.stop_set.filter(year=2022,driver_race='Black')) > agency.black_nh:
+            print(agency.name, len(agency.stop_set.filter(year=2022,driver_race='Black')), agency.black_nh)
+            watchlist.append((agency.name, len(agency.stop_set.filter(year=2022,driver_race='Black')), agency.black_nh))
+    print(len(watchlist))
