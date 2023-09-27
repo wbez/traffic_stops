@@ -249,7 +249,45 @@ def outside_chicago():
 def more_blk_drivers_stopped_than_pop():
     watchlist = []
     for agency in Agency.objects.all():
+        total_stops = len(agency.stop_set.filter(year=2022))
         if len(agency.stop_set.filter(year=2022,driver_race='Black')) and agency.black_nh and len(agency.stop_set.filter(year=2022,driver_race='Black')) > agency.black_nh:
-            print(agency.name, len(agency.stop_set.filter(year=2022,driver_race='Black')), agency.black_nh)
-            watchlist.append((agency.name, len(agency.stop_set.filter(year=2022,driver_race='Black')), agency.black_nh))
+            print(agency.name, total_stops, len(agency.stop_set.filter(year=2022,driver_race='Black')), agency.black_nh)
+            watchlist.append((agency.name, total_stops, len(agency.stop_set.filter(year=2022,driver_race='Black')), agency.black_nh))
     print(len(watchlist))
+    return watchlist
+
+
+def black_vs_white_driver_nonmoving_rates():
+    """
+    returns pcts of black drivers stopped for nonmoving
+    vs pct of white drivers stopped for nonmoving
+    """
+    stops22 = Stop.objects.filter(year=2022)
+    blk_drv_stops22 = stops22.filter(driver_race='Black')
+    wht_drv_stops22 = stops22.filter(driver_race='White')
+    blk_drv_nonmoving=blk_drv_stops22.exclude(ReasonForStop='1')
+    wht_drv_nonmoving=wht_drv_stops22.exclude(ReasonForStop='1')
+    len(blk_drv_nonmoving)/len(blk_drv_stops22), len(wht_drv_nonmoving)/len(wht_drv_stops22)
+    #[Out]# (0.5454437505998169, 0.3622251556700152)
+
+
+def consent_searches():
+    for year in range(2004,2023):
+        stops = Stop.objects.filter(year=year)
+        black_driver_stops = stops.filter(driver_race='Black')
+        white_driver_stops = stops.filter(driver_race='White')
+        consents = stops.filter(consent_search_conducted=True)
+        white_driver_consents = consents.filter(driver_race='White')
+        black_driver_consents = consents.filter(driver_race='Black')
+        print(year,len(stops),len(black_driver_stops),len(consents),len(black_driver_consents))
+
+
+def consent_searches_2022():
+    stops = Stop.objects.filter(year=2022)
+    black_driver_stops = stops.filter(driver_race='Black')
+    white_driver_stops = stops.filter(driver_race='White')
+    consents = stops.filter(consent_search_conducted=True)
+    black_driver_consents = consents.filter(driver_race='Black')
+    white_driver_consents = consents.filter(driver_race='White')
+    print(len(black_driver_consents)/len(black_driver_stops),len(white_driver_consents)/len(white_driver_stops))
+

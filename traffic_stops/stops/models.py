@@ -44,22 +44,21 @@ class Agency(models.Model):
         """
         # keep track
         total_data = OrderedDict({
-                'total_pop': self.total_pop,
-                'white_nh': self.white_nh,
                 'hispanic': self.latino,
+                'white_nh': self.white_nh,
                 'black': self.black_nh,
                 'ai_an': self.aian_nh,
-                'asian': self.asian_nh,
                 'h_opi': self.nhpi_nh,
+                'asian': self.asian_nh,
                 'other': self.other,
                 'two_or_more': self.two_or_more,
+                'total_pop': self.total_pop,
                 })
         if pct:
-            pct_data = {}
-            # get list of dict keys to iterate through
-            keys = [x for x in total_data.keys()]
+            # ordering matters
+            pct_data = OrderedDict()
             # calc pct by race
-            for key in keys:
+            for key in total_data.keys():
                 # skip total field, and any nulls
                 if key != 'total_pop' and total_data[key]:
                     # divide race by total
