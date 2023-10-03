@@ -1,4 +1,4 @@
-import json
+import json, statistics
 from collections import OrderedDict
 from stops.models import Stop, Agency
 
@@ -17,6 +17,8 @@ illinois_demo_pcts = OrderedDict({
     'other':0.3,
     'two_or_more':2.6,
     })
+debug = False
+statewide_query = True # skip statewide in debug mode
 ### END CONFIG ###
     
 # collect data
@@ -27,7 +29,7 @@ def shorten_year(year):
 
 
 def missing_years_text(name,years):
-    base = 'IDOT has no traffic stops on file for ' + name.title() + ' in '
+    base = 'IDOT has no traffic stops on file for ' + name + ' in '
     if len(years) == 1:
         return base + str(years[0]) + '.'
     elif len(years) == 2:
@@ -36,95 +38,199 @@ def missing_years_text(name,years):
         return base + ', '.join([str(x) for x in years[:-1]]) + ' or ' + str(years[-1]) + '.'
 
 
+def get_statewide():
+    # statewide first
+    row = {'name': 'Illinois statewide','chart_time_series':[]}
 
-# statewide first
-row = {'name': 'Illinois statewide','chart_time_series':[]}
-
-
-# every year
-for year in years:
-    print('statewide',year)
-    # filter by year
-    statewide_year = Stop.objects.filter(year=year)
-
-    # filter by race
-    statewide_year_blk_drv_stops = statewide_year.filter(driver_race='Black')
-    statewide_year_wh_drv_stops = statewide_year.filter(driver_race='White')
-    statewide_year_latino_drv_stops = statewide_year.filter(driver_race='Hispanic')
-    statewide_year_asian_drv_stops = statewide_year.filter(driver_race='Asian')
-    statewide_year_na_drv_stops = statewide_year.filter(driver_race='Native American')
-    statewide_year_nhpi_drv_stops = statewide_year.filter(driver_race='Native Hawaiian/Pacific Islander')
-    row['chart_time_series'].append(
-            OrderedDict({'year': shorten_year(year),
-            'latino_drv_stops':len(statewide_year_latino_drv_stops),
-            'wh_drv_stops':len(statewide_year_wh_drv_stops),
-            'blk_drv_stops':len(statewide_year_blk_drv_stops),
-            'na_drv_stops':len(statewide_year_na_drv_stops),
-            'nhpi_drv_stops':len(statewide_year_nhpi_drv_stops),
-            'asian_drv_stops':len(statewide_year_asian_drv_stops),
-            })
-        )
-print('statewide 2022')
-# 2022 data
-row['big_numbers'] = {}
-statewide_22 = Stop.objects.filter(year=2022)
-row['big_numbers']['stops'] = len(statewide_22)
-row['big_numbers']['searches'] = len(statewide_22.filter(search_conducted=True))
-row['big_numbers']['citations'] = len(statewide_22.filter(outcome='Citation'))
-row['demographics'] = illinois_demo_pcts
-data.append(row)
-
-# loop thru each agency
-for agency in Agency.objects.all():
-    # keep track
-    missing_years = []
-
-    # set up row
-    row = {'name':agency.name.title(),'chart_time_series':[]}
-    # loop through each year
+    # every year
     for year in years:
+        print('statewide',year)
         # filter by year
-        agency_year = agency.stop_set.filter(year=year)
-        if not list(agency_year):
-            missing_years.append(year)
+        statewide_year = Stop.objects.filter(year=year)
 
         # filter by race
-        agency_year_blk_drv_stops = agency_year.filter(driver_race='Black')
-        agency_year_wh_drv_stops = agency_year.filter(driver_race='White')
-        agency_year_latino_drv_stops = agency_year.filter(driver_race='Hispanic')
-        agency_year_asian_drv_stops = agency_year.filter(driver_race='Asian')
-        agency_year_na_drv_stops = agency_year.filter(driver_race='Native American')
-        agency_year_nhpi_drv_stops = agency_year.filter(driver_race='Native Hawaiin/Pacific Islander')
-        # append
+        statewide_year_blk_drv_stops = statewide_year.filter(driver_race='Black')
+        statewide_year_wh_drv_stops = statewide_year.filter(driver_race='White')
+        statewide_year_latino_drv_stops = statewide_year.filter(driver_race='Hispanic')
+        statewide_year_asian_drv_stops = statewide_year.filter(driver_race='Asian')
+        statewide_year_na_drv_stops = statewide_year.filter(driver_race='Native American')
+        statewide_year_nhpi_drv_stops = statewide_year.filter(driver_race='Native Hawaiian/Pacific Islander')
         row['chart_time_series'].append(
-            OrderedDict({'year':shorten_year(year),
-            'latino_drv_stops':len(agency_year_latino_drv_stops),
-            'wh_drv_stops':len(agency_year_wh_drv_stops),
-            'blk_drv_stops':len(agency_year_blk_drv_stops),
-            'na_drv_stops':len(agency_year_na_drv_stops),
-            'nhpi_drv_stops':len(agency_year_nhpi_drv_stops),
-            'asian_drv_stops':len(agency_year_asian_drv_stops),
-            })
-        )
-    # latest data
+                OrderedDict({'year': shorten_year(year),
+                'latino_drv_stops':len(statewide_year_latino_drv_stops),
+                'wh_drv_stops':len(statewide_year_wh_drv_stops),
+                'blk_drv_stops':len(statewide_year_blk_drv_stops),
+                'na_drv_stops':len(statewide_year_na_drv_stops),
+                'nhpi_drv_stops':len(statewide_year_nhpi_drv_stops),
+                'asian_drv_stops':len(statewide_year_asian_drv_stops),
+                'total_stops': len(statewide_year),
+                })
+            )
+    print('statewide 2022')
+    # 2022 data
     row['big_numbers'] = {}
-    max_year = max([x['year'][-2:] for x in row['chart_time_series']])
-    # think about how we're abbreviating years here
-    agency_latest = agency.stop_set.filter(year=int('20' + max_year))
-    row['big_numbers']['year'] = max_year
-    row['big_numbers']['stops'] = len(agency_latest)
-    row['big_numbers']['searches'] = len(agency_latest.filter(search_conducted=True))
-    row['big_numbers']['citations'] = len(agency_latest.filter(outcome='Citation'))
-    # demographics
-    row['demographics'] = agency.adult_pop_by_race()
-
-    # missing years
-    row['missing_years'] = missing_years_text(agency.name,missing_years)
-
-    print(row)
+    statewide_22 = Stop.objects.filter(year=2022)
+    row['big_numbers']['stops'] = len(statewide_22)
+    row['big_numbers']['searches'] = len(statewide_22.filter(search_conducted=True))
+    row['big_numbers']['citations'] = len(statewide_22.filter(outcome='Citation'))
+    row['demographics'] = illinois_demo_pcts
+    # the whole state doesn't miss a year
+    row['missing_years'] = None
+    row['copy_block'] = build_copy(row)
     data.append(row)
 
-# write out    
-outfile = open(outfile_path,'w')
-outjson = json.dump(data,outfile)
-outfile.close()
+    return data
+
+
+def get_agencies():
+# loop thru each agency
+    for agency in Agency.objects.all():
+        counter = 0
+        # keep track
+        missing_years = []
+
+        # set up row
+        row = {'name':agency.name,'chart_time_series':[]}
+        # loop through each year
+        for year in years:
+            # filter by year
+            agency_year = agency.stop_set.filter(year=year)
+            agency_year_list = list(agency_year)
+            if not agency_year_list:
+                missing_years.append(year)
+
+            # filter by race
+            agency_year_blk_drv_stops = agency_year.filter(driver_race='Black')
+            agency_year_wh_drv_stops = agency_year.filter(driver_race='White')
+            agency_year_latino_drv_stops = agency_year.filter(driver_race='Hispanic')
+            agency_year_asian_drv_stops = agency_year.filter(driver_race='Asian')
+            agency_year_na_drv_stops = agency_year.filter(driver_race='Native American')
+            agency_year_nhpi_drv_stops = agency_year.filter(driver_race='Native Hawaiian/Pacific Islander')
+            # append
+            row['chart_time_series'].append(
+                OrderedDict({'year':shorten_year(year),
+                'latino_drv_stops':len(agency_year_latino_drv_stops),
+                'wh_drv_stops':len(agency_year_wh_drv_stops),
+                'blk_drv_stops':len(agency_year_blk_drv_stops),
+                'na_drv_stops':len(agency_year_na_drv_stops),
+                'nhpi_drv_stops':len(agency_year_nhpi_drv_stops),
+                'asian_drv_stops':len(agency_year_asian_drv_stops),
+                'total_stops':len(agency_year_list)
+                })
+            )
+        # latest data
+        row['big_numbers'] = {}
+        max_year = max([x['year'][-2:] for x in row['chart_time_series']])
+        # think about how we're abbreviating years here
+        agency_latest = agency.stop_set.filter(year=int('20' + max_year))
+        row['big_numbers']['year'] = max_year
+        row['big_numbers']['stops'] = len(agency_latest)
+        row['big_numbers']['searches'] = len(agency_latest.filter(search_conducted=True))
+        row['big_numbers']['citations'] = len(agency_latest.filter(outcome='Citation'))
+        # demographics
+        row['demographics'] = agency.adult_pop_by_race()
+
+        # missing years
+        row['missing_years'] = missing_years_text(agency.name,missing_years)
+
+        # copy block on Black driver trends
+        copy = build_copy(row)
+        row['copy_block'] = copy
+
+        print(row)
+        # everything is missing, this is a garbage row
+        if len(missing_years) == len(years):
+            continue
+        
+        # append row to data
+        data.append(row)
+        counter += 1
+    
+    # return
+    return data
+
+
+def build_copy(agency_data):
+    """
+    avg num of stops each year
+    chg in pct of Black drivers stopped
+    """
+    # copy placeholder
+    copy = ''
+    comparison_text = ''
+
+    # easy access to time series data
+    time_series = agency_data['chart_time_series']
+
+    time_series_complete = [x for x in time_series if x['total_stops']]
+    
+    # nothing to see here
+    if not time_series_complete:
+        return
+
+    # medians are better than averages because incompleteness
+    median_stops = statistics.median([x['total_stops'] for x in time_series_complete]) if time_series_complete else None
+
+    # what's the earliest year on file?
+    min_year = min([x['year'] for x in time_series_complete if x['total_stops']])
+    # and the latest?
+    max_year = max([x['year'] for x in time_series_complete if x['total_stops']])
+    # black drivers, total stops for earliest year
+    earliest_black_driver_stops, earliest_total_stops = [(x['blk_drv_stops'],x['total_stops']) for x in time_series if x['year'] == min_year][0]
+    # black drivers, total stops for latest year
+    latest_black_driver_stops, latest_total_stops = [(x['blk_drv_stops'],x['total_stops']) for x in time_series if x['year'] == max_year][0]
+    # get pcts for earliest and latest
+    earliest_pct_black_driver_stops = round(earliest_black_driver_stops/earliest_total_stops*100,1) 
+    latest_pct_black_driver_stops = round(latest_black_driver_stops/latest_total_stops*100,1) 
+    # compare earlier to later, taking the first true condition
+    if abs(latest_pct_black_driver_stops - earliest_pct_black_driver_stops) < 1:
+        comparison_text = 'stayed about the same'
+    if latest_pct_black_driver_stops > earliest_pct_black_driver_stops:
+        comparison_text = 'increased'
+    elif earliest_pct_black_driver_stops > latest_pct_black_driver_stops:
+        comparison_text = 'decreased'
+    
+    # agency name
+    agency_name = agency_data['name']
+
+    # mention if the earliest year was the first year
+    full_min_year = '20' + min_year.replace("'","")
+    min_year_qualified = full_min_year if full_min_year != "2004" else '2004, the first year the state began collecting data' 
+
+    ### COPY SECTION ###
+    copy = """{agency} started participating in the Illinois Traffic Stop Study in {minyear}. """.format(
+        minyear=min_year_qualified,
+        agency=agency_name)
+    if median_stops:
+        copy+="""The median number of annual traffic stops is {medianstops}. """.format(medianstops=median_stops)    
+    # don't include if the latest pct of black drivers stopped is below 5%
+    # also don't include if the first year and last year are the same
+    # or if fewer than 50 black drivers are stopped
+    if min_year != max_year and latest_black_driver_stops > 50 and latest_pct_black_driver_stops >= 5:
+        copy += """The percentage of drivers stopped who are Black has {comparisontext} from {earliestpctblk} in {earliestyear} to {latestpctblk} in {latestyear}.""".format(
+                comparisontext=comparison_text,
+                earliestpctblk=str(earliest_pct_black_driver_stops)+'%',
+                earliestyear="20" + str(min_year).replace("'",""), 
+                latestpctblk=str(latest_pct_black_driver_stops)+'%',
+                latestyear="20" + str(max_year).replace("'","")
+                )
+    
+    # return what's been compiled
+    return copy
+
+
+
+def writeout(data):
+    # write out    
+    outfile = open(outfile_path,'w')
+    outjson = json.dump(data,outfile)
+    outfile.close()
+
+
+
+def roll_thru():
+    statewide = get_statewide() if statewide_query and not debug else None
+    agencies = get_agencies()
+    data = statewide + agencies if statewide else agencies
+    writeout(data)
+
