@@ -36,8 +36,8 @@ def load_data(apps,schema_editor):
             agency.aian_nh = pc['AIAN']
             agency.asian_nh = pc['Asian']
             agency.nhpi_nh = pc['NHPI']
-            agency.other_nh = pc['Other']
-            agency.two_or_more_nh = pc['TOM']
+            agency.other = pc['Other']
+            agency.two_or_more = pc['TOM']
             # print
             print('assigning attrs for',pc['name'],'to',agency.name)
             # save

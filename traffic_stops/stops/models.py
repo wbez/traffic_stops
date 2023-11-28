@@ -44,7 +44,7 @@ class Agency(models.Model):
         """
         # keep track
         total_data = OrderedDict({
-                'hispanic': self.latino,
+                'latino': self.latino,
                 'white_nh': self.white_nh,
                 'black': self.black_nh,
                 'ai_an': self.aian_nh,
@@ -60,7 +60,7 @@ class Agency(models.Model):
             # calc pct by race
             for key in total_data.keys():
                 # skip total field, and any nulls
-                if key != 'total_pop' and total_data[key]:
+                if key != 'total_pop' and total_data['total_pop']: 
                     # divide race by total
                     pct_data[key] = round(total_data[key]/total_data['total_pop']*100,1)
         
