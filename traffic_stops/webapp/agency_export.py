@@ -17,12 +17,11 @@ illinois_demo_pcts = OrderedDict({
     'other':0.3,
     'two_or_more':2.6,
     })
+illinois_copy_block = ''
 debug = False
 statewide_query = True # skip statewide in debug mode
 ### END CONFIG ###
     
-# collect data
-data = []
 
 def shorten_year(year):
     return "'" + str(year)[-2:]
@@ -39,6 +38,9 @@ def missing_years_text(name,years):
 
 
 def get_statewide():
+    # collect data
+    data = []
+
     # statewide first
     row = {'name': 'Illinois statewide','chart_time_series':[]}
 
@@ -47,6 +49,10 @@ def get_statewide():
         print('statewide',year)
         # filter by year
         statewide_year = Stop.objects.filter(year=year)
+
+        # save 2022 data for big numbers
+        if year == 2022:
+            statewide_22 = statewide_year
 
         # filter by race
         statewide_year_blk_drv_stops = statewide_year.filter(driver_race='Black')
@@ -66,10 +72,10 @@ def get_statewide():
                 'total_stops': len(statewide_year),
                 })
             )
-    print('statewide 2022')
+    
     # 2022 data
+    print('statewide 2022')
     row['big_numbers'] = {}
-    statewide_22 = Stop.objects.filter(year=2022)
     row['big_numbers']['stops'] = len(statewide_22)
     row['big_numbers']['searches'] = len(statewide_22.filter(search_conducted=True))
     row['big_numbers']['citations'] = len(statewide_22.filter(outcome='Citation'))
@@ -83,7 +89,11 @@ def get_statewide():
 
 
 def get_agencies():
-# loop thru each agency
+    
+    # collect data
+    data = []
+
+    # loop thru each agency
     for agency in Agency.objects.all():
         counter = 0
         # keep track
@@ -96,6 +106,7 @@ def get_agencies():
             # filter by year
             agency_year = agency.stop_set.filter(year=year)
             agency_year_list = list(agency_year)
+            # keep track of missing years
             if not agency_year_list:
                 missing_years.append(year)
 
@@ -140,11 +151,14 @@ def get_agencies():
         print(row)
         # everything is missing, this is a garbage row
         if len(missing_years) == len(years):
+            print('no data found for',agency.name)
             continue
         
         # append row to data
+        dupes = [x for x in data if x['name'] == agency.name]
+        if dupes:
+            print('dupe:',agency.name)
         data.append(row)
-        counter += 1
     
     # return
     return data
@@ -170,6 +184,8 @@ def build_copy(agency_data):
 
     # medians are better than averages because incompleteness
     median_stops = statistics.median([x['total_stops'] for x in time_series_complete]) if time_series_complete else None
+    # format thousands separator
+    median_stops_f = f"{median_stops:,}" if median_stops else None
 
     # what's the earliest year on file?
     min_year = min([x['year'] for x in time_series_complete if x['total_stops']])
@@ -201,8 +217,8 @@ def build_copy(agency_data):
     copy = """{agency} started participating in the Illinois Traffic Stop Study in {minyear}. """.format(
         minyear=min_year_qualified,
         agency=agency_name)
-    if median_stops:
-        copy+="""The median number of annual traffic stops is {medianstops}. """.format(medianstops=median_stops)    
+    if median_stops_f:
+        copy+="""The median number of annual traffic stops is {medianstops}. """.format(medianstops=median_stops_f)    
     # don't include if the latest pct of black drivers stopped is below 5%
     # also don't include if the first year and last year are the same
     # or if fewer than 50 black drivers are stopped
