@@ -18,8 +18,7 @@ illinois_demo_pcts = OrderedDict({
     'two_or_more':2.6,
     })
 illinois_copy_block = ''
-debug = True
-statewide_query = False # skip statewide in debug mode
+debug = True # basically skips statewide query when True to speed up processing
 ### END CONFIG ###
     
 
@@ -248,7 +247,8 @@ def writeout(data):
 
 
 def roll_thru():
-    statewide = get_statewide() if statewide_query and not debug else None
+    # debug mode means we don't bother getting statewide
+    statewide = get_statewide() if not debug else None
     agencies = get_agencies()
     data = statewide + agencies if statewide else agencies
     writeout(data)
