@@ -20,11 +20,14 @@ class Agency(models.Model):
     class Meta:
         db_table = 'agencies'
 
+    # idot stuff
     name = models.CharField(max_length=99,null=True)
     name_cased = models.CharField(max_length=99,null=True) # original non-upper case
-    census_name = models.CharField(max_length=99, null=True) # i.e. places and counties
     code = models.TextField(max_length=5,null=True)
+    regions = models.CharField(max_length=99,null=True)
+    # census
     # all census data is 18+ TODO relabel these fields accordingly
+    census_name = models.CharField(max_length=99, null=True) # i.e. places and counties
     geoid = models.CharField(max_length=7,null=True)
     total_pop = models.IntegerField(null=True)
     latino = models.IntegerField(null=True)
@@ -42,7 +45,7 @@ class Agency(models.Model):
         so we spoof it with a title() method for consistency
         TODO: we eventually need a dashboard to properly populate these values
         """
-        return self.name_cased if self.name_cased else self.name.title()
+        return self.name_cased if self.name_cased else self.name.title().replace('Us ','US').replace(' Pd','PD')
 
     def adult_pop_by_race(self,totals=False,pct=True):
         """
