@@ -21,6 +21,8 @@ class Agency(models.Model):
         db_table = 'agencies'
 
     name = models.CharField(max_length=99,null=True)
+    name_cased = models.CharField(max_length=99,null=True) # original non-upper case
+    census_name = models.CharField(max_length=99, null=True) # i.e. places and counties
     code = models.TextField(max_length=5,null=True)
     # all census data is 18+ TODO relabel these fields accordingly
     geoid = models.CharField(max_length=7,null=True)
@@ -33,6 +35,14 @@ class Agency(models.Model):
     asian_nh = models.IntegerField(null=True)
     other = models.IntegerField(null=True)
     two_or_more = models.IntegerField(null=True)
+
+    def get_name_cased(self):
+        """
+        we don't have properly title-cased names for each agency
+        so we spoof it with a title() method for consistency
+        TODO: we eventually need a dashboard to properly populate these values
+        """
+        return self.name_cased if self.name_cased else self.name.title()
 
     def adult_pop_by_race(self,totals=False,pct=True):
         """

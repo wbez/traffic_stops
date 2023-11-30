@@ -18,8 +18,8 @@ illinois_demo_pcts = OrderedDict({
     'two_or_more':2.6,
     })
 illinois_copy_block = ''
-debug = False
-statewide_query = True # skip statewide in debug mode
+debug = True
+statewide_query = False # skip statewide in debug mode
 ### END CONFIG ###
     
 
@@ -99,8 +99,11 @@ def get_agencies():
         # keep track
         missing_years = []
 
+        # title case, more or less
+        agency_name = agency.get_name_cased()
+        
         # set up row
-        row = {'name':agency.name,'chart_time_series':[]}
+        row = {'name':agency_name,'chart_time_series':[]}
         # loop through each year
         for year in years:
             # filter by year
@@ -142,7 +145,7 @@ def get_agencies():
         row['demographics'] = agency.adult_pop_by_race()
 
         # missing years
-        row['missing_years'] = missing_years_text(agency.name,missing_years)
+        row['missing_years'] = missing_years_text(agency_name,missing_years)
 
         # copy block on Black driver trends
         copy = build_copy(row)
@@ -155,7 +158,7 @@ def get_agencies():
             continue
         
         # append row to data
-        dupes = [x for x in data if x['name'] == agency.name]
+        dupes = [x for x in data if x['name'] == agency_name]
         if dupes:
             print('dupe:',agency.name)
         data.append(row)
