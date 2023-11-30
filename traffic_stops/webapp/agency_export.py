@@ -19,6 +19,7 @@ illinois_demo_pcts = OrderedDict({
     })
 illinois_copy_block = ''
 debug = True # basically skips statewide query when True to speed up processing
+debug_agencies = ['CHICAGO POLICE']
 ### END CONFIG ###
     
 
@@ -92,8 +93,11 @@ def get_agencies():
     # collect data
     data = []
 
+    # debug mode speeds up processing
+    agencies = Agency.objects.all() if not debug else Agency.objects.filter(name__in=debug_agencies)
+
     # loop thru each agency
-    for agency in Agency.objects.all():
+    for agency in agencies:
         counter = 0
         # keep track
         missing_years = []

@@ -19,7 +19,7 @@ def agency_name_extraction():
     for row in data:
         agency = Agency.objects.get(code=row['ID'])
         agency.regions = row['Regions']
-        agency.name_cased = row['Agency']
+        agency.name_cased = row['Agency'].replace('\n',' ')
         print(agency.name_cased,'has regions',agency.regions)
         agency.save()
 
@@ -53,7 +53,7 @@ def another_agency_name_extraction():
                 if not agency.name_cased:
                     # prevents us from assigning a truncated name
                     if len(agency.name) == len(agency_name):
-                        agency.name_cased = agency_name
+                        agency.name_cased = agency_name.replace('\n',' ')
                         print(agency.name, agency_name)
                 #agency.name_cased = agency_name
                         agency.save()
