@@ -33,6 +33,8 @@ for agency in Agency.objects.all():
         smatch = county_match[0]
     else:
         print('no match for',agency.name,agency.geoid)
+        # ope! can't make a map w/o geo information
+        continue
     # whatever matched, show it here
     print(agency.name,'matches',smatch.properties['NAME'])
     # make it a shape

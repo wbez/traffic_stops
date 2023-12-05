@@ -28,6 +28,9 @@ for agency in agencies_json:
     if map_match:
         agencies_json[counter]['map'] = map_match[0]
         print('adding',map_match[0],'to',agency['name'],'record')
+    else:
+        agencies_json[counter]['map'] = ''
+        print('no map found for',agency['name'])
     counter += 1
 
 # write out

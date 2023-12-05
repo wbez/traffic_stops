@@ -18,8 +18,8 @@ illinois_demo_pcts = OrderedDict({
     'two_or_more':2.6,
     })
 illinois_copy_block = ''
-debug = True # basically skips statewide query when True to speed up processing
-debug_agencies = ['CHICAGO POLICE']
+debug = False # basically skips statewide query when True to speed up processing
+debug_agencies = ['HIGHLAND PARK POLICE']
 ### END CONFIG ###
     
 
@@ -83,6 +83,7 @@ def get_statewide():
     # the whole state doesn't miss a year
     row['missing_years'] = None
     row['copy_block'] = build_copy(row)
+    row['census_name'] = 'state of Illinois'
     data.append(row)
 
     return data
@@ -104,9 +105,11 @@ def get_agencies():
 
         # title case, more or less
         agency_name = agency.get_name_cased()
-        
+        agency_census_name = agency.census_name
+        print(agency.name,'processing...')
+
         # set up row
-        row = {'name':agency_name,'chart_time_series':[]}
+        row = {'name':agency_name,'census_name':agency_census_name,'chart_time_series':[]}
         # loop through each year
         for year in years:
             # filter by year
