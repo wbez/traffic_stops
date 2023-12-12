@@ -18,8 +18,8 @@ illinois_demo_pcts = OrderedDict({
     'two_or_more':2.6,
     })
 illinois_copy_block = ''
-debug = False # basically skips statewide query when True to speed up processing
-debug_agencies = ['HIGHLAND PARK POLICE']
+debug = True # basically skips statewide query when True to speed up processing
+debug_agencies = ['HARVEY POLICE', 'UNIVERSITY OF CHICAGO POLICE','EVERGREEN PARK POLICE']
 ### END CONFIG ###
     
 
@@ -36,6 +36,15 @@ def missing_years_text(name,years):
     elif len(years) > 2:
         return base + ', '.join([str(x) for x in years[:-1]]) + ' or ' + str(years[-1]) + '.'
 
+
+def most_recent_year_data(max_year_data):
+    return OrderedDict({'latino_drv_stops_pct': max_year_data['latino_drv_stops']/float(max_year_data['total_stops'])*100,
+            'wh_drv_stops_pct': max_year_data['wh_drv_stops']/float(max_year_data['total_stops'])*100,
+            'blk_drv_stops_pct': max_year_data['blk_drv_stops']/float(max_year_data['total_stops'])*100,
+            'na_drv_stops_pct': max_year_data['na_drv_stops']/float(max_year_data['total_stops'])*100,
+            'nhpi_drv_stops_pct': max_year_data['nhpi_drv_stops']/float(max_year_data['total_stops'])*100,
+            'asian_drv_stops_pct': max_year_data['asian_drv_stops']/float(max_year_data['total_stops'])*100})
+    
 
 def get_statewide():
     # collect data
@@ -62,7 +71,8 @@ def get_statewide():
         statewide_year_na_drv_stops = statewide_year.filter(driver_race='Native American')
         statewide_year_nhpi_drv_stops = statewide_year.filter(driver_race='Native Hawaiian/Pacific Islander')
         row['chart_time_series'].append(
-                OrderedDict({'year': shorten_year(year),
+                OrderedDict({'year': year,
+                'short_year': shorten_year(year),
                 'latino_drv_stops':len(statewide_year_latino_drv_stops),
                 'wh_drv_stops':len(statewide_year_wh_drv_stops),
                 'blk_drv_stops':len(statewide_year_blk_drv_stops),
@@ -100,6 +110,7 @@ def get_agencies():
     # loop thru each agency
     for agency in agencies:
         counter = 0
+            
         # keep track
         missing_years = []
 
@@ -107,6 +118,11 @@ def get_agencies():
         agency_name = agency.get_name_cased()
         agency_census_name = agency.census_name
         print(agency.name,'processing...')
+
+        # bail out right away if there's no data
+        if not agency.stop_set.all():
+            print('no data for agency ... bailing out')
+            continue
 
         # set up row
         row = {'name':agency_name,'census_name':agency_census_name,'chart_time_series':[]}
@@ -128,7 +144,8 @@ def get_agencies():
             agency_year_nhpi_drv_stops = agency_year.filter(driver_race='Native Hawaiian/Pacific Islander')
             # append
             row['chart_time_series'].append(
-                OrderedDict({'year':shorten_year(year),
+                OrderedDict({'year': year,
+                'short_year': shorten_year(year),
                 'latino_drv_stops':len(agency_year_latino_drv_stops),
                 'wh_drv_stops':len(agency_year_wh_drv_stops),
                 'blk_drv_stops':len(agency_year_blk_drv_stops),
@@ -140,9 +157,13 @@ def get_agencies():
             )
         # latest data
         row['big_numbers'] = {}
-        max_year = max([x['year'][-2:] for x in row['chart_time_series']])
+        # last year with actual data
+        max_year = max([x['year'] for x in row['chart_time_series'] if x['total_stops']])
+        max_year_data = [x for x in row['chart_time_series'] if x['year'] == max_year][0]
+        # need pcts for bar chart
+        row['latest_year_pcts'] = most_recent_year_data(max_year_data)
         # think about how we're abbreviating years here
-        agency_latest = agency.stop_set.filter(year=int('20' + max_year))
+        agency_latest = agency.stop_set.filter(year=max_year)
         row['big_numbers']['year'] = max_year
         row['big_numbers']['stops'] = len(agency_latest)
         row['big_numbers']['searches'] = len(agency_latest.filter(search_conducted=True))
@@ -219,8 +240,7 @@ def build_copy(agency_data):
     agency_name = agency_data['name']
 
     # mention if the earliest year was the first year
-    full_min_year = '20' + min_year.replace("'","")
-    min_year_qualified = full_min_year if full_min_year != "2004" else '2004, the first year the state began collecting data' 
+    min_year_qualified = min_year if min_year != "2004" else '2004, the first year the state began collecting data' 
 
     ### COPY SECTION ###
     copy = """{agency} started participating in the Illinois Traffic Stop Study in {minyear}. """.format(
@@ -232,12 +252,12 @@ def build_copy(agency_data):
     # also don't include if the first year and last year are the same
     # or if fewer than 50 black drivers are stopped
     if min_year != max_year and latest_black_driver_stops > 50 and latest_pct_black_driver_stops >= 5:
-        copy += """The percentage of drivers stopped who are Black has {comparisontext} from {earliestpctblk} in {earliestyear} to {latestpctblk} in {latestyear}.""".format(
+        copy += """The percentage share of drivers stopped who are Black has {comparisontext} from {earliestpctblk} in {earliestyear} to {latestpctblk} in {latestyear}.""".format(
                 comparisontext=comparison_text,
                 earliestpctblk=str(earliest_pct_black_driver_stops)+'%',
-                earliestyear="20" + str(min_year).replace("'",""), 
+                earliestyear=min_year, 
                 latestpctblk=str(latest_pct_black_driver_stops)+'%',
-                latestyear="20" + str(max_year).replace("'","")
+                latestyear=max_year
                 )
     
     # return what's been compiled

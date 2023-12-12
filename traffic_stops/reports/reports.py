@@ -4,6 +4,19 @@ from stops.models import Stop, Agency
 from traffic_stops.settings import BASE_DIR
 from reports.utils import get_rate
 
+# google apis
+import google.auth
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+from googleapiclient.http import MediaFileUpload
+from google.oauth2.credentials import Credentials
+
+# google setup
+#creds, _ = google.auth.default()
+creds = Credentials.from_authorized_user_file('/home/matt/.creds/google.json')
+service = build("drive","v3",credentials=creds)
+
+
 ### START CONFIGS ###
 # output
 outfile_dir = str(BASE_DIR) + '/reports/output/'
@@ -17,6 +30,7 @@ cursor = connection.cursor()
 #race_categories = ['White','Hispanic','Black','Native Hawaiian/Pacific Islander','Asian','Native American']
 race_categories = [x['driver_race'] for x in Stop.objects.values('driver_race').distinct() if x['driver_race']]
 ### END CONFIGS ###
+
 
 def write_out(name,data):
     """
@@ -125,31 +139,76 @@ def agencies_report(year=None):
 
 
 
-
-
-def agency_export():
+def agency_export(upload=False):
     """
     for each agency,
     export all their stop data
-    to a csv
+    to a csv.
+    optionally upload to gdrive
     """
-    for agency_code in agency_codes:
+    # log uploads
+    if upload:
+        print('***upload=true will update agency.public_drive_id***')
+        logger_file = open('drive_log.csv','w')
+        logger_csv = csv.DictWriter(logger_file,['name','id'])
+        logger_csv.writeheader()
+
+
+    for agency in Agency.objects.all():
         try:
-            data = Stop.objects.raw('select * from stops where AgencyCode = "' + agency_code + '"')
-            agency_name = Stop.objects.filter(AgencyCode=agency)[0].AgencyName
-            outfile = open(outfile_dir + agency_name + '.csv','w')
+            data = Stop.objects.raw("select * from stops where AgencyCode='" + str(agency.code) + "'") 
+            outfile_path = outfile_dir + agency.name + '.csv'
+            outfile = open(outfile_path,'w')
             outcsv = csv.DictWriter(outfile,stop_headers)
             outcsv.writeheader()
             for row in data.iterator():
-                # remove extraneous metadata field
+                # remove extraneous metadata fields
                 row.__dict__.pop('_state')
+                row.__dict__.pop('Agency_id')
                 # write row as dict
                 outcsv.writerow(row.__dict__)
             outfile.close()
-            print(agency_name)
+            print(outfile_dir,'written')
+            if upload:
+                print('uploading',agency.name)
+                file_id = upload_file(outfile_path)
+                agency.public_drive_id = file_id
+                agency.save()
+                logger_csv.writerow({'name':agency.name,'id':file_id})
+
+
         except Exception as e:
-            print(agency_name,'ERROR')
+            print(agency.name,e)
             import ipdb; ipdb.set_trace()
+
+    if upload:
+        logger_file.close()
+
+
+
+def upload_file(path):
+    """
+    uploads a file to gdrive
+    https://developers.google.com/drive/api/guides/manage-uploads
+    """
+    # file handling
+    file_name = path.split('/')[-1]
+    file_metadata = {"name":file_name,"parents":['1H5AuQE3zC5krJFRvS0ACxz9_SLS-uQ3f']}
+    
+    # upload 
+    try:
+        media = MediaFileUpload(path,mimetype="text/csv")
+        file = (service.files()
+                .create(body=file_metadata, media_body=media, fields="id")
+                .execute()
+                )
+        service.permissions().create(fileId=file.get('id'),
+                body={'type':'anyone','role':'reader'}).execute()
+        return file.get('id')
+        print(f'File ID: {file.get("id")}')
+    except Exception as e:
+        print(e)
+
 
 
 def stops_searches_citations_by_race(agency_codes=None,year=None):

@@ -2,6 +2,7 @@ import requests, json, fiona
 from shapely.geometry import shape
 from stops.models import Agency
 from traffic_stops.settings import BASE_DIR
+from webapp.agency_export import debug, debug_agencies
 
 ### START CONFIG ###
 template_url = "https://api.mapbox.com/styles/v1/mapbox/light-v11/static/pin-l+ff0000({lat},{lon})/[-91.666,36.6362,-87.053,42.8369]/200x350?access_token=pk.eyJ1IjoiY2t1cmdhbndiZXoiLCJhIjoiY2xtODR5eDZkMDZjazNqbnp6Z2xlcmpzeCJ9.UOjL4Dy56jwCRe75Qc19iw"
@@ -18,7 +19,10 @@ place_shapes = fiona.open(place_shape_file_path)
 # then counties 
 county_shapes = fiona.open(county_shape_file_path)
 # iterate
-for agency in Agency.objects.all():
+
+agencies = Agency.objects.all() if not debug else Agency.objects.filter(name__in=debug_agencies)
+
+for agency in agencies:
     # slugify
     agency_name = agency.name.replace(' ','-').lower()
     # for lookups

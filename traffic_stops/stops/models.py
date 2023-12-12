@@ -39,6 +39,9 @@ class Agency(models.Model):
     other = models.IntegerField(null=True)
     two_or_more = models.IntegerField(null=True)
 
+    # publishing
+    public_drive_id = models.CharField(max_length=99,null=True)
+
     def get_name_cased(self):
         """
         we don't have properly title-cased names for each agency
