@@ -10,15 +10,18 @@ years = range(2004,2023)
 illinois_demo_pcts = OrderedDict({
     'latino':16.2,
     'white_nh':61.2,
-    'black_nh':13.6,
-    'aian_nh':0.1,
-    'nhpi_nh':0,
-    'asian_nh':6,
+    'black':13.6,
+    'ai_an':0.1,
+    'h_opi':0,
+    'asian':6,
     'other':0.3,
     'two_or_more':2.6,
     })
-illinois_copy_block = ''
-debug = True # basically skips statewide query when True to speed up processing
+# what do we call the statewide totals?
+illinois_name = 'Illinois statewide'
+# link to download the whole db (for the statewide page)
+biglocal_url = 'https://biglocalnews.org/#/project/UHJvamVjdDpiYWI2Mzg3ZC1iMmZjLTQ2ZjUtOWY0Zi1lOTg4ZmEzMmUwM2M='
+debug = False # basically skips statewide query when True to speed up processing
 debug_agencies = ['HARVEY POLICE', 'UNIVERSITY OF CHICAGO POLICE','EVERGREEN PARK POLICE']
 ### END CONFIG ###
     
@@ -51,7 +54,7 @@ def get_statewide():
     data = []
 
     # statewide first
-    row = {'name': 'Illinois statewide','chart_time_series':[]}
+    row = {'name': illinois_name,'census_name':'state of Illinois','chart_time_series':[]}
 
     # every year
     for year in years:
@@ -82,8 +85,16 @@ def get_statewide():
                 'total_stops': len(statewide_year),
                 })
             )
-    
-    # 2022 data
+
+
+    # last year with actual data
+    max_year = max([x['year'] for x in row['chart_time_series'] if x['total_stops']])
+    max_year_data = [x for x in row['chart_time_series'] if x['year'] == max_year][0]
+    # need pcts for bar chart
+    row['latest_year_pcts'] = most_recent_year_data(max_year_data)
+
+
+    # deprecated: 2022 data
     print('statewide 2022')
     row['big_numbers'] = {}
     row['big_numbers']['stops'] = len(statewide_22)
@@ -92,8 +103,8 @@ def get_statewide():
     row['demographics'] = illinois_demo_pcts
     # the whole state doesn't miss a year
     row['missing_years'] = None
-    row['copy_block'] = build_copy(row)
-    row['census_name'] = 'state of Illinois'
+    row['copy_block'] = build_copy(row) 
+    row['drive_url'] = biglocal_url
     data.append(row)
 
     return data
@@ -177,6 +188,7 @@ def get_agencies():
         # copy block on Black driver trends
         copy = build_copy(row)
         row['copy_block'] = copy
+        row['drive_url'] = 'https://drive.google.com/file/d/' + agency.public_drive_id if agency.public_drive_id else ''
 
         print(row)
         # everything is missing, this is a garbage row
@@ -237,10 +249,10 @@ def build_copy(agency_data):
         comparison_text = 'decreased'
     
     # agency name
-    agency_name = agency_data['name']
+    agency_name = agency_data['name'] if agency_data['name'] != illinois_name else 'Police agencies statewide'
 
-    # mention if the earliest year was the first year
-    min_year_qualified = min_year if min_year != "2004" else '2004, the first year the state began collecting data' 
+    # mention if the earliest year was the first year, except on the statewide page
+    min_year_qualified = str(min_year) if min_year != 2004 or agency_data['name'] == illinois_name else '2004, the first year the state began collecting data' 
 
     ### COPY SECTION ###
     copy = """{agency} started participating in the Illinois Traffic Stop Study in {minyear}. """.format(
