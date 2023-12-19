@@ -96,7 +96,7 @@ def get_statewide():
 
     # deprecated: 2022 data
     print('statewide 2022')
-    row['big_numbers'] = {}
+    row['big_numbers'] = {'year':max_year}
     row['big_numbers']['stops'] = len(statewide_22)
     row['big_numbers']['searches'] = len(statewide_22.filter(search_conducted=True))
     row['big_numbers']['citations'] = len(statewide_22.filter(outcome='Citation'))

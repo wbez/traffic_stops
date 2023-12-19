@@ -15,6 +15,11 @@ from google.oauth2.credentials import Credentials
 #creds, _ = google.auth.default()
 creds = Credentials.from_authorized_user_file('/home/matt/.creds/google.json')
 service = build("drive","v3",credentials=creds)
+# where all folders, data etc. are stored
+root_drive_folder_id = '1DHRLVIRtdAjVl46JygmMliwQE6KC66fp'
+# gonna link to this later
+# OLD readme_id = '1b4CRyTMIDK9uOuIvNB-WucIdrIwbHahT'
+readme_id = '1Yk1J9SAPfZXfYk2Kb-z6K4p4eU6Rhnoc0RciRscymgY'
 
 
 ### START CONFIGS ###
@@ -150,36 +155,32 @@ def agency_export(upload=False):
     if upload:
         print('***upload=true will update agency.public_drive_id***')
         logger_file = open('drive_log.csv','w')
-        logger_csv = csv.DictWriter(logger_file,['name','id'])
+        logger_csv = csv.DictWriter(logger_file,['name','file_id','folder_id'])
         logger_csv.writeheader()
 
 
     for agency in Agency.objects.all():
-        try:
-            data = Stop.objects.raw("select * from stops where AgencyCode='" + str(agency.code) + "'") 
-            outfile_path = outfile_dir + agency.name + '.csv'
-            outfile = open(outfile_path,'w')
-            outcsv = csv.DictWriter(outfile,stop_headers)
-            outcsv.writeheader()
-            for row in data.iterator():
-                # remove extraneous metadata fields
-                row.__dict__.pop('_state')
-                row.__dict__.pop('Agency_id')
-                # write row as dict
-                outcsv.writerow(row.__dict__)
-            outfile.close()
-            print(outfile_dir,'written')
-            if upload:
-                print('uploading',agency.name)
-                file_id = upload_file(outfile_path)
-                agency.public_drive_id = file_id
-                agency.save()
-                logger_csv.writerow({'name':agency.name,'id':file_id})
-
-
-        except Exception as e:
-            print(agency.name,e)
-            import ipdb; ipdb.set_trace()
+        data = Stop.objects.raw("select * from stops where AgencyCode='" + str(agency.code) + "'") 
+        outfile_path = outfile_dir + agency.name + '.csv'
+        outfile = open(outfile_path,'w')
+        outcsv = csv.DictWriter(outfile,stop_headers)
+        outcsv.writeheader()
+        for row in data.iterator():
+            # remove extraneous metadata fields
+            row.__dict__.pop('_state')
+            row.__dict__.pop('Agency_id')
+            # write row as dict
+            outcsv.writerow(row.__dict__)
+        outfile.close()
+        print(outfile_dir,'written')
+        if upload:
+            print('uploading',agency.name)
+            metadata = upload_file(outfile_path)
+            file_id, folder_id = metadata['file_id'], metadata['folder_id']
+            agency.public_drive_file_id = file_id
+            agency.public_drive_folder_id = folder_id
+            agency.save()
+            logger_csv.writerow({'name':agency.name,'file_id':file_id, 'folder_id': folder_id})
 
     if upload:
         logger_file.close()
@@ -191,25 +192,77 @@ def upload_file(path):
     uploads a file to gdrive
     https://developers.google.com/drive/api/guides/manage-uploads
     """
-    # file handling
+    # file name is at the end of the path
     file_name = path.split('/')[-1]
-    file_metadata = {"name":file_name,"parents":['1H5AuQE3zC5krJFRvS0ACxz9_SLS-uQ3f']}
+    # folder name is file name without extension
+    folder_name = file_name.split('.')[0] + ' traffic stops'
+    folder_id = create_folder(folder_name)
+    # add a readme to the folder
+    readme_shortcut(folder_id)
+
+    # start on the data file
+    file_metadata = {"name":file_name,"parents":[folder_id]}
     
     # upload 
+    # TODO: handle large uploads timing out ...
     try:
         media = MediaFileUpload(path,mimetype="text/csv")
         file = (service.files()
-                .create(body=file_metadata, media_body=media, fields="id")
-                .execute()
-                )
+            .create(body=file_metadata, media_body=media, fields="id")
+            .execute()
+            )
+        file_id = file.get('id')
         service.permissions().create(fileId=file.get('id'),
-                body={'type':'anyone','role':'reader'}).execute()
-        return file.get('id')
-        print(f'File ID: {file.get("id")}')
+            body={'type':'anyone','role':'reader'}).execute()
+    
+        # print and return
+        print(file_name,'uploaded with file id',file_id,'to folder name',folder_name,'with folder id',folder_id)
     except Exception as e:
         print(e)
+        file_id = None
 
 
+    return {'file_id':file_id,'folder_id':folder_id}
+
+
+def create_folder(folder_name):
+    """
+    each agency gets its own public google drive folder
+    to store data + readme files
+    https://developers.google.com/drive/api/guides/folder
+    """
+    # create the folder (calling it a file) and get the id
+    file_metadata = {
+            'name': folder_name,
+            'parents': [root_drive_folder_id],
+            'mimeType': 'application/vnd.google-apps.folder',}
+    file = service.files().create(body=file_metadata,fields="id").execute()
+    file_id = file.get('id')
+    # read-only to the world
+    service.permissions().create(fileId=file_id,
+            body={'type':'anyone','role':'reader'}).execute()
+
+    print(folder_name,file_id)
+    return file_id
+
+
+def readme_shortcut(folder_id):
+    """
+    https://developers.google.com/drive/api/guides/shortcuts#create-shortcut
+    """
+    shortcut_metadata = {
+            'Name':'readme.txt',
+            'mimeType': 'application/vnd.google-apps.shortcut',
+            'shortcutDetails': {
+                'targetId': readme_id
+                },
+            'parents':[folder_id]
+            }
+    try:
+        shortcut = service.files().create(body=shortcut_metadata,fields='id').execute()
+    except Exception as e:
+        print(e)
+        print('%%% shortcut exception %%%')
 
 def stops_searches_citations_by_race(agency_codes=None,year=None):
     """
