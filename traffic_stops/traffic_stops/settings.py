@@ -22,7 +22,7 @@ data_dir = str(BASE_DIR) + '/data/'
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y0!+5&8^me5q1w18s=mk&xjft83#wlkp4sflz-7ven9muqp@&%'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
