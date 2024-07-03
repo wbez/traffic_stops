@@ -56,7 +56,6 @@ def update_stop_agencies():
     for agency in Agency.objects.all():
         stops = Stop.objects.filter(AgencyCode=agency.code,agency=None)
         stops.update(agency=agency,AgencyName=agency.name)
-        stops.save()
         print('updated',agency.name,'stops')
 
 
