@@ -148,7 +148,6 @@ def load_data(data_csv,year):
             ipdb.set_trace()
 
         counter += 1
-        print(counter)
         if LOADER_DEBUG:
             if counter > 10:
                 break

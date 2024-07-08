@@ -123,7 +123,6 @@ def load_data(data_csv,year):
                         PoliceDogDrugAmount = row['DOGDRAMT']
                 )
             stop_objs.append(stop_obj)
-            print(counter)
 
         except Exception as e:
             print('counter:',counter)
