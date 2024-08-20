@@ -17,3 +17,5 @@ dbDisconnect(connection)
 
 # preview
 data
+
+# next, I will analyze outcomes of violations
